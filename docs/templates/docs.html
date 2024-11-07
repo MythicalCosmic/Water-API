@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Documentation</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
+    h1, h2, h3 { color: #333; }
+    p, ul { color: #555; }
+    .model { margin-bottom: 30px; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 5px; }
+    .model h2 { margin-top: 0; }
+    .endpoint { background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px; }
+    code { background-color: #e8e8e8; padding: 2px 4px; border-radius: 3px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>API Documentation</h1>
+    <p>This documentation provides an overview of all API endpoints, models, and fields. All requests require JWT authentication in the header as <code>Authorization: Bearer &lt;access-token&gt;</code>.</p>
+
+    <!-- Brand Model -->
+    <div class="model">
+      <h2>Brand Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the brand.</li>
+        <li><strong>name</strong> (string): Name of the brand (max length 100).</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Brands</strong></p>
+        <p><code>GET /api/brands/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Brand</strong></p>
+        <p><code>POST /api/brands/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Brand Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Brand</strong></p>
+        <p><code>GET /api/brands/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Brand</strong></p>
+        <p><code>PUT /api/brands/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Updated Brand Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Brand</strong></p>
+        <p><code>DELETE /api/brands/{id}/</code></p>
+      </div>
+    </div>
+
+    <!-- Product Model -->
+    <div class="model">
+      <h2>Product Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the product.</li>
+        <li><strong>name</strong> (string): Name of the product (max length 100).</li>
+        <li><strong>category_id</strong> (integer): Foreign key referencing <em>Category</em>.</li>
+        <li><strong>brand_id</strong> (integer): Foreign key referencing <em>Brand</em>.</li>
+        <li><strong>sku</strong> (string): Unique SKU identifier for the product.</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Products</strong></p>
+        <p><code>GET /api/products/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Product</strong></p>
+        <p><code>POST /api/products/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Product Name", "category_id": 1, "brand_id": 1, "sku": "SKU-1001" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Product</strong></p>
+        <p><code>GET /api/products/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Product</strong></p>
+        <p><code>PUT /api/products/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Updated Product Name", "category_id": 1, "brand_id": 2, "sku": "SKU-1002" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Product</strong></p>
+        <p><code>DELETE /api/products/{id}/</code></p>
+      </div>
+    </div>
+
+    <!-- Category Model -->
+    <div class="model">
+      <h2>Category Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the category.</li>
+        <li><strong>name</strong> (string): Name of the category (max length 100).</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Categories</strong></p>
+        <p><code>GET /api/categories/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Category</strong></p>
+        <p><code>POST /api/categories/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Category Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Category</strong></p>
+        <p><code>GET /api/categories/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Category</strong></p>
+        <p><code>PUT /api/categories/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Updated Category Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Category</strong></p>
+        <p><code>DELETE /api/categories/{id}/</code></p>
+      </div>
+    </div>
+
+    <!-- Size Model -->
+    <div class="model">
+      <h2>Size Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the size.</li>
+        <li><strong>name</strong> (string): Name of the size (max length 100).</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Sizes</strong></p>
+        <p><code>GET /api/sizes/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Size</strong></p>
+        <p><code>POST /api/sizes/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Size Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Size</strong></p>
+        <p><code>GET /api/sizes/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Size</strong></p>
+        <p><code>PUT /api/sizes/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Updated Size Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Size</strong></p>
+        <p><code>DELETE /api/sizes/{id}/</code></p>
+      </div>
+    </div>
+
+    <!-- Supplier Model -->
+    <div class="model">
+      <h2>Supplier Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the supplier.</li>
+        <li><strong>name</strong> (string): Name of the supplier (max length 100).</li>
+        <li><strong>address</strong> (string): Address of the supplier (max length 100).</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Suppliers</strong></p>
+        <p><code>GET /api/suppliers/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Supplier</strong></p>
+        <p><code>POST /api/suppliers/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Supplier Name", "address": "Supplier Address" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Supplier</strong></p>
+        <p><code>GET /api/suppliers/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Supplier</strong></p>
+        <p><code>PUT /api/suppliers/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Updated Supplier Name", "address": "Updated Address" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Supplier</strong></p>
+        <p><code>DELETE /api/suppliers/{id}/</code></p>
+      </div>
+    </div>
+
+    <!-- Client Model -->
+    <div class="model">
+      <h2>Client Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the client.</li>
+        <li><strong>name</strong> (string): Name of the client (max length 100).</li>
+        <li><strong>address</strong> (string): Address of the client (max length 100).</li>
+        <li><strong>phone_number</strong> (string): Phone number of the client (max length 15).</li>
+        <li><strong>company_name</strong> (string): Company name associated with the client (max length 100).</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Clients</strong></p>
+        <p><code>GET /api/clients/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Client</strong></p>
+        <p><code>POST /api/clients/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Client Name", "address": "Client Address", "phone_number": "1234567890", "company_name": "Company ABC" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Client</strong></p>
+        <p><code>GET /api/clients/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Client</strong></p>
+        <p><code>PUT /api/clients/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Updated Client Name", "address": "Updated Address", "phone_number": "0987654321", "company_name": "Updated Company" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Client</strong></p>
+        <p><code>DELETE /api/clients/{id}/</code></p>
+      </div>
+    </div>
+
+    <!-- ProductVariant Model -->
+    <div class="model">
+      <h2>ProductVariant Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the product variant.</li>
+        <li><strong>product_id</strong> (integer): Foreign key referencing <em>Product</em>.</li>
+        <li><strong>price</strong> (decimal): Price of the variant.</li>
+        <li><strong>size_id</strong> (integer): Foreign key referencing <em>Size</em>.</li>
+        <li><strong>sell_price</strong> (decimal): Selling price of the variant.</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Product Variants</strong></p>
+        <p><code>GET /api/product-variants/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Product Variant</strong></p>
+        <p><code>POST /api/product-variants/</code></p>
+        <p>Body:</p>
+        <code>{ "product_id": 1, "price": 20.99, "size_id": 1, "sell_price": 25.99 }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Product Variant</strong></p>
+        <p><code>GET /api/product-variants/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Product Variant</strong></p>
+        <p><code>PUT /api/product-variants/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "product_id": 1, "price": 21.99, "size_id": 2, "sell_price": 26.99 }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Product Variant</strong></p>
+        <p><code>DELETE /api/product-variants/{id}/</code></p>
+      </div>
+    </div>
+
+    <!-- Branch Model -->
+    <div class="model">
+      <h2>Branch Model</h2>
+      <p><strong>Fields:</strong></p>
+      <ul>
+        <li><strong>id</strong> (integer): Primary key of the branch.</li>
+        <li><strong>name</strong> (string): Name of the branch (max length 100).</li>
+      </ul>
+      <h3>Endpoints:</h3>
+      <div class="endpoint">
+        <p><strong>List All Branches</strong></p>
+        <p><code>GET /api/branches/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Create a Branch</strong></p>
+        <p><code>POST /api/branches/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Branch Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Retrieve a Branch</strong></p>
+        <p><code>GET /api/branches/{id}/</code></p>
+      </div>
+      <div class="endpoint">
+        <p><strong>Update a Branch</strong></p>
+        <p><code>PUT /api/branches/{id}/</code></p>
+        <p>Body:</p>
+        <code>{ "name": "Updated Branch Name" }</code>
+      </div>
+      <div class="endpoint">
+        <p><strong>Delete a Branch</strong></p>
+        <p><code>DELETE /api/branches/{id}/</code></p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
