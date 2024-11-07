@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-py@nn$v(-+i6)zg^3^h6@4*k(ot7d8zqdj9xag@zm2ll685bqz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['water-api-fbhj.onrender.com']
 
 
 # Application definition
