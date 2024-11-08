@@ -145,10 +145,19 @@ INSTALLED_APPS += ['rest_framework_simplejwt.token_blacklist']
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
+    'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
+    ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',  
     ],
 }
+
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8080/',
+    'http://192.168.0.191:8080/',
+    'https://water-api-fbhj.onrender.com',
+    'http://192.168.100.0:8080/'
+]
+CSRF_TRUSTED_ORIGINS = ['https://water-api-fbhj.onrender.com']

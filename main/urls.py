@@ -21,5 +21,9 @@ urlpatterns = [
     path('api/product-variants/<int:pk>/', ProductVariantDetailView.as_view(), name='product-variant-detail'),
     path('api/sizes/', SizeListCreateView.as_view(), name='size-list-create'),
     path('api/sizes/<int:pk>/', SizeDetailView.as_view(), name='size-detail'),
-
+     path('api/users/', UserListCreateView.as_view(), name='user-list-create'),
+    path('api/users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),
+    path('api/groups/', GroupListCreateView.as_view(), name='group-list-create'),
+    path('api/groups/<int:pk>/', GroupDetailView.as_view(), name='group-detail'),
+    path('api/permissions/',PermissionListView.as_view(), name='permission-list'),
 ]

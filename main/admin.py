@@ -9,4 +9,4 @@ admin.site.register(ProductVariant)
 admin.site.register(Branch)
 admin.site.register(Supplier)
 admin.site.register(Client)
-
+admin.site.register(Role)
