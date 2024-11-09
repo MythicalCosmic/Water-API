@@ -163,7 +163,8 @@ REST_FRAMEWORK = {
 
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8080/',
+    'http://localhost:5173',
+    'http://localhost:5174/',
     'http://192.168.0.191:8080/',
     'https://water-api-fbhj.onrender.com',
     'http://192.168.100.0:8080/'
