@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^9@^jign5ll9*-mvbl_2=rl#(n&zr02(4n5h0+x$^2=%rd#omt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://water-api-fbhj.onrender.com']
 
 
 # Application definition
@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'main',
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -141,6 +143,10 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
+
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 INSTALLED_APPS += ['rest_framework_simplejwt.token_blacklist']
