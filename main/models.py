@@ -32,7 +32,7 @@ class Size(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
-    category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 
 
@@ -41,14 +41,15 @@ class Product(models.Model):
     
 class ProductVariant(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    size = models.ForeignKey(Size, null=True, on_delete=models.SET_NULL)
+    size = models.ForeignKey(Size,  on_delete=models.CASCADE)
     uniq_code = models.CharField(max_length=50, unique=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.uniq_code:
             with transaction.atomic():
                 max_sku = ProductVariant.objects.select_for_update().aggregate(Max('uniq_code'))
-                max_number = int(max_sku['uniq_code__max'].replace('SKU-', '') or 1000)
+
+                max_number = 1000 if max_sku['uniq_code__max'] is None else int(max_sku['uniq_code__max'].replace('SKU-', ''))
                 self.uniq_code = f"SKU-{max_number + 1}"
 
         super().save(*args, **kwargs)
@@ -103,7 +104,7 @@ class StockMovement(models.Model):
 class Client(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
-    phone = models.CharField(max_length=15)
+    phone = models.IntegerField()
     cud = models.CharField(max_length=20, unique=True)
 
 

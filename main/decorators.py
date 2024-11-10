@@ -12,3 +12,5 @@ class GroupPermission(BasePermission):
         if any(perm in required_permissions for perm in user_groups_permissions):
             return True
         return False
+
+

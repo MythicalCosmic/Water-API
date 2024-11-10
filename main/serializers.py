@@ -2,20 +2,29 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from .models import *
 from django.contrib.auth.models import User, Group, Permission
-
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.exceptions import AuthenticationFailed
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
-    @classmethod
-    def get_token(cls, user):
-        token = super().get_token(user)
-        token['username'] = user.username
-        return token
-
+    def validate(self, attrs):
+        try:
+            data = super().validate(attrs)
+        except AuthenticationFailed:
+            raise AuthenticationFailed({
+                "ok": False,
+                "error_code": "INVALID_CREDENTIALS",
+                "message": "The provided credentials are incorrect or the account is inactive."
+            })
+        
+        return data
 
 class SupplierSerializer(serializers.ModelSerializer):
     class Meta:
         model = Supplier
-        fields = '__all__'
+        fields = ['id', 'name', 'phone_number']
+
+        
 
 
 class CategorySerializer(serializers.ModelSerializer):

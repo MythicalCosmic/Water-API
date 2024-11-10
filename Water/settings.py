@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^9@^jign5ll9*-mvbl_2=rl#(n&zr02(4n5h0+x$^2=%rd#omt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://water-api-fbhj.onrender.com']
+ALLOWED_HOSTS = ['https://water-api-fbhj.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
+    
 ]
 
 MIDDLEWARE = [
@@ -129,23 +130,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 from datetime import timedelta
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-}
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1440),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-    'ROTATE_REFRESH_TOKENS': True,
-    'BLACKLIST_AFTER_ROTATION': True,
-    'BLACKLIST_AFTER_ROTATION': True,
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': False,
+    'BLACKLIST_AFTER_ROTATION': False,
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -159,14 +156,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',  
     ],
+    
 }
 
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
-    'http://localhost:5174/',
-    'http://192.168.0.191:8080/',
-    'https://water-api-fbhj.onrender.com',
-    'http://192.168.100.0:8080/'
 ]
 CSRF_TRUSTED_ORIGINS = ['https://water-api-fbhj.onrender.com']
