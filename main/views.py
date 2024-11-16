@@ -20,7 +20,6 @@ from rest_framework.generics import get_object_or_404
 
 
 
-
 class LogoutView(APIView):
     def post(self, request, *args, **kwargs):
         access_token = request.data.get("access_token")
@@ -299,12 +298,6 @@ class SizeListCreateView(generics.ListCreateAPIView):
                     "name": instance.name,
                 }
             }, status=status.HTTP_201_CREATED)   
-        
-        return Response({
-            "ok": True,
-            "message": "Category retrieved successfully",
-            "data": serializer.data  
-        })
         
         return Response({
             "ok": False,
