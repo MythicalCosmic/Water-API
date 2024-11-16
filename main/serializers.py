@@ -16,7 +16,11 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
                 "error_code": "INVALID_CREDENTIALS",
                 "message": "The provided credentials are incorrect or the account is inactive."
             })
-        
+        user = self.user
+        data['username'] = getattr(self.user, 'username', None)
+        data['role'] = user.groups.first().name if user.groups.exists() else None 
+        data['permissions'] = list(user.get_all_permissions())
+        data['superuser_status'] = user.is_superuser
         return data
 
 class SupplierSerializer(serializers.ModelSerializer):
@@ -40,9 +44,21 @@ class SizeSerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    category_name = serializers.CharField(source='category.name', read_only=True)
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ['id', 'name', 'description', 'category', 'category_name']
+        
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['category_data'] = {
+            'category_id': data.pop('category', None),
+            'category_name': data.pop('category_name', None) 
+        }
+
+
+        return data
+
 
 
 class ProductVariantSerializer(serializers.ModelSerializer):
@@ -52,20 +68,56 @@ class ProductVariantSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductVariant
         fields = ['id', 'product', 'product_name', 'size', 'size_name', 'uniq_code']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['product_data'] = {
+            'product_id': data.pop('product', None),
+            'product_name': data.pop('product_name', None) 
+        }
+        data['size_data'] = {
+            'size_id': data.pop('size', None),
+            'size_name': data.pop('size_name', None),
+        }
+        return data
 
 
 class StockSerializer(serializers.ModelSerializer):
-    variant_info = serializers.CharField(source='variant.__str__', read_only=True)
+    variant_data = serializers.CharField(source='variant.__str__', read_only=True)
 
     class Meta:
         model = Stock
-        fields = ['id', 'variant', 'variant_info', 'quantity', 'price']
+        fields = ['id', 'variant', 'variant_data', 'quantity', 'price']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['variant_data'] = {
+            'variant_id': data.pop('variant', None),
+            'variant_info': data.pop('variant_data', None) 
+        }
+        return data
 
 
 class ImportInvoiceSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username', read_only=True)
+    supplier_name = serializers.CharField(source='supplier.name', read_only=True)
     class Meta:
         model = ImportInvoice
-        fields = ['supplier', 'user', 'state']
+        fields = ['id', 'supplier', 'supplier_name', 'state', 'user', 'username']  
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['user_data'] = {
+            'user_id': data.pop('user', None),
+            'username': data.pop('username', None) 
+        }
+        data['supplier_data'] = {
+            'supplier_id': instance.supplier.id,
+            'supplier_name': instance.supplier.name
+        }
+        data.pop('user', None)
+        data.pop('supplier', None)
+
+
+        return data
 
     def create(self, validated_data):
         user = self.context['request'].user  
@@ -80,6 +132,21 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = ImportedInvoiceItem
         fields = ['id', 'import_invoice', 'import_invoice_info', 'variant', 'variant_info', 'input_price', 'quantity']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['import_invoice_data'] = {
+            'import_invoice_id': data.pop('import_invoice', None),
+            'import_invoice_info': data.pop('import_invoice_info', None) 
+        }
+        data['variant_data'] = {
+            'variant_id': data.pop('variant', None),
+            'variant_info': data.pop('variant_info', None),
+        }
+        data.pop('user', None)
+        data.pop('supplier', None)
+
+
+        return data
 
 
 class StockMovementSerializer(serializers.ModelSerializer):
@@ -88,6 +155,17 @@ class StockMovementSerializer(serializers.ModelSerializer):
     class Meta:
         model = StockMovement
         fields = ['id', 'variant', 'variant_info', 'type', 'quantity', 'description']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['variant_data'] = {
+            'variant_id': data.pop('variant', None),
+            'variant_info': data.pop('variant_info', None),
+        }
+        data.pop('user', None)
+        data.pop('supplier', None)
+
+
+        return data
 
 
 class ClientSerializer(serializers.ModelSerializer):
@@ -103,6 +181,21 @@ class ExportInvoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExportInvoice
         fields = ['id', 'client', 'client_name', 'user', 'user_username', 'state']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['user_data'] = {
+            'user_id': data.pop('user', None),
+            'username': data.pop('user_username', None) 
+        }
+        data['client_data'] = {
+            'client_id': data.pop('client', None),
+            'client_name': data.pop('client_name', None),
+        }
+        data.pop('user', None)
+        data.pop('supplier', None)
+
+
+        return data
 
     
     def create(self, validated_data):
@@ -118,6 +211,21 @@ class ExportedInvoiceItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExportedInvoiceItem
         fields = ['id', 'export_invoice', 'export_invoice_info', 'variant', 'variant_info', 'price', 'quantity']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['export_invoice_data'] = {
+            'export_invoice_id': data.pop('export_invoice', None),
+            'export_invoice_info': data.pop('export_invoice_info', None) 
+        }
+        data['variant_data'] = {
+            'variant_id': data.pop('variant', None),
+            'variant_info': data.pop('variant_info', None),
+        }
+        data.pop('user', None)
+        data.pop('supplier', None)
+
+
+        return data
 
 
 class CashboxSerializer(serializers.ModelSerializer):
@@ -132,7 +240,13 @@ class CashboxMovementSerializer(serializers.ModelSerializer):
     class Meta:
         model = CashboxMovement
         fields = ['id', 'type', 'sum', 'remains', 'comment', 'payment_type', 'user', 'user_username', 'created_at', 'updated_at', 'deleted_at']
-
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['user_data'] = {
+            'user_id': data.pop('user', None),
+            'username': data.pop('user_username', None) 
+        }
+        return data
     
     
     def create(self, validated_data):

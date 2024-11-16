@@ -5,8 +5,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import *
-from .serializers import *  # type: ignore
-from .decorators import * # type: ignore
+from .serializers import *  
+from .decorators import * 
 import jwt
 from datetime import datetime
 from rest_framework_simplejwt.tokens import AccessToken
@@ -26,7 +26,7 @@ class LogoutView(APIView):
         access_token = request.data.get("access_token")
 
         if not access_token:
-            return Response({"ok": True, "message": "Access Token required or expired"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"ok": False, "message": "Access Token required or expired"}, status=status.HTTP_400_BAD_REQUEST)
 
         try:
             token = AccessToken(access_token)
@@ -49,11 +49,24 @@ class LoginView(TokenObtainPairView):
                 decoded_token = jwt.decode(access_token, options={"verify_signature": False})
                 expires_in = int(decoded_token['exp'] - datetime.utcnow().timestamp()) 
                 user_id = decoded_token.get('user_id')  
+                username = response.data.get('username')
+                user_role = response.data.get('role')
+                user_permissions = response.data.get('permissions')
+                superuser_status = response.data.get('superuser_status')
+                if superuser_status:
+                    user_permissions = None
+                    user_role = None
                 response_data = {
                     'ok': True,
                     'message': 'Login successful',
                     'data': {
-                        'user_id': user_id,  
+                        'user_data': {
+                            'user_id': user_id,
+                            'username': username,
+                            'user_role': user_role,
+                            'user_permissions': user_permissions,
+                            'superuser_status': superuser_status
+                        },  
                         'access_token': response.data['access'],
                         'token_type': 'Bearer',
                         'expires_in': expires_in 
