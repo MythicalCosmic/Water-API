@@ -2,6 +2,7 @@ from django.db import models, transaction
 from django.utils import timezone
 from django.db.models import Max
 from django.contrib.auth.models import User
+from decimal import Decimal
 
 class Supplier(models.Model):
     name = models.CharField(max_length=100)
@@ -133,6 +134,43 @@ class Cashbox(models.Model):
     remains = models.DecimalField(max_digits=15, decimal_places=2)
 
 
+    def deposit(self, amount, comment='', payment_type='', user=None):
+        amount = Decimal(amount)
+        if amount <= 0:
+            raise ValueError("Deposit amount must be positive.")
+
+        with transaction.atomic():
+            self.remains += amount
+            self.save()
+            CashboxMovement.objects.create(
+                type='positive',
+                sum=amount,
+                remains=self.remains,
+                comment=comment,
+                payment_type=payment_type,
+                user=user
+            )
+
+    def withdraw(self, amount, comment='', payment_type='', user=None):
+        amount = Decimal(amount)
+        if amount <= 0:
+            raise ValueError("Withdrawal amount must be positive.")
+        if amount > self.remains:
+            raise ValueError("Insufficient funds.")
+
+        with transaction.atomic():
+            self.remains -= amount
+            self.save()
+            CashboxMovement.objects.create(
+                type='negative',
+                sum=amount,
+                remains=self.remains,
+                comment=comment,
+                payment_type=payment_type,
+                user=user
+            )
+
+
 
 class CashboxMovement(models.Model):
     TYPE_CHOICES = [('positive', 'Positive'), ('negative', 'Negative'), ('clear', 'Clear')]
@@ -146,3 +184,5 @@ class CashboxMovement(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(null=True, blank=True)
+
+

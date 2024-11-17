@@ -42,7 +42,8 @@ urlpatterns = [
     path('api/exported-invoice-items/<int:pk>/', ExportedInvoiceItemRetrieveUpdateDestroyView.as_view(), name='exportedinvoiceitem-detail'),
     
     path('api/cashboxes/', CashboxListCreateView.as_view(), name='cashbox-list-create'),
-    path('api/cashboxes/<int:pk>/', CashboxRetrieveUpdateDestroyView.as_view(), name='cashbox-detail'),
+    path('api/cashbox/<int:pk>/deposit/', DepositMoneyView.as_view(), name='deposit-money'),
+    path('api/cashbox/<int:pk>/withdraw/', WithdrawMoneyView.as_view(), name='withdraw-money'),
     
     path('api/cashbox-movements/', CashboxMovementListCreateView.as_view(), name='cashboxmovement-list-create'),
     path('api/cashbox-movements/<int:pk>/', CashboxMovementRetrieveUpdateDestroyView.as_view(), name='cashboxmovement-detail'),

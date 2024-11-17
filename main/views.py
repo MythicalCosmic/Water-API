@@ -17,7 +17,10 @@ from datetime import datetime
 import pytz
 from rest_framework.exceptions import NotFound
 from rest_framework.generics import get_object_or_404
-
+from rest_framework.generics import ListAPIView
+from rest_framework.permissions import IsAuthenticated
+from django_filters.rest_framework import DjangoFilterBackend # type: ignore
+from rest_framework.filters import OrderingFilter
 
 
 class LogoutView(APIView):
@@ -1420,122 +1423,131 @@ class ExportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestro
 
 
 
-# Cashbox Views
+class DepositMoneyView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, pk):
+        cashbox = get_object_or_404(Cashbox, pk=pk)
+        amount = request.data.get('amount')
+        comment = request.data.get('comment', '')
+        payment_type = request.data.get('payment_type', '')
+
+        try:
+            cashbox.deposit(
+                amount=amount,
+                comment=comment,
+                payment_type=payment_type,
+                user=request.user
+            )
+            return Response({
+                "ok": True,
+                "message": f"{amount} deposited successfully.",
+                "data": {"remains": cashbox.remains}
+            }, status=status.HTTP_200_OK)
+        except ValueError as e:
+            return Response({
+                "ok": False,
+                "message": str(e)
+            }, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({
+                "ok": False,
+                "message": "An unexpected error occurred.",
+                "error": str(e)
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+class WithdrawMoneyView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, pk):
+        cashbox = get_object_or_404(Cashbox, pk=pk)
+        amount = request.data.get('amount')
+        comment = request.data.get('comment', '')
+        payment_type = request.data.get('payment_type', '')
+
+        try:
+            cashbox.withdraw(
+                amount=amount,
+                comment=comment,
+                payment_type=payment_type,
+                user=request.user
+            )
+            return Response({
+                "ok": True,
+                "message": f"{amount} withdrawn successfully.",
+                "data": {"remains": cashbox.remains}
+            }, status=status.HTTP_200_OK)
+        except ValueError as e:
+            return Response({
+                "ok": False,
+                "message": str(e)
+            }, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({
+                "ok": False,
+                "message": "An unexpected error occurred.",
+                "error": str(e)
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
 class CashboxListCreateView(generics.ListCreateAPIView):
     queryset = Cashbox.objects.all()
     serializer_class = CashboxSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashbox', 'view_cashbox']
+
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-    
+
         if serializer.is_valid():
-            instance = serializer.save()
+            instance = serializer.save() 
             return Response({
                 "ok": True,
-                "message": "Cashbox Item created successfully",
+                "message": "Cashbox created successfully.",
                 "data": {
                     "id": instance.id,
-                    "remains": instance.remains,
+                    "remains": str(instance.remains), 
                 }
             }, status=status.HTTP_201_CREATED)
-    
-        else:
-            return Response({
-                "ok": False,
-                "message": "Cashbox creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-        
+
+        return Response({
+            "ok": False,
+            "message": "Cashbox creation failed.",
+            "data": serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)
 
     def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
+        queryset = self.get_queryset() 
+        serializer = self.get_serializer(queryset, many=True) 
         return Response({
             "ok": True,
-            "message": "Cashbox retrieved successfully",
+            "message": "Cashboxes retrieved successfully.",
             "data": serializer.data
-        })
-
-
-
-class CashboxRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Cashbox.objects.all()
-    serializer_class = CashboxSerializer
-    permission_classes = [IsAuthenticated, GroupPermission]
-    required_permissions = ['change_cashbox', 'view_cashbox']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Cashbox with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Cashbox retrieved successfully",
-            "data": serializer.data  
-        })
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save()  
-            return Response({
-                "ok": True,
-                "message": "Cashbox updated successfully",
-                "data": {
-                    "id": instance.id,
-                    "remains": instance.remains,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Cashbox update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Cashbox with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
+        }, status=status.HTTP_200_OK)
     
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Cashbox deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
 
-
-
-
-# Cashbox Movement Views
 class CashboxMovementListCreateView(generics.ListCreateAPIView):
     queryset = CashboxMovement.objects.all()
     serializer_class = CashboxMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashboxmovement', 'view_cashboxmovement']
+
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-    
+
         if serializer.is_valid():
             instance = serializer.save()
-            user_data = {
-                "id": instance.user.id,
-                "username": instance.user.username,
-            }
+            if instance.user:
+                user_data = {
+                    "id": instance.user.id,
+                    "username": instance.user.username,
+                }
+            else:
+                user_data = None 
+
             return Response({
                 "ok": True,
                 "message": "CashboxMovement Item created successfully",
@@ -1552,7 +1564,6 @@ class CashboxMovementListCreateView(generics.ListCreateAPIView):
                     "deleted_at": instance.deleted_at,
                 }
             }, status=status.HTTP_201_CREATED)
-    
         else:
             return Response({
                 "ok": False,
@@ -1560,16 +1571,16 @@ class CashboxMovementListCreateView(generics.ListCreateAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
         
-
+        
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
         serializer = self.get_serializer(queryset, many=True)
+        
         return Response({
             "ok": True,
-            "message": "CashboxMovement retrieved successfully",
+            "message": "CashboxMovement retrieved successfully.",
             "data": serializer.data
         })
-
 
 
 class CashboxMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):

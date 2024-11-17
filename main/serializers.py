@@ -5,6 +5,7 @@ from django.contrib.auth.models import User, Group, Permission
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.exceptions import AuthenticationFailed
+from decimal import Decimal
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
@@ -174,6 +175,11 @@ class ClientSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class CashboxSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cashbox
+        fields = ['id', 'remains']
+
 class ExportInvoiceSerializer(serializers.ModelSerializer):
     client_name = serializers.CharField(source='client.name', read_only=True)
     user_username = serializers.CharField(source='user.username', read_only=True)
@@ -228,31 +234,22 @@ class ExportedInvoiceItemSerializer(serializers.ModelSerializer):
         return data
 
 
-class CashboxSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Cashbox
-        fields = '__all__'
 
 
 class CashboxMovementSerializer(serializers.ModelSerializer):
-    user_username = serializers.CharField(source='user.username', read_only=True)
+    user = serializers.SerializerMethodField()
 
     class Meta:
         model = CashboxMovement
-        fields = ['id', 'type', 'sum', 'remains', 'comment', 'payment_type', 'user', 'user_username', 'created_at', 'updated_at', 'deleted_at']
-    def to_representation(self, instance):
-        data = super().to_representation(instance)
-        data['user_data'] = {
-            'user_id': data.pop('user', None),
-            'username': data.pop('user_username', None) 
-        }
-        return data
+        fields = ['id', 'type', 'sum', 'remains', 'comment', 'payment_type', 'user', 'created_at', 'updated_at', 'deleted_at']
     
-    
-    def create(self, validated_data):
-        user = self.context['request'].user  
-        validated_data['user'] = user
-        return super().create(validated_data)
+    def get_user(self, obj):
+        if obj.user:
+            return {
+                "id": obj.user.id,
+                "username": obj.user.username,
+            }
+        return None
 
 
 
