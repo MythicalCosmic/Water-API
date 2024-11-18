@@ -62,6 +62,7 @@ class Stock(models.Model):
     variant = models.ForeignKey(ProductVariant, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
 
 
 

@@ -613,12 +613,14 @@ class StockListCreateView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_stock', 'view_stock']
 
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-    
         if serializer.is_valid():
-            instance = serializer.save()
-
+            self.perform_create(serializer)  
+            instance = serializer.instance
             variant_data = {
                 "id": instance.variant.id,
             }
@@ -630,16 +632,18 @@ class StockListCreateView(generics.ListCreateAPIView):
                     "variant": variant_data,
                     "quantity": instance.quantity,
                     "price": instance.price,
+                    "user": {
+                        "id": instance.user.id,
+                        "username": instance.user.username
+                    }
                 }
             }, status=status.HTTP_201_CREATED)
-    
         else:
             return Response({
                 "ok": False,
                 "message": "Stock creation failed",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
-        
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
@@ -652,47 +656,43 @@ class StockListCreateView(generics.ListCreateAPIView):
 
 
 
+
 class StockRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_stock', 'view_stock']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Stock with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
+    def retrieve(self, request, *args, **kwargs):
+        instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
         serializer = self.get_serializer(instance)
         return Response({
             "ok": True,
             "message": "Stock retrieved successfully",
             "data": serializer.data  
         })
-        
 
     def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
+        partial = kwargs.get('partial', False)
         instance = self.get_object()
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
         if serializer.is_valid():
-            updated_instance = serializer.save() 
+            updated_instance = serializer.save(user=request.user)  
             variant_data = {
-                "id": instance.variant.id,
+                "id": updated_instance.variant.id,
             }
-            
             return Response({
                 "ok": True,
                 "message": "Stock updated successfully",
                 "data": {
-                    "id": instance.id,
+                    "id": updated_instance.id,
                     "variant": variant_data,
-                    "quantity": instance.quantity,
-                    "price": instance.price,
+                    "quantity": updated_instance.quantity,
+                    "price": updated_instance.price,
+                    "user": {
+                        "id": updated_instance.user.id,
+                        "username": updated_instance.user.username
+                    }
                 }
             })
         else:
@@ -701,21 +701,13 @@ class StockRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                 "message": "Stock update failed",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
-        
+
     def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Stock with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
+        instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
         instance.delete()
         return Response({
             "ok": True,
             "message": "Stock deleted successfully",
-            "data": {} 
         }, status=status.HTTP_204_NO_CONTENT)
 
 

@@ -84,22 +84,30 @@ class ProductVariantSerializer(serializers.ModelSerializer):
 
 class StockSerializer(serializers.ModelSerializer):
     variant_data = serializers.CharField(source='variant.__str__', read_only=True)
+    user_username = serializers.CharField(source='user.username', read_only=True)
 
     class Meta:
         model = Stock
-        fields = ['id', 'variant', 'variant_data', 'quantity', 'price']
+        fields = ['id', 'variant', 'variant_data', 'quantity', 'price', 'user', 'user_username']
+
     def to_representation(self, instance):
         data = super().to_representation(instance)
         data['variant_data'] = {
             'variant_id': data.pop('variant', None),
-            'variant_info': data.pop('variant_data', None) 
+            'variant_info': data.pop('variant_data', None),
+        }
+        data['user_data'] = {
+            'user_id': data.pop('user', None),
+            'username': data.pop('user_username', None),
         }
         return data
+
 
 
 class ImportInvoiceSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
     supplier_name = serializers.CharField(source='supplier.name', read_only=True)
+
     class Meta:
         model = ImportInvoice
         fields = ['id', 'supplier', 'supplier_name', 'state', 'user', 'username']  
