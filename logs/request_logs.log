@@ -11,3 +11,59 @@ INFO 2024-11-20 11:24:00,839 autoreload Watching for file changes with StatReloa
 INFO 2024-11-20 11:24:06,450 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/middleware/request_log.py changed, reloading.
 INFO 2024-11-20 11:24:07,148 autoreload Watching for file changes with StatReloader
 INFO 2024-11-20 11:24:09,411 basehttp "GET //api/users/ HTTP/1.1" 200 498
+ERROR 2024-11-20 12:41:28,443 log Internal Server Error: /api/stocks/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/Water/middleware/request_log.py", line 23, in __call__
+    req_body = json.loads(request.body.decode("utf-8")) if request.body else {}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR 2024-11-20 12:41:28,572 basehttp "POST //api/stocks/ HTTP/1.1" 500 86770
+INFO 2024-11-20 12:42:37,682 basehttp "GET //api/users/ HTTP/1.1" 200 498
+ERROR 2024-11-20 12:43:26,102 log Internal Server Error: /api/categories/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/Water/middleware/request_log.py", line 23, in __call__
+    req_body = json.loads(request.body.decode("utf-8")) if request.body else {}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR 2024-11-20 12:43:26,104 basehttp "POST //api/categories/ HTTP/1.1" 500 85511
+INFO 2024-11-20 12:43:57,041 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-11-20 12:43:59,111 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-20 12:44:00,413 log Unauthorized: /api/categories/
+WARNING 2024-11-20 12:44:00,414 basehttp "POST //api/categories/ HTTP/1.1" 401 183
+WARNING 2024-11-20 12:44:23,058 log Unauthorized: /api/categories/
+WARNING 2024-11-20 12:44:23,058 basehttp "POST //api/categories/ HTTP/1.1" 401 183
+WARNING 2024-11-20 12:44:24,428 log Unauthorized: /api/categories/
+WARNING 2024-11-20 12:44:24,428 basehttp "POST //api/categories/ HTTP/1.1" 401 183
+WARNING 2024-11-20 12:44:30,498 log Bad Request: /api/categories/
+WARNING 2024-11-20 12:44:30,498 basehttp "POST //api/categories/ HTTP/1.1" 400 109
+WARNING 2024-11-20 12:44:36,914 log Bad Request: /api/categories/
+WARNING 2024-11-20 12:44:36,915 basehttp "POST //api/categories/ HTTP/1.1" 400 93
+WARNING 2024-11-20 12:44:44,805 log Bad Request: /api/categories/
+WARNING 2024-11-20 12:44:44,806 basehttp "POST //api/categories/ HTTP/1.1" 400 98
+INFO 2024-11-20 12:45:09,902 basehttp "POST //api/categories/ HTTP/1.1" 201 105
+INFO 2024-11-20 12:45:19,360 basehttp "POST //api/stocks/ HTTP/1.1" 201 148
+INFO 2024-11-20 12:45:39,686 basehttp "GET //api/stocks/ HTTP/1.1" 200 1480
+INFO 2024-11-20 12:45:52,410 basehttp "POST //api/stocks/ HTTP/1.1" 201 148
+INFO 2024-11-20 12:45:57,880 basehttp "GET //api/stocks/ HTTP/1.1" 200 1638
