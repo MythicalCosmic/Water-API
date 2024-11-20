@@ -1,0 +1,13 @@
+INFO 2024-11-20 11:18:34,935 autoreload Watching for file changes with StatReloader
+INFO 2024-11-20 11:18:49,178 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-20 11:19:01,350 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-20 11:19:05,243 basehttp "GET //api/users/ HTTP/1.1" 200 498
+INFO 2024-11-20 11:20:49,532 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-11-20 11:23:56,167 autoreload Watching for file changes with StatReloader
+INFO 2024-11-20 11:23:57,541 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-11-20 11:23:58,440 autoreload Watching for file changes with StatReloader
+INFO 2024-11-20 11:23:59,929 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-11-20 11:24:00,839 autoreload Watching for file changes with StatReloader
+INFO 2024-11-20 11:24:06,450 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/middleware/request_log.py changed, reloading.
+INFO 2024-11-20 11:24:07,148 autoreload Watching for file changes with StatReloader
+INFO 2024-11-20 11:24:09,411 basehttp "GET //api/users/ HTTP/1.1" 200 498
