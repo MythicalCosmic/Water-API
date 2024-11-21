@@ -73,7 +73,7 @@ class Stock(models.Model):
 class ImportInvoice(models.Model):
     supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
-    state = models.CharField(max_length=10, choices=[('new', 'New'), ('accepted', 'Accepted'), ('canceled', 'Canceled')])
+    state = models.CharField(max_length=10, choices=[('new', 'New'), ('accepted', 'Accepted'), ('canceled', 'Canceled')], default='new')
 
     def __str__(self):
         return f"Invoice {self.id} - {self.state}"
@@ -134,7 +134,6 @@ class ExportedInvoiceItem(models.Model):
 class Cashbox(models.Model):
     remains = models.DecimalField(max_digits=15, decimal_places=2)
 
-
     def deposit(self, amount, comment='', payment_type='', user=None):
         amount = Decimal(amount)
         if amount <= 0:
@@ -151,6 +150,7 @@ class Cashbox(models.Model):
                 payment_type=payment_type,
                 user=user
             )
+
 
     def withdraw(self, amount, comment='', payment_type='', user=None):
         amount = Decimal(amount)

@@ -141,6 +141,7 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = ImportedInvoiceItem
         fields = ['id', 'import_invoice', 'import_invoice_info', 'variant', 'variant_info', 'input_price', 'quantity']
+    
     def to_representation(self, instance):
         data = super().to_representation(instance)
         data['import_invoice_data'] = {
@@ -151,11 +152,8 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
             'variant_id': data.pop('variant', None),
             'variant_info': data.pop('variant_info', None),
         }
-        data.pop('user', None)
-        data.pop('supplier', None)
-
-
         return data
+
 
 
 class StockMovementSerializer(serializers.ModelSerializer):
