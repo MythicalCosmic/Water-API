@@ -3672,3 +3672,68 @@ WARNING 2024-11-23 12:04:00,788 log Bad Request: /api/imported-invoice-items/42/
 WARNING 2024-11-23 12:04:00,789 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
 INFO 2024-11-23 12:04:04,402 basehttp "GET //api/stocks/ HTTP/1.1" 200 463
 INFO 2024-11-23 12:04:11,224 basehttp "GET //api/imported-invoice-items/ HTTP/1.1" 200 2773
+INFO 2024-11-23 13:37:20,913 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 13:37:23,059 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 3999
+INFO 2024-11-23 13:37:40,114 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 13:37:41,109 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 13:37:44,112 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 4068
+INFO 2024-11-23 13:38:51,068 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-23 13:38:52,056 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 13:38:56,768 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-23 13:38:57,716 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 13:39:00,355 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 4068
+INFO 2024-11-23 13:39:29,251 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-23 13:39:30,224 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 13:39:33,834 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-23 13:39:34,714 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 13:39:37,205 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-23 13:39:37,851 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 13:39:38,629 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 827, in list
+    "data": serializer.data
+            ^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 166, in to_representation
+    if instance.imported_items.exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'imported_items'
+ERROR 2024-11-23 13:39:38,636 basehttp "GET //api/import-invoices/ HTTP/1.1" 500 140071
+INFO 2024-11-23 13:40:19,785 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-23 13:40:21,339 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 13:40:22,007 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 7470
+INFO 2024-11-23 13:40:47,637 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-23 13:40:48,293 autoreload Watching for file changes with StatReloader

@@ -936,7 +936,7 @@ class ImportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestro
                 "message": "Imported Invoice Item with the specified ID does not exist",
             }, status=status.HTTP_404_NOT_FOUND)
     
-        # Check if the associated import invoice is in a state that allows deletion
+
         import_invoice = instance.import_invoice
         if import_invoice.state not in ['new']:
             return Response({

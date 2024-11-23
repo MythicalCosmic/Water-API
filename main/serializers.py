@@ -112,11 +112,10 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
         fields = ['id', 'import_invoice', 'import_invoice_info', 'variant', 'variant_info', 'input_price', 'quantity']
 
     def to_representation(self, instance):
-
         data = super().to_representation(instance)
         data['import_invoice_data'] = {
             'import_invoice_id': data.pop('import_invoice', None),
-            'import_invoice_info': data.pop('import_invoice_info', None) 
+            'import_invoice_info': data.pop('import_invoice_info', None)
         }
         data['variant_data'] = {
             'variant_id': data.pop('variant', None),
@@ -127,18 +126,18 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
 
 
 
+
 class ImportInvoiceSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
     supplier_name = serializers.CharField(source='supplier.name', read_only=True)
-    imported_items = ImportedInvoiceItemSerializer(many=True, required=False)  # Mark as optional
+    imported_items = ImportedInvoiceItemSerializer(many=True, read_only=True)  
 
     class Meta:
         model = ImportInvoice
         fields = ['id', 'supplier', 'supplier_name', 'state', 'user', 'username', 'imported_items']
 
     def create(self, validated_data):
-
-        imported_items_data = validated_data.pop('imported_items', []) 
+        imported_items_data = validated_data.pop('imported_items', [])
         import_invoice = ImportInvoice.objects.create(**validated_data)
 
         for item_data in imported_items_data:
@@ -162,6 +161,11 @@ class ImportInvoiceSerializer(serializers.ModelSerializer):
         data.pop('username', None)
         data.pop('supplier', None)
         data.pop('supplier_name', None)
+
+        if instance.importedinvoiceitem_set.exists():
+            data['imported_items'] = ImportedInvoiceItemSerializer(instance.importedinvoiceitem_set.all(), many=True).data
+        else:
+            data['imported_items'] = []
 
         return data
 
