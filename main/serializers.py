@@ -88,51 +88,20 @@ class StockSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Stock
-        fields = ['id', 'variant', 'variant_data', 'quantity', 'price', 'user', 'user_username']
+        fields = ['id', 'variant', 'variant_data', 'quantity', 'price', 'user', 'user_username'] 
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
+        
         data['variant_data'] = {
-            'variant_id': data.pop('variant', None),
-            'variant_info': data.pop('variant_data', None),
+            'variant_id': data.pop('variant', None), 
+            'variant_info': data.pop('variant_data', None),  
         }
         data['user_data'] = {
-            'user_id': data.pop('user', None),
-            'username': data.pop('user_username', None),
+            'user_id': data.pop('user', None),  
+            'username': data.pop('user_username', None),  
         }
         return data
-
-
-
-class ImportInvoiceSerializer(serializers.ModelSerializer):
-    username = serializers.CharField(source='user.username', read_only=True)
-    supplier_name = serializers.CharField(source='supplier.name', read_only=True)
-
-    class Meta:
-        model = ImportInvoice
-        fields = ['id', 'supplier', 'supplier_name', 'state', 'user', 'username']  
-
-    def to_representation(self, instance):
-        data = super().to_representation(instance)
-        data['user_data'] = {
-            'user_id': data.pop('user', None),
-            'username': data.pop('username', None) 
-        }
-        data['supplier_data'] = {
-            'supplier_id': instance.supplier.id,
-            'supplier_name': instance.supplier.name
-        }
-        data.pop('user', None)
-        data.pop('supplier', None)
-
-
-        return data
-
-    def create(self, validated_data):
-        user = self.context['request'].user  
-        validated_data['user'] = user
-        return super().create(validated_data)
-
 
 class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
     import_invoice_info = serializers.CharField(source='import_invoice.__str__', read_only=True)
@@ -141,8 +110,9 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = ImportedInvoiceItem
         fields = ['id', 'import_invoice', 'import_invoice_info', 'variant', 'variant_info', 'input_price', 'quantity']
-    
+
     def to_representation(self, instance):
+
         data = super().to_representation(instance)
         data['import_invoice_data'] = {
             'import_invoice_id': data.pop('import_invoice', None),
@@ -153,6 +123,49 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
             'variant_info': data.pop('variant_info', None),
         }
         return data
+
+
+
+
+class ImportInvoiceSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username', read_only=True)
+    supplier_name = serializers.CharField(source='supplier.name', read_only=True)
+    imported_items = ImportedInvoiceItemSerializer(many=True, required=False)  # Mark as optional
+
+    class Meta:
+        model = ImportInvoice
+        fields = ['id', 'supplier', 'supplier_name', 'state', 'user', 'username', 'imported_items']
+
+    def create(self, validated_data):
+
+        imported_items_data = validated_data.pop('imported_items', []) 
+        import_invoice = ImportInvoice.objects.create(**validated_data)
+
+        for item_data in imported_items_data:
+            ImportedInvoiceItem.objects.create(import_invoice=import_invoice, **item_data)
+
+        return import_invoice
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+
+        data['user_data'] = {
+            'user_id': instance.user.id if instance.user else None,
+            'username': instance.user.username if instance.user else None
+        }
+        data['supplier_data'] = {
+            'supplier_id': instance.supplier.id,
+            'supplier_name': instance.supplier.name
+        }
+
+        data.pop('user', None)
+        data.pop('username', None)
+        data.pop('supplier', None)
+        data.pop('supplier_name', None)
+
+        return data
+
+
 
 
 
