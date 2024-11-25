@@ -3737,3 +3737,2209 @@ INFO 2024-11-23 13:40:21,339 autoreload Watching for file changes with StatReloa
 INFO 2024-11-23 13:40:22,007 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 7470
 INFO 2024-11-23 13:40:47,637 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
 INFO 2024-11-23 13:40:48,293 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:42:21,251 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:42:24,948 basehttp "GET //api/stocks/ HTTP/1.1" 200 463
+INFO 2024-11-23 17:43:21,553 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:43:23,595 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:43:29,430 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:43:30,875 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:43:32,760 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:43:33,353 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:43:36,018 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:43:36,765 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:43:38,344 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:43:39,067 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:43:41,497 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:43:42,115 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:43:45,659 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:43:46,288 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:44:17,556 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:44:18,294 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:44:40,190 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:45:05,398 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:45:06,297 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:45:07,985 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:45:08,749 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:45:10,071 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:45:10,867 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:45:11,863 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:45:31,312 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:45:32,005 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:45:34,691 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:45:46,925 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:45:47,642 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:45:53,595 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:45:54,159 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:45:58,723 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:45:59,405 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:46:01,874 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:46:12,379 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:46:13,036 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:46:27,898 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:46:28,562 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:46:30,543 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:46:34,195 basehttp "GET //api/stocks/ HTTP/1.1" 200 784
+INFO 2024-11-23 17:46:48,193 basehttp "GET //api/stocks/ HTTP/1.1" 200 784
+INFO 2024-11-23 17:47:04,734 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 10320
+INFO 2024-11-23 17:47:19,297 basehttp "GET //api/stock-movements/ HTTP/1.1" 200 8309
+INFO 2024-11-23 17:48:06,686 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:07,489 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:48:09,986 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:10,720 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:48:14,402 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:15,019 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:48:19,553 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:20,408 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:48:23,019 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:23,622 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:48:27,307 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:28,291 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:48:29,779 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:30,464 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:48:32,038 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 800, in create
+    "id": instance.variant.id,
+          ^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'variant'
+ERROR 2024-11-23 17:48:32,044 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113650
+INFO 2024-11-23 17:48:51,909 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:48:52,644 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:48:55,619 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:49:32,813 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:49:40,098 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:49:56,274 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:49:56,893 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:50:08,852 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:50:31,462 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:50:32,518 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:50:51,256 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:50:51,806 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:50:55,827 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:50:56,674 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:50:57,885 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:50:58,509 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:51:00,544 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:51:26,878 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:51:27,960 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:51:30,445 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:51:38,936 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:51:39,861 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:51:40,897 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:51:54,711 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:51:55,956 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:51:58,855 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:51:59,734 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:52:02,231 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 799, in create
+    print(items.variant.id)
+          ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'variant'
+ERROR 2024-11-23 17:52:02,239 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113611
+INFO 2024-11-23 17:52:12,880 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:52:14,199 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:52:15,575 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:52:16,463 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:52:21,073 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 799, in create
+    print(items['variant_id'])
+          ^^^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+ERROR 2024-11-23 17:52:21,076 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113531
+INFO 2024-11-23 17:52:31,585 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:52:32,643 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:52:35,191 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:52:35,983 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:52:38,088 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 799, in create
+    print(items.variant)
+          ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'variant'
+ERROR 2024-11-23 17:52:38,091 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113605
+INFO 2024-11-23 17:52:45,720 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:52:47,178 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:52:54,136 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:52:54,862 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:52:57,461 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 799, in create
+    print(items[variant])
+          ~~~~~^^^^^^^^^
+TypeError: list indices must be integers or slices, not ProductVariant
+ERROR 2024-11-23 17:52:57,464 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113563
+INFO 2024-11-23 17:53:08,843 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:53:09,680 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:53:11,787 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 799, in create
+    print(items[variant.id])
+          ~~~~~^^^^^^^^^^^^
+IndexError: list index out of range
+ERROR 2024-11-23 17:53:11,790 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113367
+INFO 2024-11-23 17:53:23,598 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:53:24,552 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:53:28,546 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:54:05,447 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:54:06,180 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:54:09,154 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 800, in create
+    variant_ids = [item['variant'] for item in data]
+                   ~~~~^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+ERROR 2024-11-23 17:54:09,157 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113537
+INFO 2024-11-23 17:54:16,131 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:54:17,068 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:54:18,416 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:54:19,005 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:54:21,213 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 800, in create
+    variant_ids = [item[variant] for item in data]
+                   ~~~~^^^^^^^^^
+TypeError: string indices must be integers, not 'ProductVariant'
+ERROR 2024-11-23 17:54:21,216 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113575
+ERROR 2024-11-23 17:54:22,908 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 800, in create
+    variant_ids = [item[variant] for item in data]
+                   ~~~~^^^^^^^^^
+TypeError: string indices must be integers, not 'ProductVariant'
+ERROR 2024-11-23 17:54:22,910 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113575
+INFO 2024-11-23 17:54:34,247 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:54:34,829 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:54:37,960 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 800, in create
+    variant_ids = [item[variant] for item in items]
+                   ~~~~^^^^^^^^^
+KeyError: <ProductVariant: coca-cola2assd23 - 123213asd>
+ERROR 2024-11-23 17:54:37,963 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113467
+INFO 2024-11-23 17:54:50,794 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:54:51,430 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-23 17:54:53,284 log Internal Server Error: /api/import-invoices/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 800, in create
+    variant_ids = [item[variant_id] for item in items]
+                   ~~~~^^^^^^^^^^^^
+KeyError: 7
+ERROR 2024-11-23 17:54:53,287 basehttp "POST //api/import-invoices/ HTTP/1.1" 500 113173
+INFO 2024-11-23 17:55:25,904 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:55:26,553 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:55:40,063 basehttp "GET //api/stocks/ HTTP/1.1" 200 789
+INFO 2024-11-23 17:55:52,352 basehttp "GET //api/stocks/ HTTP/1.1" 200 789
+INFO 2024-11-23 17:55:54,436 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:55:57,652 basehttp "GET //api/stocks/ HTTP/1.1" 200 789
+INFO 2024-11-23 17:56:17,274 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:56:19,909 basehttp "GET //api/stocks/ HTTP/1.1" 200 1109
+INFO 2024-11-23 17:56:33,176 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:56:37,898 basehttp "GET //api/stocks/ HTTP/1.1" 200 1111
+INFO 2024-11-23 17:57:05,834 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:57:06,629 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:57:10,325 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:57:11,224 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:57:12,902 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-23 17:57:13,754 autoreload Watching for file changes with StatReloader
+INFO 2024-11-23 17:57:22,932 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:57:27,202 basehttp "GET //api/stocks/ HTTP/1.1" 200 1433
+INFO 2024-11-23 17:57:37,551 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-23 17:57:40,599 basehttp "GET //api/stocks/ HTTP/1.1" 200 1433
+WARNING 2024-11-23 18:06:21,539 log Bad Request: /api-auth/logout/
+WARNING 2024-11-23 18:06:21,540 basehttp "POST //api-auth/logout/ HTTP/1.1" 400 39
+WARNING 2024-11-23 18:06:27,633 log Bad Request: /api-auth/logout/
+WARNING 2024-11-23 18:06:27,634 basehttp "POST //api-auth/logout/ HTTP/1.1" 400 39
+WARNING 2024-11-23 18:06:33,529 log Bad Request: /api-auth/logout/
+WARNING 2024-11-23 18:06:33,529 basehttp "POST //api-auth/logout/ HTTP/1.1" 400 39
+WARNING 2024-11-23 18:06:47,465 log Bad Request: /api-auth/logout/
+WARNING 2024-11-23 18:06:47,466 basehttp "POST //api-auth/logout/ HTTP/1.1" 400 39
+INFO 2024-11-24 03:46:43,474 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:46:55,280 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:50:52,574 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:50:53,526 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:50:58,020 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:50:58,795 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:51:00,356 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:51:01,001 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 03:51:52,879 log Bad Request: /api/export-invoices/
+WARNING 2024-11-24 03:51:52,879 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 120
+INFO 2024-11-24 03:52:05,780 basehttp "POST //api/clients/ HTTP/1.1" 201 142
+ERROR 2024-11-24 03:52:10,586 log Internal Server Error: /api/export-invoices/
+ERROR 2024-11-24 03:52:10,589 basehttp "POST //api/export-invoices/ HTTP/1.1" 500 84
+INFO 2024-11-24 03:52:19,750 basehttp "POST //api/cashboxes/ HTTP/1.1" 201 86
+INFO 2024-11-24 03:52:20,735 basehttp "POST //api/cashboxes/ HTTP/1.1" 201 86
+INFO 2024-11-24 03:52:25,175 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 605
+INFO 2024-11-24 03:52:38,759 basehttp "GET //api/stocks/ HTTP/1.1" 200 1432
+INFO 2024-11-24 03:52:47,205 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 605
+INFO 2024-11-24 03:52:49,633 basehttp "GET //api/stocks/ HTTP/1.1" 200 1431
+INFO 2024-11-24 03:53:09,969 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 605
+INFO 2024-11-24 03:53:12,056 basehttp "GET //api/stocks/ HTTP/1.1" 200 1271
+WARNING 2024-11-24 03:53:24,740 log Bad Request: /api/export-invoices/
+WARNING 2024-11-24 03:53:24,741 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+INFO 2024-11-24 03:53:32,118 basehttp "GET //api/stocks/ HTTP/1.1" 200 1271
+INFO 2024-11-24 03:54:02,062 basehttp "GET //api/stocks/ HTTP/1.1" 200 1271
+WARNING 2024-11-24 03:54:35,815 log Bad Request: /api/export-invoices/
+WARNING 2024-11-24 03:54:35,815 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+INFO 2024-11-24 03:54:42,566 basehttp "GET //api/stocks/ HTTP/1.1" 200 1271
+INFO 2024-11-24 03:55:03,275 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 396
+INFO 2024-11-24 03:55:06,414 basehttp "GET //api/stocks/ HTTP/1.1" 200 1111
+INFO 2024-11-24 03:55:24,583 basehttp "GET //api/stock-movements/ HTTP/1.1" 200 17400
+INFO 2024-11-24 03:56:12,235 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:56:13,243 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:56:16,927 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:56:17,612 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:56:19,210 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:56:19,841 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:56:24,446 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:56:25,190 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:56:28,669 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:56:29,276 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:56:31,775 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:56:32,403 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 03:56:37,926 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 03:56:38,515 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:45:34,890 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:45:35,985 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:45:40,613 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:45:41,275 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:45:42,916 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:45:43,567 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:45:58,340 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:45:59,154 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:00,590 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:01,172 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:03,418 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:03,984 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:06,233 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:07,186 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:11,612 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:12,420 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:16,740 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:17,302 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:18,525 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:19,244 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:21,588 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:22,344 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:23,572 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:24,131 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:25,383 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:26,106 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:28,448 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:29,026 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:30,460 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:31,212 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:32,474 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:33,129 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:35,601 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:36,345 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:37,880 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:38,606 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:48,218 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:48,829 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:52,313 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:52,970 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:55,572 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:56,334 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:46:58,856 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:46:59,578 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:09,240 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:09,903 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:12,161 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:12,892 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:17,309 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:18,079 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:19,388 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:19,972 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:24,321 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:25,073 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:26,435 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:27,261 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:29,633 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:30,215 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:32,504 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:33,436 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:34,734 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:35,587 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:36,903 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:37,488 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:38,745 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:39,381 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:40,706 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:41,263 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:42,489 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:43,118 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:45,428 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:46,168 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:47,676 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:48,441 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:47:49,986 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:47:50,620 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:48:04,658 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 22860
+WARNING 2024-11-24 04:48:24,029 log Not Found: /api/import-invoices/97/
+WARNING 2024-11-24 04:48:24,030 basehttp "PUT //api/import-invoices/97/ HTTP/1.1" 404 54
+INFO 2024-11-24 04:48:48,174 basehttp "PUT //api/import-invoices/59/ HTTP/1.1" 200 652
+WARNING 2024-11-24 04:49:00,929 log Bad Request: /api/import-invoices/59/
+WARNING 2024-11-24 04:49:00,929 basehttp "PUT //api/import-invoices/59/ HTTP/1.1" 400 77
+WARNING 2024-11-24 04:49:10,608 log Bad Request: /api/import-invoices/59/
+WARNING 2024-11-24 04:49:10,609 basehttp "PUT //api/import-invoices/59/ HTTP/1.1" 400 77
+WARNING 2024-11-24 04:49:12,165 log Bad Request: /api/import-invoices/59/
+WARNING 2024-11-24 04:49:12,165 basehttp "PUT //api/import-invoices/59/ HTTP/1.1" 400 77
+INFO 2024-11-24 04:49:17,379 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 22875
+INFO 2024-11-24 04:50:55,320 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:50:55,921 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:50:58,408 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:50:59,076 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:01,373 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:02,087 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:03,363 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:04,070 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:06,397 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:07,370 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:09,700 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:10,602 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:11,909 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:12,525 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:13,790 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:14,473 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:15,777 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:16,690 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:20,033 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:20,654 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:21,954 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:22,729 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:25,408 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:26,299 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:29,808 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:30,541 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:33,073 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:33,902 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:51:35,465 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:51:36,123 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:52:09,339 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 04:52:10,007 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 04:52:14,132 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 22875
+WARNING 2024-11-24 04:52:18,771 log Bad Request: /api/import-invoices/59/
+WARNING 2024-11-24 04:52:18,772 basehttp "PUT //api/import-invoices/59/ HTTP/1.1" 400 76
+INFO 2024-11-24 04:52:38,192 basehttp "PUT //api/import-invoices/58/ HTTP/1.1" 200 652
+INFO 2024-11-24 04:52:41,857 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 22890
+INFO 2024-11-24 05:05:00,670 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:05:01,295 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:05:10,920 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:05:11,515 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:05:13,029 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:05:13,718 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:05:27,338 log Bad Request: /api/import-invoices/58/
+WARNING 2024-11-24 05:05:27,339 basehttp "PUT //api/import-invoices/58/ HTTP/1.1" 400 76
+INFO 2024-11-24 05:05:37,359 basehttp "PUT //api/import-invoices/57/ HTTP/1.1" 200 652
+WARNING 2024-11-24 05:05:46,492 log Bad Request: /api/import-invoices/57/
+WARNING 2024-11-24 05:05:46,492 basehttp "PUT //api/import-invoices/57/ HTTP/1.1" 400 76
+WARNING 2024-11-24 05:06:13,492 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:06:13,493 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:06:21,809 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:06:21,810 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:06:23,504 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:06:23,505 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:06:31,615 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:06:31,616 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:06:34,190 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:06:34,190 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+INFO 2024-11-24 05:06:48,356 basehttp "GET //api/imported-invoice-items/ HTTP/1.1" 200 14305
+WARNING 2024-11-24 05:09:14,964 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:09:14,965 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:09:16,728 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:09:16,729 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:09:23,672 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:09:23,672 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+INFO 2024-11-24 05:10:37,629 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:10:38,308 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:10:41,760 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:10:42,518 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:10:45,027 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:10:46,008 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:10:48,644 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:10:49,702 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:11:04,574 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:11:05,194 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:11:48,977 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:11:49,851 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:11:53,350 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:11:54,165 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:11:55,742 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:11:56,438 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:11:57,949 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:11:58,658 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:12:02,127 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:12:03,130 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:12:08,778 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:12:09,556 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-24 05:13:15,162 log Internal Server Error: /api/import-invoices/55/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 874, in update
+    item_instance, created = ImportedInvoiceItem.objects.update_or_create(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1009, in update_or_create
+    obj.save(using=self.db, update_fields=update_fields)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1129, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1194, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/fields/__init__.py", line 1829, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/base/operations.py", line 588, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/utils.py", line 326, in format_number
+    value = value.quantize(
+            ^^^^^^^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2024-11-24 05:13:15,169 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 500 181122
+ERROR 2024-11-24 05:13:40,506 log Internal Server Error: /api/import-invoices/55/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 874, in update
+    item_instance, created = ImportedInvoiceItem.objects.update_or_create(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1009, in update_or_create
+    obj.save(using=self.db, update_fields=update_fields)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1129, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1194, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/fields/__init__.py", line 1829, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/base/operations.py", line 588, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/utils.py", line 326, in format_number
+    value = value.quantize(
+            ^^^^^^^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2024-11-24 05:13:40,509 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 500 181099
+INFO 2024-11-24 05:15:45,373 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:15:58,433 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-24 05:16:12,785 log Internal Server Error: /api/import-invoices/55/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 874, in update
+    item_instance, created = ImportedInvoiceItem.objects.update_or_create(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1009, in update_or_create
+    obj.save(using=self.db, update_fields=update_fields)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1129, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1194, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/fields/__init__.py", line 1829, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/base/operations.py", line 588, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/utils.py", line 326, in format_number
+    value = value.quantize(
+            ^^^^^^^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2024-11-24 05:16:12,791 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 500 181099
+ERROR 2024-11-24 05:16:58,156 log Internal Server Error: /api/import-invoices/55/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 874, in update
+    item_instance, created = ImportedInvoiceItem.objects.update_or_create(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1009, in update_or_create
+    obj.save(using=self.db, update_fields=update_fields)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1129, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1194, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/fields/__init__.py", line 1829, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/base/operations.py", line 588, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/utils.py", line 326, in format_number
+    value = value.quantize(
+            ^^^^^^^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2024-11-24 05:16:58,158 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 500 181099
+ERROR 2024-11-24 05:16:59,837 log Internal Server Error: /api/import-invoices/55/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 874, in update
+    item_instance, created = ImportedInvoiceItem.objects.update_or_create(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1009, in update_or_create
+    obj.save(using=self.db, update_fields=update_fields)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1129, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1194, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/fields/__init__.py", line 1829, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/base/operations.py", line 588, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/utils.py", line 326, in format_number
+    value = value.quantize(
+            ^^^^^^^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2024-11-24 05:16:59,842 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 500 181099
+WARNING 2024-11-24 05:18:10,715 log Bad Request: /api/import-invoices/55/
+WARNING 2024-11-24 05:18:10,715 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 400 176
+ERROR 2024-11-24 05:19:04,090 log Internal Server Error: /api/import-invoices/55/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 874, in update
+    item_instance, created = ImportedInvoiceItem.objects.update_or_create(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1009, in update_or_create
+    obj.save(using=self.db, update_fields=update_fields)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1129, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/base.py", line 1194, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/models/fields/__init__.py", line 1829, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/base/operations.py", line 588, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/db/backends/utils.py", line 326, in format_number
+    value = value.quantize(
+            ^^^^^^^^^^^^^^^
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2024-11-24 05:19:04,092 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 500 181215
+ERROR 2024-11-24 05:19:13,212 log Internal Server Error: /api/import-invoices/55/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'imported_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 888, in update
+    "data": self.get_serializer(updated_instance).data
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 180, in to_representation
+    data = super().to_representation(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `imported_items` on serializer `ImportInvoiceSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ImportInvoice` instance.
+Original exception text was: 'ImportInvoice' object has no attribute 'imported_items'.
+ERROR 2024-11-24 05:19:13,217 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 500 153771
+INFO 2024-11-24 05:20:03,234 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:20:04,052 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:20:06,743 log Bad Request: /api/import-invoices/55/
+WARNING 2024-11-24 05:20:06,744 basehttp "PUT //api/import-invoices/55/ HTTP/1.1" 400 76
+ERROR 2024-11-24 05:20:15,411 log Internal Server Error: /api/import-invoices/54/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 883, in update
+    updated_instance = serializer.save()
+                       ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 167, in update
+    ImportedInvoiceItem.objects.create(import_invoice=instance, **item_data)
+TypeError: django.db.models.query.QuerySet.create() got multiple values for keyword argument 'import_invoice'
+ERROR 2024-11-24 05:20:15,414 basehttp "PUT //api/import-invoices/54/ HTTP/1.1" 500 127504
+INFO 2024-11-24 05:22:46,554 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:22:47,188 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:22:50,460 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:22:51,382 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:22:53,747 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:22:54,520 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:22:56,824 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:22:57,719 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:22:59,036 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:22:59,806 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:02,068 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:02,713 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:06,079 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:06,870 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:09,115 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:09,727 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:10,999 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:11,708 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:13,044 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:13,980 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:36,019 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:36,698 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:38,285 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:38,967 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:41,482 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:42,214 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:43,821 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:44,482 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:46,083 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:46,821 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:48,395 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:49,092 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:23:50,550 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:23:51,188 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:22,470 basehttp "GET /admin/main/importedinvoiceitem/ HTTP/1.1" 200 37530
+INFO 2024-11-24 05:24:22,790 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-11-24 05:24:22,791 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-11-24 05:24:22,792 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-11-24 05:24:22,792 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-11-24 05:24:22,812 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-11-24 05:24:22,813 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:24:23,119 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-11-24 05:24:23,213 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-11-24 05:24:29,847 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:30,607 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:34,178 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:34,888 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:36,185 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:36,769 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:39,026 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:39,630 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:43,909 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:44,661 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:45,940 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:46,787 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:49,136 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:49,982 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:54,355 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:55,111 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:24:57,359 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:24:58,034 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:00,270 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:00,814 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:03,046 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:03,840 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:06,135 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:07,168 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:20,484 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:25,968 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:26,641 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:28,132 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:28,708 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:30,167 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:30,941 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:33,455 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:34,132 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:35,632 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:36,381 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:37,907 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:38,569 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:40,021 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:41,162 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:25:42,740 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:25:43,413 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:25:47,804 log Bad Request: /api/import-invoices/54/
+WARNING 2024-11-24 05:25:47,805 basehttp "PUT //api/import-invoices/54/ HTTP/1.1" 400 76
+WARNING 2024-11-24 05:26:04,353 log Bad Request: /api/import-invoices/53/
+WARNING 2024-11-24 05:26:04,354 basehttp "PUT //api/import-invoices/53/ HTTP/1.1" 400 176
+ERROR 2024-11-24 05:26:33,898 log Internal Server Error: /api/import-invoices/53/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'imported_items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 888, in update
+    "data": self.get_serializer(updated_instance).data
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 176, in to_representation
+    data = super().to_representation(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `imported_items` on serializer `ImportInvoiceSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ImportInvoice` instance.
+Original exception text was: 'ImportInvoice' object has no attribute 'imported_items'.
+ERROR 2024-11-24 05:26:33,908 basehttp "PUT //api/import-invoices/53/ HTTP/1.1" 500 153829
+INFO 2024-11-24 05:26:41,557 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:26:42,287 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:09,432 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:10,014 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:15,460 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:16,088 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:19,542 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:20,331 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:22,725 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:23,339 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:25,696 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:26,322 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:27,705 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:28,242 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:32,644 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:33,222 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:27:36,675 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:27:37,484 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:27:38,547 log Bad Request: /api/import-invoices/53/
+WARNING 2024-11-24 05:27:38,548 basehttp "PUT //api/import-invoices/53/ HTTP/1.1" 400 76
+ERROR 2024-11-24 05:27:45,318 log Internal Server Error: /api/import-invoices/52/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 888, in update
+    "data": self.get_serializer(updated_instance).data
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 165, in to_representation
+    if instance.imported_items.exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'imported_items'
+ERROR 2024-11-24 05:27:45,328 basehttp "PUT //api/import-invoices/52/ HTTP/1.1" 500 130512
+INFO 2024-11-24 05:29:09,871 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:29:11,241 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:29:21,401 log Bad Request: /api/import-invoices/52/
+WARNING 2024-11-24 05:29:21,402 basehttp "PUT //api/import-invoices/52/ HTTP/1.1" 400 77
+ERROR 2024-11-24 05:29:27,605 log Internal Server Error: /api/import-invoices/51/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 871, in update
+    "data": self.get_serializer(updated_instance).data
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 165, in to_representation
+    if instance.imported_items.exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'imported_items'
+ERROR 2024-11-24 05:29:27,611 basehttp "PUT //api/import-invoices/51/ HTTP/1.1" 500 128663
+INFO 2024-11-24 05:29:47,979 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:29:48,662 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:29:57,324 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:29:58,053 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:30:00,380 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:30:00,946 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:30:03,915 log Bad Request: /api/import-invoices/51/
+WARNING 2024-11-24 05:30:03,915 basehttp "PUT //api/import-invoices/51/ HTTP/1.1" 400 77
+ERROR 2024-11-24 05:30:10,481 log Internal Server Error: /api/import-invoices/50/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 865, in update
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'imported_items' was declared on serializer ImportInvoiceSerializer, but has not been included in the 'fields' option.
+ERROR 2024-11-24 05:30:10,485 basehttp "PUT //api/import-invoices/50/ HTTP/1.1" 500 152480
+INFO 2024-11-24 05:30:19,031 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:30:19,740 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:30:23,199 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:30:23,790 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:30:30,313 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:30:30,942 autoreload Watching for file changes with StatReloader
+ERROR 2024-11-24 05:30:31,568 log Internal Server Error: /api/import-invoices/50/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 871, in update
+    "data": self.get_serializer(updated_instance).data
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 166, in to_representation
+    if instance.imported_items.exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'imported_items'
+ERROR 2024-11-24 05:30:31,576 basehttp "PUT //api/import-invoices/50/ HTTP/1.1" 500 128654
+WARNING 2024-11-24 05:30:33,199 log Bad Request: /api/import-invoices/50/
+WARNING 2024-11-24 05:30:33,200 basehttp "PUT //api/import-invoices/50/ HTTP/1.1" 400 77
+ERROR 2024-11-24 05:30:40,840 log Internal Server Error: /api/import-invoices/49/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 289, in put
+    return self.update(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 871, in update
+    "data": self.get_serializer(updated_instance).data
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py", line 166, in to_representation
+    if instance.imported_items.exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImportInvoice' object has no attribute 'imported_items'
+ERROR 2024-11-24 05:30:40,845 basehttp "PUT //api/import-invoices/49/ HTTP/1.1" 500 128654
+INFO 2024-11-24 05:31:37,187 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:31:37,873 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:31:40,951 log Bad Request: /api/import-invoices/49/
+WARNING 2024-11-24 05:31:40,951 basehttp "PUT //api/import-invoices/49/ HTTP/1.1" 400 77
+INFO 2024-11-24 05:31:47,619 basehttp "PUT //api/import-invoices/48/ HTTP/1.1" 200 652
+INFO 2024-11-24 05:32:03,780 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 23451
+INFO 2024-11-24 05:32:47,245 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:32:47,972 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:32:49,484 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:32:50,075 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:32:53,510 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:32:54,167 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:32:56,692 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:32:57,411 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:32:59,860 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-24 05:33:00,464 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:33:36,902 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:33:37,594 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:33:40,099 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:33:40,895 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:33:42,353 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:33:42,970 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:33:47,284 log Bad Request: /api/imported-invoice-items/42/
+WARNING 2024-11-24 05:33:47,284 basehttp "PUT //api/imported-invoice-items/42/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:34:16,779 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:34:16,780 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:34:19,151 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:34:19,152 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:34:28,196 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:34:28,196 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:34:29,974 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:34:29,975 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+INFO 2024-11-24 05:35:01,640 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:35:02,333 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-24 05:35:04,740 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:35:04,740 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:35:06,326 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:35:06,327 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:35:10,317 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:35:10,318 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:35:11,904 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:35:11,905 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:35:14,650 log Bad Request: /api/imported-invoice-items/74/
+WARNING 2024-11-24 05:35:14,650 basehttp "PUT //api/imported-invoice-items/74/ HTTP/1.1" 400 115
+WARNING 2024-11-24 05:35:19,351 log Not Found: /api/imported-invoice-items/5/
+WARNING 2024-11-24 05:35:19,352 basehttp "PUT //api/imported-invoice-items/5/ HTTP/1.1" 404 83
+INFO 2024-11-24 05:35:25,334 basehttp "GET //api/imported-invoice-items/ HTTP/1.1" 200 14811
+WARNING 2024-11-24 05:35:35,325 log Bad Request: /api/imported-invoice-items/32/
+WARNING 2024-11-24 05:35:35,325 basehttp "PUT //api/imported-invoice-items/32/ HTTP/1.1" 400 73
+INFO 2024-11-24 05:35:40,223 basehttp "PUT //api/imported-invoice-items/32/ HTTP/1.1" 200 210
+INFO 2024-11-24 05:36:00,359 basehttp "GET //api/imported-invoice-items/ HTTP/1.1" 200 14809
+INFO 2024-11-24 05:36:07,532 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 23449
+INFO 2024-11-24 05:36:51,189 basehttp "GET /admin/main/importedinvoiceitem/ HTTP/1.1" 200 38178
+INFO 2024-11-24 05:36:51,279 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:36:55,358 basehttp "POST /admin/main/importedinvoiceitem/ HTTP/1.1" 200 27640
+INFO 2024-11-24 05:36:55,460 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2024-11-24 05:36:57,583 basehttp "POST /admin/main/importedinvoiceitem/ HTTP/1.1" 302 0
+INFO 2024-11-24 05:36:57,612 basehttp "GET /admin/main/importedinvoiceitem/ HTTP/1.1" 200 14927
+INFO 2024-11-24 05:36:57,708 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:36:57,780 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-11-24 05:37:00,090 basehttp "GET /admin/main/stock/ HTTP/1.1" 200 17631
+INFO 2024-11-24 05:37:00,134 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:37:03,130 basehttp "POST /admin/main/stock/ HTTP/1.1" 200 15579
+INFO 2024-11-24 05:37:04,313 basehttp "POST /admin/main/stock/ HTTP/1.1" 302 0
+INFO 2024-11-24 05:37:04,345 basehttp "GET /admin/main/stock/ HTTP/1.1" 200 14802
+INFO 2024-11-24 05:37:04,441 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:37:05,653 basehttp "GET /admin/main/importedinvoiceitem/ HTTP/1.1" 200 14774
+INFO 2024-11-24 05:37:05,694 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:37:06,667 basehttp "GET /admin/main/importinvoice/ HTTP/1.1" 200 32837
+INFO 2024-11-24 05:37:06,703 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:37:11,444 basehttp "POST /admin/main/importinvoice/ HTTP/1.1" 200 24108
+INFO 2024-11-24 05:37:13,583 basehttp "POST /admin/main/importinvoice/ HTTP/1.1" 302 0
+INFO 2024-11-24 05:37:13,609 basehttp "GET /admin/main/importinvoice/ HTTP/1.1" 200 14873
+INFO 2024-11-24 05:37:13,693 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-24 05:37:25,009 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-24 05:37:31,459 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 642
+INFO 2024-11-24 05:37:56,518 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:38:21,875 basehttp "GET //api/imported-invoice-items/ HTTP/1.1" 200 429
+WARNING 2024-11-24 05:38:51,660 log Bad Request: /api/imported-invoice-items/100/
+WARNING 2024-11-24 05:38:51,661 basehttp "PUT //api/imported-invoice-items/100/ HTTP/1.1" 400 64
+INFO 2024-11-24 05:39:08,451 basehttp "PUT //api/imported-invoice-items/100/ HTTP/1.1" 200 213
+INFO 2024-11-24 05:39:14,952 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 642
+INFO 2024-11-24 05:39:33,659 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+WARNING 2024-11-24 05:39:59,417 log Not Found: /api/import-invoices/48/
+WARNING 2024-11-24 05:39:59,418 basehttp "PUT //api/import-invoices/48/ HTTP/1.1" 404 54
+INFO 2024-11-24 05:40:11,538 basehttp "PUT //api/imported-invoice-items/100/ HTTP/1.1" 200 213
+INFO 2024-11-24 05:40:21,388 basehttp "PUT //api/imported-invoice-items/100/ HTTP/1.1" 200 217
+INFO 2024-11-24 05:40:25,216 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 646
+INFO 2024-11-24 05:40:30,953 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:41:15,383 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:41:16,478 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:41:18,982 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:41:19,607 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:42:09,333 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:42:10,016 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:42:13,671 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:42:26,504 basehttp "PUT //api/imported-invoice-items/100/ HTTP/1.1" 200 217
+INFO 2024-11-24 05:42:35,873 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:43:35,703 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:43:36,396 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:43:38,801 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:43:39,542 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:43:40,987 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:43:41,914 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:43:43,445 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:43:44,412 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:43:47,924 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:43:48,510 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:43:55,181 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:43:55,810 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:43:57,305 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:43:57,924 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:43:59,463 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:44:00,628 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:45:23,984 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-24 05:45:27,660 basehttp "GET //api/imported-invoice-items/ HTTP/1.1" 200 861
+INFO 2024-11-24 05:45:45,988 basehttp "PUT //api/imported-invoice-items/103/ HTTP/1.1" 200 217
+INFO 2024-11-24 05:45:57,039 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 1222
+INFO 2024-11-24 05:46:35,774 basehttp "GET //api/imported-invoice-items/ HTTP/1.1" 200 865
+INFO 2024-11-24 05:46:41,421 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:48:23,993 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:48:25,033 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:48:59,983 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:49:06,317 basehttp "PUT //api/imported-invoice-items/103/ HTTP/1.1" 200 217
+INFO 2024-11-24 05:49:13,350 basehttp "PUT //api/imported-invoice-items/103/ HTTP/1.1" 200 219
+INFO 2024-11-24 05:49:22,456 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:49:35,421 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 1224
+INFO 2024-11-24 05:50:00,402 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:50:16,646 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:17,331 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:19,845 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:20,530 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:22,043 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:22,909 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:26,506 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:27,400 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:29,025 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:29,892 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:33,401 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:34,751 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:37,363 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:37,958 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:45,519 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:46,243 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:47,521 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:48,130 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:50,389 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:51,123 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:52,482 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:53,413 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:50:55,690 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:50:56,468 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:00,858 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:51:01,382 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:02,697 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:51:03,532 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:05,774 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:51:06,522 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:07,827 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:51:08,587 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:10,885 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:51:11,561 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:14,842 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:51:15,741 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:18,109 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-24 05:51:18,948 autoreload Watching for file changes with StatReloader
+INFO 2024-11-24 05:51:23,962 basehttp "PUT //api/imported-invoice-items/103/ HTTP/1.1" 200 219
+INFO 2024-11-24 05:51:28,181 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:51:33,004 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:51:35,066 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:51:37,565 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 05:51:39,942 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+WARNING 2024-11-24 05:53:08,235 log Bad Request: /api/export-invoices/
+WARNING 2024-11-24 05:53:08,236 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+INFO 2024-11-24 05:53:24,987 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 397
+INFO 2024-11-24 05:53:35,449 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 06:52:27,435 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 06:53:12,696 basehttp "PUT //api/imported-invoice-items/103/ HTTP/1.1" 200 219
+INFO 2024-11-24 06:53:18,014 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 06:54:03,067 basehttp "PUT //api/import-invoices/60/ HTTP/1.1" 200 883
+INFO 2024-11-24 06:54:22,132 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-24 06:54:52,102 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-24 06:55:22,442 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-24 06:55:25,752 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-24 06:55:29,467 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-24 06:55:31,738 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-24 06:55:34,834 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-24 06:55:40,277 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+WARNING 2024-11-24 06:55:47,093 log Bad Request: /api/export-invoices/
+WARNING 2024-11-24 06:55:47,093 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 87
+INFO 2024-11-24 06:55:54,951 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-24 06:56:07,561 basehttp "GET //api/stocks/ HTTP/1.1" 200 455
+INFO 2024-11-25 08:00:15,617 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:24,914 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:27,947 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:28,722 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:31,105 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:31,952 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:34,265 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:35,174 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:36,419 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:37,101 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:38,403 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:39,086 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:40,566 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:41,188 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:43,418 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:44,125 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:46,412 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:47,184 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:48,612 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:49,248 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:50,484 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:51,030 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:53,256 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:53,796 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:56,034 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:56,905 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:00:58,219 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:00:58,775 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:01,030 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:01,779 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:03,008 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:03,573 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:05,782 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:06,694 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:08,025 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:08,674 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:11,994 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:12,748 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:14,024 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:14,845 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:19,187 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:19,931 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:21,136 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:21,766 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:24,018 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:24,634 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:25,844 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:26,538 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:31,891 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:32,569 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:33,860 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:34,428 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:36,772 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:37,497 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:39,780 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:40,483 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:42,846 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:43,513 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:44,778 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:45,579 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:47,937 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:48,936 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:01:51,707 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:01:52,617 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:02:20,106 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 1244
+INFO 2024-11-25 08:02:51,466 basehttp "PUT //api/import-invoices/61/ HTTP/1.1" 200 654
+INFO 2024-11-25 08:03:11,320 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 1473
+INFO 2024-11-25 08:03:48,637 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+WARNING 2024-11-25 08:04:03,388 log Bad Request: /api/import-invoices/61/
+WARNING 2024-11-25 08:04:03,389 basehttp "PUT //api/import-invoices/61/ HTTP/1.1" 400 77
+INFO 2024-11-25 08:04:20,009 basehttp "GET //api/stock-movements/ HTTP/1.1" 200 19974
+INFO 2024-11-25 08:05:17,013 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:17,687 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:20,277 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:20,916 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:22,452 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:23,054 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:26,568 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:27,145 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:29,590 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:30,231 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:31,628 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:32,249 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:33,731 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:34,340 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:50,215 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:51,101 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:05:52,642 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:05:53,441 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:06:36,003 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-25 08:06:38,968 basehttp "GET //api/stocks/ HTTP/1.1" 200 455
+INFO 2024-11-25 08:06:47,521 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+WARNING 2024-11-25 08:06:48,445 log Bad Request: /api/export-invoices/
+WARNING 2024-11-25 08:06:48,446 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+WARNING 2024-11-25 08:06:49,155 log Bad Request: /api/export-invoices/
+WARNING 2024-11-25 08:06:49,155 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+INFO 2024-11-25 08:06:51,853 basehttp "GET //api/stocks/ HTTP/1.1" 200 455
+INFO 2024-11-25 08:07:09,449 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 400
+INFO 2024-11-25 08:07:11,769 basehttp "GET //api/stocks/ HTTP/1.1" 200 294
+INFO 2024-11-25 08:07:23,032 basehttp "GET //api/exported-invoice-items/ HTTP/1.1" 200 4515
+INFO 2024-11-25 08:08:37,376 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-25 08:08:38,050 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:08:40,584 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-25 08:08:41,212 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:09:43,044 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-25 08:09:43,833 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:09:47,291 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-25 08:09:47,922 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:09:50,337 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-25 08:09:50,935 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:09:52,362 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-25 08:09:52,958 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:10:15,111 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:10:15,727 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:10:22,262 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:10:23,074 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:10:27,061 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:10:27,917 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:10:50,876 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:10:51,564 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:13:50,701 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:13:51,323 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:13:59,961 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:00,867 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:03,207 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:03,925 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:07,257 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:07,940 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:09,246 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:10,047 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:11,382 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:11,919 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:16,215 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:16,891 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:19,182 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:19,924 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:23,334 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:24,013 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:25,312 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:26,006 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:28,340 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:28,996 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:31,366 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:32,156 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:33,510 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:34,388 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:36,776 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:37,572 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:39,823 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:40,457 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:41,757 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:42,318 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:43,534 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:44,205 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:47,586 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:48,218 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:50,455 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:51,301 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:52,607 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:53,147 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:55,386 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:55,993 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:14:57,279 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:14:57,805 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:00,056 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:00,844 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:03,113 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:03,755 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:06,197 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:07,004 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:09,272 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:09,866 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:11,074 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:11,922 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:15,199 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:15,926 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:17,144 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:17,709 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:20,986 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:21,736 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:24,084 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:24,734 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:27,040 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:27,843 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:32,332 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:33,034 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:34,362 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:35,001 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:37,257 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:37,925 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:40,225 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:40,792 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:42,057 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:42,760 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:44,038 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:44,753 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:48,161 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:48,711 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:49,930 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:50,557 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:52,878 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:53,546 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:54,861 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:55,516 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:15:57,772 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:15:58,457 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:01,762 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:16:02,542 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:04,799 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:16:05,355 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:08,638 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:16:09,352 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:11,621 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:16:12,287 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:16,674 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:16:17,604 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:20,216 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:16:21,052 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:22,552 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:16:23,158 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:16:31,956 basehttp "GET //api/stocks/ HTTP/1.1" 200 294
+INFO 2024-11-25 08:16:49,123 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 2752
+INFO 2024-11-25 08:17:07,897 basehttp "GET //api/exported-invoice-items/ HTTP/1.1" 200 4515
+WARNING 2024-11-25 08:17:23,681 log Bad Request: /api/export-invoices/1/
+WARNING 2024-11-25 08:17:23,682 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 400 87
+INFO 2024-11-25 08:17:40,026 basehttp "GET //api/stocks/ HTTP/1.1" 200 294
+WARNING 2024-11-25 08:17:52,059 log Bad Request: /api/export-invoices/1/
+WARNING 2024-11-25 08:17:52,060 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 400 86
+WARNING 2024-11-25 08:17:53,769 log Bad Request: /api/export-invoices/1/
+WARNING 2024-11-25 08:17:53,770 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 400 86
+INFO 2024-11-25 08:17:58,959 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 200 806
+INFO 2024-11-25 08:18:12,152 basehttp "GET //api/exported-invoice-items/ HTTP/1.1" 200 4726
+INFO 2024-11-25 08:18:17,781 basehttp "GET //api/stocks/ HTTP/1.1" 200 294
+INFO 2024-11-25 08:18:23,251 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 200 806
+INFO 2024-11-25 08:18:25,397 basehttp "GET //api/stocks/ HTTP/1.1" 200 294
+INFO 2024-11-25 08:18:44,819 basehttp "GET //api/cashbox-movements/ HTTP/1.1" 200 4826
+INFO 2024-11-25 08:21:32,599 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-25 08:21:57,505 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:22:05,093 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:22:05,761 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:22:08,240 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:22:08,885 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:22:18,458 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:22:19,058 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:22:25,664 basehttp "GET //api/cashboxes/ HTTP/1.1" 200 122
+INFO 2024-11-25 08:22:40,341 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:22:41,041 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:22:43,646 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:22:44,246 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:22:47,744 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:22:48,407 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:22:50,974 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:22:51,706 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:29,529 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:30,211 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:33,467 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:34,126 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:35,486 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:36,214 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:37,455 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:38,217 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:40,543 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:41,251 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:42,539 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:43,154 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:45,526 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:46,368 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:47,683 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:48,403 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:49,722 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:50,467 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:51,795 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:52,669 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:53,959 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:54,655 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:57,000 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:57,609 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:25:58,890 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:25:59,549 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:00,877 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:01,804 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:06,193 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:06,963 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:10,348 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:11,031 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:12,488 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:13,287 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:14,541 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:15,517 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:16,864 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:17,678 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:20,002 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:20,569 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:23,862 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:24,631 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:25,914 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:26,714 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:28,962 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:29,986 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:36,475 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:37,276 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:39,592 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:40,300 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:41,580 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:42,273 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:47,687 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:48,422 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:50,752 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:51,456 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:52,746 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:53,297 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:54,518 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:55,251 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:26:56,534 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:26:57,183 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:03,627 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:04,253 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:07,552 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:08,525 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:16,966 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:17,543 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:20,845 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:21,415 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:24,820 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:25,543 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:28,810 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:29,639 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:33,069 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:33,877 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:37,284 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:38,152 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:40,383 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:41,172 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:44,501 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:45,190 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:46,498 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:47,207 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:48,551 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:49,323 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:51,608 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:52,199 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:27:53,588 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:27:54,530 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:28:01,089 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:28:01,696 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-25 08:28:27,401 log Bad Request: /api/export-invoices/
+WARNING 2024-11-25 08:28:27,402 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 87
+WARNING 2024-11-25 08:28:37,946 log Bad Request: /api/export-invoices/
+WARNING 2024-11-25 08:28:37,946 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 109
+INFO 2024-11-25 08:30:45,688 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:30:46,425 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:30:48,805 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:30:49,546 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:30:51,919 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:30:52,563 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:30:54,811 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:30:55,639 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:30:58,033 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:30:59,034 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:31:00,274 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:31:00,963 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:31:02,314 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:31:03,106 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:31:05,419 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:31:06,080 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:31:07,403 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:31:08,254 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:31:09,526 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:31:10,306 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:31:12,587 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:31:13,242 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 08:31:14,644 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 08:31:15,424 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-25 08:31:17,665 log Bad Request: /api/export-invoices/
+WARNING 2024-11-25 08:31:17,665 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 87
+INFO 2024-11-25 08:31:26,616 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-25 08:31:27,839 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-25 08:31:30,050 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 632
+INFO 2024-11-25 08:31:49,980 basehttp "GET //api/clients/ HTTP/1.1" 200 162

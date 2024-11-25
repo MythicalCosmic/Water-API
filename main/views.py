@@ -728,6 +728,7 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
 
     def create(self, request, *args, **kwargs):
         data = request.data
+        user = request.user
         items = data.pop("items", None) 
 
         if not items:
@@ -757,7 +758,8 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
                 
                     stock, created = Stock.objects.get_or_create(
                     variant=variant, 
-                     defaults={"quantity": 0, "price": input_price}  
+                    user=user,
+                     defaults={"quantity": quantity, "price": input_price}  
                     )
                     if not created: 
                         stock.quantity += int(quantity)
@@ -851,17 +853,72 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.get('partial', False)  
-        instance = self.get_object() 
+        instance = self.get_object()
+
         if instance.state in ['accepted', 'canceled']:
             return Response({
                 "ok": False,
                 "message": f"Cannot edit an Import Invoice with state '{instance.state}'."
             }, status=status.HTTP_400_BAD_REQUEST)
 
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        data = request.data
+        items = data.pop("items", None)
 
+
+        serializer = self.get_serializer(instance, data=data, partial=partial)
         if serializer.is_valid():
             updated_instance = serializer.save()
+
+            if items:
+                for item in items:
+                    variant_id = item.get("variant")
+                    input_price = item.get("input_price")
+                    quantity = item.get("quantity")
+
+                    if not variant_id or input_price is None or quantity is None:
+                        return Response({
+                            "ok": False,
+                            "message": "Each item must include variant, input_price, and quantity."
+                        }, status=status.HTTP_400_BAD_REQUEST)
+
+                    try:
+                        variant = ProductVariant.objects.get(id=variant_id)
+
+                        imported_item, item_created = ImportedInvoiceItem.objects.get_or_create(
+                            import_invoice=instance,
+                            variant=variant,
+                            defaults={
+                                "input_price": input_price,
+                                "quantity": quantity,
+                            }
+                        )
+                        if not item_created:
+                            imported_item.quantity = quantity
+                            imported_item.input_price = input_price
+                            imported_item.save()
+
+                        stock, created = Stock.objects.get_or_create(
+                            variant=variant,
+                            user=request.user,
+                            defaults={"quantity": quantity, "price": input_price}
+                        )
+                        if not created:
+                            stock.quantity += quantity
+                            stock.price = input_price
+                        stock.save()
+
+                        StockMovement.objects.create(
+                            variant=variant,
+                            type="update",
+                            quantity=quantity,
+                            description=f"Stock updated from Import Invoice {instance.id}"
+                        )
+
+                    except ProductVariant.DoesNotExist:
+                        return Response({
+                            "ok": False,
+                            "message": f"Variant with ID {variant_id} does not exist."
+                        }, status=status.HTTP_400_BAD_REQUEST)
 
             return Response({
                 "ok": True,
@@ -874,6 +931,9 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
             "message": "Import Invoice update failed.",
             "data": serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
+
+
+
 
 
 
@@ -951,25 +1011,8 @@ class ImportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestro
             "data": {} 
         }, status=status.HTTP_204_NO_CONTENT)
 
-    def update(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Imported Invoice Item with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
-        # Check if the associated import invoice is in a state that allows update
-        import_invoice = instance.import_invoice
-        if import_invoice.state not in ['new']:
-            return Response({
-                "ok": False,
-                "message": f"Cannot update Imported Invoice Item. The associated Import Invoice is in '{import_invoice.state}' state.",
-            }, status=status.HTTP_400_BAD_REQUEST)
 
-        # Continue with the update if the state is valid
-        return super().update(request, *args, **kwargs)
 
 
 # Stock Movement Views
@@ -1201,36 +1244,125 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
     serializer_class = ExportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportinvoice', 'view_exportinvoice']
+
+    @transaction.atomic
     def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-    
-        if serializer.is_valid():
-            instance = serializer.save()
-            client_data = {
-                "id": instance.client.id,
-                "name": instance.client.name
-            }
-            user_data = {
-                "id": instance.user.id,
-                "username": instance.user.username
-            }
-            return Response({
-                "ok": True,
-                "message": "Export Invoice created successfully",
-                "data": {
-                    "id": instance.id,
-                    "client": client_data,
-                    "user": user_data,
-                    "state": instance.state,
-                }
-            }, status=status.HTTP_201_CREATED)
-    
-        else:
+        data = request.data
+        items = data.pop("items", None)  
+        payment_type = data.pop("payment_type", None)  
+
+        if not items:
             return Response({
                 "ok": False,
-                "message": "Expoort Invoice creation failed",
+                "message": "Missing required field: items"
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer = self.get_serializer(data=data)
+        if not serializer.is_valid():
+            return Response({
+                "ok": False,
+                "message": "Export Invoice creation failed.",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
+
+        export_invoice = serializer.save(user=request.user)  
+
+        total_price = Decimal(0)
+        created_items = []
+
+        for item in items:
+            variant_id = item.get("product_variant_id")
+            price = item.get("price")
+            quantity = item.get("quantity")
+
+            if not variant_id or price is None or quantity is None:
+                return Response({
+                    "ok": False,
+                    "message": "Each item must include product_variant_id, price, and quantity."
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+            try:
+                variant = ProductVariant.objects.get(id=variant_id)
+                stock = Stock.objects.filter(variant=variant).first()
+
+                if not stock or stock.quantity < quantity:
+                    return Response({
+                        "ok": False,
+                        "message": f"Insufficient stock for variant {variant_id}. Available: {stock.quantity if stock else 0}, requested: {quantity}."
+                    }, status=status.HTTP_400_BAD_REQUEST)
+
+                if stock.quantity > quantity:
+                    stock.quantity -= quantity
+                    stock.save()
+                elif stock.quantity == quantity:
+                    stock.delete()
+
+                exported_item = ExportedInvoiceItem.objects.create(
+                    export_invoice=export_invoice,
+                    variant=variant,
+                    price=Decimal(price),
+                    quantity=quantity
+                )
+                created_items.append(exported_item)
+
+                StockMovement.objects.create(
+                    variant=variant,
+                    type="departure",
+                    quantity=quantity,
+                    description=f"Stock moved for Export Invoice {export_invoice.id}"
+                )
+
+                total_price += Decimal(price) * Decimal(quantity)
+
+            except ProductVariant.DoesNotExist:
+                return Response({
+                    "ok": False,
+                    "message": f"Product variant with ID {variant_id} does not exist."
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+
+        client = export_invoice.client
+        try:
+            if payment_type == "Debt":
+                client.balance -= total_price  # Allow negative balance for debts
+                client.save()
+            else:
+                cashbox = get_object_or_404(Cashbox, id=2)
+                cashbox.deposit(
+                    total_price,
+                    comment=f"Payment for Export Invoice {export_invoice.id}",
+                    payment_type=payment_type,
+                    user=request.user
+                )
+        except Exception as e:
+            return Response({
+                "ok": False,
+                "message": f"Error processing payment: {str(e)}"
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        export_invoice_data = {
+            "id": export_invoice.id,
+            "client": {
+                "id": client.id,
+                "name": client.name,
+                "balance": client.balance  
+            },
+            "user": {
+                "id": export_invoice.user.id,
+                "username": export_invoice.user.username
+            },
+            "state": export_invoice.state,
+        }
+
+        return Response({
+            "ok": True,
+            "message": "Export Invoice and items created successfully.",
+            "data": {
+                "invoice": export_invoice_data,
+                "items": ExportedInvoiceItemSerializer(created_items, many=True).data
+            }
+        }, status=status.HTTP_201_CREATED)
+
         
 
     def list(self, request, *args, **kwargs):
@@ -1264,38 +1396,122 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
             "data": serializer.data  
         })
         
-
     def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
+        partial = kwargs.get('partial', False)
         instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            client_data = {
-                "id": instance.client.id,
-                "name": instance.client.name
-            }
-            user_data = {
-                "id": instance.user.id,
-                "username": instance.user.username
-            }
-            return Response({
-                "ok": True,
-                "message": "Export Invoice updated successfully",
-               "data": {
-                    "id": instance.id,
-                    "client": client_data,
-                    "user": user_data,
-                    "state": instance.state,
-                }
-            })
-        else:
+
+        if instance.state != 'new':
             return Response({
                 "ok": False,
-                "message": "Export Invoice  update failed",
+                "message": f"Cannot edit an Export Invoice with state '{instance.state}'. Only invoices with state 'new' can be updated."
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        data = request.data
+        items = data.pop("items", None)
+        payment_type = data.get("payment_type", None)
+
+
+        serializer = self.get_serializer(instance, data=data, partial=partial)
+        if not serializer.is_valid():
+            return Response({
+                "ok": False,
+                "message": "Export Invoice update failed.",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
+
+        export_invoice = serializer.save()
+        total_price = Decimal(0)
+
+        if items:
+            for item in items:
+                variant_id = item.get("product_variant_id")
+                price = item.get("price")
+                quantity = item.get("quantity")
+
+                if not variant_id or price is None or quantity is None:
+                    return Response({
+                        "ok": False,
+                        "message": "Each item must include product_variant_id, price, and quantity."
+                    }, status=status.HTTP_400_BAD_REQUEST)
+
+                try:
+                    variant = ProductVariant.objects.get(id=variant_id)
+                    stock = Stock.objects.filter(variant=variant).first()
+
+
+                    if not stock or stock.quantity < quantity:
+                        return Response({
+                            "ok": False,
+                            "message": f"Insufficient stock for variant {variant_id}. Available: {stock.quantity if stock else 0}, requested: {quantity}."
+                        }, status=status.HTTP_400_BAD_REQUEST)
+
+                    if stock.quantity > quantity:
+                        stock.quantity -= quantity
+                        stock.save()
+                    elif stock.quantity == quantity:
+                        stock.delete()
+
+                    exported_item, created = ExportedInvoiceItem.objects.update_or_create(
+                        export_invoice=export_invoice,
+                        variant=variant,
+                        defaults={
+                            "price": Decimal(price),
+                            "quantity": quantity
+                        }
+                    )
+
+                    StockMovement.objects.create(
+                        variant=variant,
+                        type="departure",
+                        quantity=quantity,
+                        description=f"Stock updated for Export Invoice {export_invoice.id}"
+                    )
+
+                    total_price += Decimal(price) * Decimal(quantity)
+
+                except ProductVariant.DoesNotExist:
+                    return Response({
+                        "ok": False,
+                        "message": f"Product variant with ID {variant_id} does not exist."
+                    }, status=status.HTTP_400_BAD_REQUEST)
+
+
+        try:
+            cashbox = get_object_or_404(Cashbox, id=2)
+            cashbox.deposit(
+                total_price,
+                comment=f"Payment updated for Export Invoice {export_invoice.id}",
+                payment_type=payment_type,
+                user=request.user
+            )
+        except Exception as e:
+            return Response({
+                "ok": False,
+                "message": f"Error updating Cashbox: {str(e)}"
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        export_invoice_data = {
+            "id": export_invoice.id,
+            "client": {
+                "id": export_invoice.client.id,
+                "name": export_invoice.client.name
+            },
+            "user": {
+                "id": export_invoice.user.id,
+                "username": export_invoice.user.username
+            },
+            "state": export_invoice.state,
+        }
+        return Response({
+            "ok": True,
+            "message": "Export Invoice updated successfully.",
+            "data": {
+                "invoice": export_invoice_data,
+                "items": ExportedInvoiceItemSerializer(ExportedInvoiceItem.objects.filter(export_invoice=export_invoice), many=True).data
+            }
+        }, status=status.HTTP_200_OK)
+
+
 
     def destroy(self, request, *args, **kwargs):
         try:
@@ -1325,7 +1541,7 @@ class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
     def create(self, request, *args, **kwargs):
         data = request.data
         export_invoice_id = data.get("export_invoice")
-        items = data.get("items")  # List of items
+        items = data.get("items") 
 
         if not export_invoice_id or not items:
             return Response({
@@ -1365,11 +1581,10 @@ class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
                         "message": f"Not enough stock for variant {variant_id}. Available quantity: {stock.quantity if stock else 0}, requested quantity: {quantity}"
                     }, status=status.HTTP_400_BAD_REQUEST)
 
-                # Decrement stock
+
                 stock.quantity -= quantity
                 stock.save()
 
-                # Create export invoice item
                 export_invoice_item = ExportedInvoiceItem.objects.create(
                     export_invoice=export_invoice,
                     variant=variant,
@@ -1378,7 +1593,7 @@ class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
                 )
                 created_items.append(export_invoice_item)
 
-                # Create stock movement
+
                 StockMovement.objects.create(
                     variant=variant,
                     type='departure',
@@ -1386,7 +1601,6 @@ class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
                     description=f"Departure for Export Invoice {export_invoice_id}",
                 )
 
-                # Update total price
                 total_price += Decimal(price) * Decimal(quantity)
 
             except ProductVariant.DoesNotExist:
@@ -1400,11 +1614,9 @@ class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
                     "message": f"Error creating ExportInvoiceItem for variant ID {variant_id}: {str(e)}"
                 }, status=status.HTTP_400_BAD_REQUEST)
 
-        # Process payment
         cashbox = get_object_or_404(Cashbox, id=2)
         cashbox.deposit(total_price, comment="Export Invoice Payment", payment_type="cash", user=request.user)
 
-        # Serialize and return response
         serialized_items = self.get_serializer(created_items, many=True)
         return Response({
             "ok": True,

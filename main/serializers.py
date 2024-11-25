@@ -162,12 +162,16 @@ class ImportInvoiceSerializer(serializers.ModelSerializer):
         data.pop('supplier', None)
         data.pop('supplier_name', None)
 
-        if instance.importedinvoiceitem_set.exists():
-            data['imported_items'] = ImportedInvoiceItemSerializer(instance.importedinvoiceitem_set.all(), many=True).data
+
+        imported_items = instance.importedinvoiceitem_set.all() 
+
+        if imported_items.exists():
+            data['imported_items'] = ImportedInvoiceItemSerializer(imported_items, many=True).data
         else:
             data['imported_items'] = []
 
         return data
+
 
 
 
