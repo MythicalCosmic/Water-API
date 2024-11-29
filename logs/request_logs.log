@@ -5444,7 +5444,7 @@ INFO 2024-11-24 05:37:06,667 basehttp "GET /admin/main/importinvoice/ HTTP/1.1" 
 INFO 2024-11-24 05:37:06,703 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2024-11-24 05:37:11,444 basehttp "POST /admin/main/importinvoice/ HTTP/1.1" 200 24108
 INFO 2024-11-24 05:37:13,583 basehttp "POST /admin/main/importinvoice/ HTTP/1.1" 302 0
-INFO 2024-11-24 05:37:13,609 basehttp "GET /admin/main/importinvoice/ HTTP/1.1" 200 14873
+INFO 2024-11-24 05:37:13,609 "GET /admin/main/importinvoice/ HTTP/1.1" 200 14873
 INFO 2024-11-24 05:37:13,693 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2024-11-24 05:37:25,009 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
 INFO 2024-11-24 05:37:31,459 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 642
@@ -5943,3 +5943,159 @@ INFO 2024-11-25 08:31:26,616 basehttp "POST //api/import-invoices/ HTTP/1.1" 201
 INFO 2024-11-25 08:31:27,839 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
 INFO 2024-11-25 08:31:30,050 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 632
 INFO 2024-11-25 08:31:49,980 basehttp "GET //api/clients/ HTTP/1.1" 200 162
+INFO 2024-11-25 11:14:22,055 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 11:14:22,861 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 11:14:26,457 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 11:14:27,208 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 11:14:44,136 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 11:14:44,775 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 11:14:47,264 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-25 11:14:47,822 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 11:33:13,548 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 11:33:21,456 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:25,543 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:29,661 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:31,910 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:37,186 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:53,854 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-25 11:33:58,353 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-11-26 10:20:33,666 basehttp "GET //api/cashbox-movements/ HTTP/1.1" 200 4826
+INFO 2024-11-26 10:21:36,277 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 632
+INFO 2024-11-26 10:21:51,603 basehttp "GET //api/cashbox-movements/ HTTP/1.1" 200 4826
+WARNING 2024-11-26 10:22:04,248 log Bad Request: /api/export-invoices/
+WARNING 2024-11-26 10:22:04,249 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+WARNING 2024-11-26 10:22:12,559 log Bad Request: /api/export-invoices/
+WARNING 2024-11-26 10:22:12,560 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+INFO 2024-11-26 10:22:19,532 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 630
+INFO 2024-11-26 10:22:23,955 basehttp "GET //api/cashbox-movements/ HTTP/1.1" 200 5092
+INFO 2024-11-26 10:24:54,789 basehttp "GET //api/clients/ HTTP/1.1" 200 162
+WARNING 2024-11-26 10:25:16,407 log Bad Request: /api/export-invoices/
+WARNING 2024-11-26 10:25:16,408 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 87
+INFO 2024-11-26 10:25:26,452 basehttp "GET //api/stocks/ HTTP/1.1" 200 292
+INFO 2024-11-26 10:25:51,746 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 631
+INFO 2024-11-26 10:25:55,315 basehttp "GET //api/clients/ HTTP/1.1" 200 162
+INFO 2024-11-26 10:25:59,488 basehttp "GET //api/stocks/ HTTP/1.1" 200 127
+INFO 2024-11-27 06:24:00,969 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-27 06:24:10,282 autoreload Watching for file changes with StatReloader
+INFO 2024-11-27 06:44:17,449 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:42:49,594 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:42:56,767 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:43:50,378 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 3922
+WARNING 2024-11-29 07:44:06,180 log Bad Request: /api/export-invoices/
+WARNING 2024-11-29 07:44:06,181 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+INFO 2024-11-29 07:44:32,348 basehttp "GET //api/clients/ HTTP/1.1" 200 162
+INFO 2024-11-29 07:48:29,273 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:48:30,300 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:48:36,179 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:48:37,113 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:48:39,685 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:48:40,365 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:48:41,656 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:48:42,671 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:48:43,912 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:48:44,790 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:48:49,381 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:48:50,094 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:48:51,390 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:48:52,124 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:49:43,012 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:49:43,710 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:49:51,996 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:50:31,799 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/urls.py changed, reloading.
+INFO 2024-11-29 07:50:32,478 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:50:34,148 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/urls.py changed, reloading.
+INFO 2024-11-29 07:50:34,820 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-29 07:51:22,409 log Not Found: /clients/<int:pk>/adjust-balance/
+WARNING 2024-11-29 07:51:22,410 basehttp "POST //clients/%3Cint:pk%3E/adjust-balance/ HTTP/1.1" 404 12819
+WARNING 2024-11-29 07:51:36,302 log Method Not Allowed: /clients/1/adjust-balance/
+WARNING 2024-11-29 07:51:36,303 basehttp "POST //clients/1/adjust-balance/ HTTP/1.1" 405 41
+WARNING 2024-11-29 07:52:04,879 log Method Not Allowed: /clients/1/adjust-balance/
+WARNING 2024-11-29 07:52:04,880 basehttp "POST //clients/1/adjust-balance/ HTTP/1.1" 405 41
+WARNING 2024-11-29 07:52:09,797 log Bad Request: /clients/1/adjust-balance/
+WARNING 2024-11-29 07:52:09,798 basehttp "PUT //clients/1/adjust-balance/ HTTP/1.1" 400 159
+WARNING 2024-11-29 07:52:57,039 log Bad Request: /clients/1/adjust-balance/
+WARNING 2024-11-29 07:52:57,039 basehttp "PUT //clients/1/adjust-balance/ HTTP/1.1" 400 159
+WARNING 2024-11-29 07:53:01,128 log Method Not Allowed: /clients/1/adjust-balance/
+WARNING 2024-11-29 07:53:01,128 basehttp "POST //clients/1/adjust-balance/ HTTP/1.1" 405 41
+INFO 2024-11-29 07:53:45,735 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:53:46,459 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:53:49,703 basehttp "POST //clients/1/adjust-balance/ HTTP/1.1" 200 100
+INFO 2024-11-29 07:53:57,928 basehttp "POST //clients/1/adjust-balance/ HTTP/1.1" 200 100
+INFO 2024-11-29 07:54:05,896 basehttp "POST //clients/1/adjust-balance/ HTTP/1.1" 200 99
+INFO 2024-11-29 07:55:43,224 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:55:44,199 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:55:45,810 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:55:46,441 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:56:16,148 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:56:16,904 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:56:18,364 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:56:19,357 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:57:11,354 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-29 07:57:12,265 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:57:18,762 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-29 07:57:19,511 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:57:24,059 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-29 07:57:24,933 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:57:26,575 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-11-29 07:57:27,434 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:57:57,219 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:57:58,015 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:58:02,743 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:58:03,449 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:58:04,919 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:58:05,632 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:58:17,688 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-29 07:58:18,677 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:58:23,359 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/urls.py changed, reloading.
+INFO 2024-11-29 07:58:23,997 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:58:26,516 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/urls.py changed, reloading.
+INFO 2024-11-29 07:58:27,278 autoreload Watching for file changes with StatReloader
+INFO 2024-11-29 07:58:49,683 basehttp "POST //cashbox/2/reset/ HTTP/1.1" 200 74
+INFO 2024-11-29 07:59:07,335 basehttp "GET //api/cashboxes/ HTTP/1.1" 200 118

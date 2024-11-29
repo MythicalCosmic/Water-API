@@ -171,11 +171,22 @@ class Cashbox(models.Model):
                 payment_type=payment_type,
                 user=user
             )
-
+    def reset(self, user=None):
+        with transaction.atomic():
+            self.remains = Decimal('0.00')
+            self.save()
+            CashboxMovement.objects.create(
+                type='clear',
+                sum=self.remains,
+                remains=self.remains,
+                comment='Cashbox reset',
+                payment_type='',
+                user=user
+            )
 
 
 class CashboxMovement(models.Model):
-    TYPE_CHOICES = [('positive', 'Positive'), ('negative', 'Negative'), ('clear', 'Clear'), ('debt', 'Debt')]
+    TYPE_CHOICES = [('positive', 'Positive'), ('negative', 'Negative'), ('clear', 'Clear')]
 
     type = models.CharField(max_length=10, choices=TYPE_CHOICES)
     sum = models.DecimalField(max_digits=15, decimal_places=2)

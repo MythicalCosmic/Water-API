@@ -34,6 +34,8 @@ urlpatterns = [
     
     path('api/clients/', ClientListCreateView.as_view(), name='client-list-create'),
     path('api/clients/<int:pk>/', ClientRetrieveUpdateDestroyView.as_view(), name='client-detail'),
+    path('clients/<int:pk>/adjust-balance/', ClientRetrieveUpdateDestroyView.as_view(), name='adjust-balance'),
+
     
     path('api/export-invoices/', ExportInvoiceListCreateView.as_view(), name='exportinvoice-list-create'),
     path('api/export-invoices/<int:pk>/', ExportInvoiceRetrieveUpdateDestroyView.as_view(), name='exportinvoice-detail'),
@@ -44,6 +46,7 @@ urlpatterns = [
     path('api/cashboxes/', CashboxListCreateView.as_view(), name='cashbox-list-create'),
     path('api/cashbox/<int:pk>/deposit/', DepositMoneyView.as_view(), name='deposit-money'),
     path('api/cashbox/<int:pk>/withdraw/', WithdrawMoneyView.as_view(), name='withdraw-money'),
+    path('cashbox/<int:pk>/reset/', ResetCashboxView.as_view(), name='reset-cashbox'),
     
     path('api/cashbox-movements/', CashboxMovementListCreateView.as_view(), name='cashboxmovement-list-create'),
     path('api/cashbox-movements/<int:pk>/', CashboxMovementRetrieveUpdateDestroyView.as_view(), name='cashboxmovement-detail'),

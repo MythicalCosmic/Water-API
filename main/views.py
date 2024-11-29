@@ -21,6 +21,8 @@ from rest_framework.generics import ListAPIView
 from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend # type: ignore
 from rest_framework.filters import OrderingFilter
+from rest_framework.decorators import action
+
 
 
 class LogoutView(APIView):
@@ -1194,6 +1196,11 @@ class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
             "data": serializer.data  
         })
         
+    def post(self, request, *args, **kwargs):
+        if self.request.path.endswith('adjust-balance/'):
+            return self.adjust_balance(request, *args, **kwargs)
+        
+        return super().post(request, *args, **kwargs)
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.get('partial', False) 
@@ -1235,6 +1242,44 @@ class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
             "message": "Client deleted successfully",
             "data": {} 
         }, status=status.HTTP_204_NO_CONTENT)
+    @action(detail=True, methods=['post'], url_path='adjust-balance')
+    def adjust_balance(self, request, *args, **kwargs):
+        client = self.get_object() 
+        amount = request.data.get('amount')
+
+        if not amount:
+            return Response({
+                "ok": False,
+                "message": "'amount' field is required."
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            amount = float(amount)
+            if amount < 0:
+                return Response({
+                    "ok": False,
+                    "message": "Amount must be a positive number."
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+
+            client.balance += amount  
+            client.save()
+
+            return Response({
+                "ok": True,
+                "message": "Balance updated successfully.",
+                "data": {
+                    "id": client.id,
+                    "name": client.name,
+                    "balance": client.balance
+                }
+            }, status=status.HTTP_200_OK)
+
+        except ValueError:
+            return Response({
+                "ok": False,
+                "message": "Invalid amount format."
+            }, status=status.HTTP_400_BAD_REQUEST)
 
 
 
@@ -1324,7 +1369,7 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
         client = export_invoice.client
         try:
             if payment_type == "Debt":
-                client.balance -= total_price  # Allow negative balance for debts
+                client.balance -= total_price 
                 client.save()
             else:
                 cashbox = get_object_or_404(Cashbox, id=2)
@@ -1538,91 +1583,6 @@ class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportedinvoiceitem', 'view_exportedinvoiceitem']
 
-    def create(self, request, *args, **kwargs):
-        data = request.data
-        export_invoice_id = data.get("export_invoice")
-        items = data.get("items") 
-
-        if not export_invoice_id or not items:
-            return Response({
-                "ok": False,
-                "message": "Missing required fields: export_invoice or items."
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            export_invoice = ExportInvoice.objects.get(id=export_invoice_id)
-        except ExportInvoice.DoesNotExist:
-            return Response({
-                "ok": False,
-                "message": f"ExportInvoice with ID {export_invoice_id} does not exist."
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-        created_items = []
-        total_price = Decimal(0)
-
-        for item in items:
-            variant_id = item.get("product_variant_id")
-            price = item.get("price")
-            quantity = item.get("quantity")
-
-            if not variant_id or not price or not quantity:
-                return Response({
-                    "ok": False,
-                    "message": f"Missing fields in item: product_variant_id, price, or quantity."
-                }, status=status.HTTP_400_BAD_REQUEST)
-
-            try:
-                variant = ProductVariant.objects.get(id=variant_id)
-                stock = Stock.objects.filter(variant=variant).first()
-
-                if not stock or stock.quantity < quantity:
-                    return Response({
-                        "ok": False,
-                        "message": f"Not enough stock for variant {variant_id}. Available quantity: {stock.quantity if stock else 0}, requested quantity: {quantity}"
-                    }, status=status.HTTP_400_BAD_REQUEST)
-
-
-                stock.quantity -= quantity
-                stock.save()
-
-                export_invoice_item = ExportedInvoiceItem.objects.create(
-                    export_invoice=export_invoice,
-                    variant=variant,
-                    price=price,
-                    quantity=quantity
-                )
-                created_items.append(export_invoice_item)
-
-
-                StockMovement.objects.create(
-                    variant=variant,
-                    type='departure',
-                    quantity=quantity,
-                    description=f"Departure for Export Invoice {export_invoice_id}",
-                )
-
-                total_price += Decimal(price) * Decimal(quantity)
-
-            except ProductVariant.DoesNotExist:
-                return Response({
-                    "ok": False,
-                    "message": f"Variant with ID {variant_id} does not exist."
-                }, status=status.HTTP_400_BAD_REQUEST)
-            except Exception as e:
-                return Response({
-                    "ok": False,
-                    "message": f"Error creating ExportInvoiceItem for variant ID {variant_id}: {str(e)}"
-                }, status=status.HTTP_400_BAD_REQUEST)
-
-        cashbox = get_object_or_404(Cashbox, id=2)
-        cashbox.deposit(total_price, comment="Export Invoice Payment", payment_type="cash", user=request.user)
-
-        serialized_items = self.get_serializer(created_items, many=True)
-        return Response({
-            "ok": True,
-            "message": f"{len(created_items)} Export Invoice Items created successfully.",
-            "data": serialized_items.data
-        }, status=status.HTTP_201_CREATED)
 
 
     def list(self, request, *args, **kwargs):
@@ -1772,6 +1732,28 @@ class WithdrawMoneyView(APIView):
             return Response({
                 "ok": False,
                 "message": "An unexpected error occurred.",
+                "error": str(e)
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+class ResetCashboxView(APIView):
+    permission_classes = [IsAuthenticated]  
+
+    def post(self, request, pk):
+        cashbox = get_object_or_404(Cashbox, pk=pk)
+
+        try:
+            cashbox.reset(user=request.user)
+
+            return Response({
+                "ok": True,
+                "message": "Cashbox reset successfully.",
+                "data": {"remains": cashbox.remains}
+            }, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({
+                "ok": False,
+                "message": "An error occurred while resetting the cashbox.",
                 "error": str(e)
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
