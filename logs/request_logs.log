@@ -6503,3 +6503,23 @@ INFO 2024-12-02 08:55:20,675 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Wate
 INFO 2024-12-02 08:55:21,494 autoreload Watching for file changes with StatReloader
 INFO 2024-12-02 08:55:24,950 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
 INFO 2024-12-02 08:55:25,673 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:56:07,618 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 13:21:31,098 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 13:22:47,571 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 15499
+WARNING 2024-12-02 13:22:59,764 log Bad Request: /api/export-invoices/1/
+WARNING 2024-12-02 13:22:59,765 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 400 86
+INFO 2024-12-02 13:23:16,794 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+WARNING 2024-12-02 13:23:21,091 log Bad Request: /api/import-invoices/64/
+WARNING 2024-12-02 13:23:21,091 basehttp "PUT //api/import-invoices/64/ HTTP/1.1" 400 77
+WARNING 2024-12-02 13:23:29,620 log Bad Request: /api/import-invoices/65/
+WARNING 2024-12-02 13:23:29,621 basehttp "PUT //api/import-invoices/65/ HTTP/1.1" 400 77
+WARNING 2024-12-02 13:23:31,682 log Bad Request: /api/import-invoices/65/
+WARNING 2024-12-02 13:23:31,682 basehttp "PUT //api/import-invoices/65/ HTTP/1.1" 400 77
+INFO 2024-12-02 13:23:35,654 basehttp "PUT //api/import-invoices/66/ HTTP/1.1" 200 654
+WARNING 2024-12-02 13:23:43,037 log Bad Request: /api/export-invoices/1/
+WARNING 2024-12-02 13:23:43,038 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 400 124
+INFO 2024-12-02 13:25:19,471 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 15520
+WARNING 2024-12-02 13:25:31,993 log Bad Request: /api/export-invoices/1/
+WARNING 2024-12-02 13:25:31,993 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 400 124
+INFO 2024-12-02 13:25:47,178 basehttp "PUT //api/export-invoices/2/ HTTP/1.1" 200 839
+INFO 2024-12-02 13:25:52,971 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 15751
