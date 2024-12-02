@@ -207,35 +207,6 @@ class CashboxSerializer(serializers.ModelSerializer):
         model = Cashbox
         fields = ['id', 'remains']
 
-class ExportInvoiceSerializer(serializers.ModelSerializer):
-    client_name = serializers.CharField(source='client.name', read_only=True)
-    user_username = serializers.CharField(source='user.username', read_only=True)
-
-    class Meta:
-        model = ExportInvoice
-        fields = ['id', 'client', 'client_name', 'user', 'user_username', 'state']
-    def to_representation(self, instance):
-        data = super().to_representation(instance)
-        data['user_data'] = {
-            'user_id': data.pop('user', None),
-            'username': data.pop('user_username', None) 
-        }
-        data['client_data'] = {
-            'client_id': data.pop('client', None),
-            'client_name': data.pop('client_name', None),
-        }
-        data.pop('user', None)
-        data.pop('supplier', None)
-
-
-        return data
-
-    
-    def create(self, validated_data):
-        user = self.context['request'].user  
-        validated_data['user'] = user
-        return super().create(validated_data)
-
 
 class ExportedInvoiceItemSerializer(serializers.ModelSerializer):
     export_invoice_info = serializers.CharField(source='export_invoice.__str__', read_only=True)
@@ -259,6 +230,45 @@ class ExportedInvoiceItemSerializer(serializers.ModelSerializer):
 
 
         return data
+
+
+class ExportInvoiceSerializer(serializers.ModelSerializer):
+    client_name = serializers.CharField(source='client.name', read_only=True)
+    user_username = serializers.CharField(source='user.username', read_only=True)
+    exported_items = ExportedInvoiceItemSerializer(source='exportedinvoiceitem_set', many=True, read_only=True)
+
+    class Meta:
+        model = ExportInvoice
+        fields = ['id', 'client', 'client_name', 'user', 'user_username', 'state', 'exported_items']
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['user_data'] = {
+            'user_id': data.pop('user', None),
+            'username': data.pop('user_username', None)
+        }
+        data['client_data'] = {
+            'client_id': data.pop('client', None),
+            'client_name': data.pop('client_name', None),
+        }
+        data.pop('user', None)
+        data.pop('supplier', None)
+
+        return data
+
+    def create(self, validated_data):
+        user = self.context['request'].user
+        validated_data['user'] = user
+        return super().create(validated_data)
+
+
+    
+    def create(self, validated_data):
+        user = self.context['request'].user  
+        validated_data['user'] = user
+        return super().create(validated_data)
+
+
 
 
 

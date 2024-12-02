@@ -6099,3 +6099,407 @@ INFO 2024-11-29 07:58:26,516 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Wate
 INFO 2024-11-29 07:58:27,278 autoreload Watching for file changes with StatReloader
 INFO 2024-11-29 07:58:49,683 basehttp "POST //cashbox/2/reset/ HTTP/1.1" 200 74
 INFO 2024-11-29 07:59:07,335 basehttp "GET //api/cashboxes/ HTTP/1.1" 200 118
+INFO 2024-11-29 09:47:30,640 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:23:41,562 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:23:51,996 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:23:54,473 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:23:55,666 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:23:59,163 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:00,039 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:02,451 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:03,458 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:05,731 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:06,618 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:07,898 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:08,716 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:10,156 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:10,959 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:13,211 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:14,052 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:16,375 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:17,206 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:18,428 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:19,056 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:22,334 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:23,467 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:25,855 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:26,727 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:29,094 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:30,074 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:32,457 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:33,123 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:35,354 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:36,013 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:38,258 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:38,843 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:43,232 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:43,885 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:24:55,817 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:24:56,612 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:00,964 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:01,729 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:05,028 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:05,808 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:08,112 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:08,779 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:10,092 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:10,908 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:14,252 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:14,901 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:16,122 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:16,750 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:20,080 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:20,797 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:27,292 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:27,995 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:29,315 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:30,111 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:32,427 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:33,051 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:35,378 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:36,032 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:40,470 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:41,091 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:44,339 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:45,197 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:46,462 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:47,303 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:48,606 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:49,411 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:51,649 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:52,555 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:53,940 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:54,647 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:55,921 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:56,762 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:25:59,015 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:25:59,700 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:08,188 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:08,801 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:10,096 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:10,848 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:18,517 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:19,193 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:28,231 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:28,920 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:46,251 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:46,979 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:49,293 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:50,072 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:56,535 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:57,278 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:26:58,524 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:26:59,237 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:00,530 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:01,138 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:03,437 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:04,041 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:08,365 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:09,133 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:11,412 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:12,148 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:13,440 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:14,207 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:16,469 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:17,216 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:20,569 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:21,176 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:24,594 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:25,392 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:26,674 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:27,406 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:30,822 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:31,587 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:36,055 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:36,876 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:38,138 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:39,006 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:40,285 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:40,854 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:44,192 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:45,031 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:46,342 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:46,989 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:49,366 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:49,993 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:51,228 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:51,946 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:53,232 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:54,098 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:27:56,472 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:27:57,333 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:00,710 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:01,330 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:03,683 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:04,483 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:07,799 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:08,673 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:10,041 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:10,648 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:15,096 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:15,855 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:17,146 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:17,908 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:19,245 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:19,980 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:23,337 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:24,046 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:25,337 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:25,975 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:28,304 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:29,299 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:31,592 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:32,176 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:34,422 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:35,108 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:36,393 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:37,267 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:38,592 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:39,228 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:40,459 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:41,175 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:43,424 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:44,365 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:45,890 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:46,667 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:28:50,386 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:28:51,344 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:23,854 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:24,780 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:31,456 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:32,140 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:37,510 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:38,254 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:41,642 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:42,385 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:43,700 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:44,791 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:49,260 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:49,948 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:52,293 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:53,001 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:54,334 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:54,925 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:29:57,179 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:29:57,998 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:00,322 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:01,139 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:04,435 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:05,003 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:08,298 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:08,924 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:12,375 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:13,182 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:14,428 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:15,273 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:16,624 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:17,327 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:21,826 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:22,474 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:24,728 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:25,365 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:27,752 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:28,578 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:29,788 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:30,676 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:34,150 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:34,895 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:37,289 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:37,910 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:40,223 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:40,946 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:44,465 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:45,320 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:47,558 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:48,413 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:30:51,858 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:30:52,770 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:31:00,499 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:31:01,070 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:31:07,532 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:31:08,337 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:31:09,594 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:31:10,231 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:31:12,856 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:31:13,574 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:31:25,024 basehttp "GET //api/stocks/ HTTP/1.1" 200 127
+INFO 2024-11-30 17:31:30,781 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-11-30 17:31:34,571 basehttp "GET //api/stocks/ HTTP/1.1" 200 127
+INFO 2024-11-30 17:31:47,026 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 3189
+INFO 2024-11-30 17:32:02,464 basehttp "PUT //api/import-invoices/64/ HTTP/1.1" 200 654
+INFO 2024-11-30 17:32:06,020 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+WARNING 2024-11-30 17:32:11,996 log Bad Request: /api/import-invoices/64/
+WARNING 2024-11-30 17:32:11,997 basehttp "PUT //api/import-invoices/64/ HTTP/1.1" 400 77
+INFO 2024-11-30 17:32:14,327 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-11-30 17:36:23,761 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:36:25,127 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:36:35,048 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:36:35,735 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:36:56,486 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-11-30 17:37:03,041 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 193
+INFO 2024-11-30 17:37:07,034 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-11-30 17:37:17,693 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 4156
+INFO 2024-11-30 17:37:54,542 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 4156
+INFO 2024-11-30 17:38:28,279 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:38:29,268 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:38:32,981 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:38:33,731 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:38:36,162 basehttp "PUT //api/export-invoices/35/ HTTP/1.1" 200 178
+INFO 2024-11-30 17:38:40,603 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-11-30 17:39:34,400 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:39:35,582 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:39:43,793 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:39:44,456 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:39:46,727 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:39:47,744 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:40:02,991 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:40:03,682 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:40:11,473 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:40:12,283 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:40:14,695 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:40:15,312 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:40:18,493 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 193
+INFO 2024-11-30 17:40:25,008 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 193
+INFO 2024-11-30 17:41:31,867 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-30 17:41:32,632 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:41:35,139 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-30 17:41:36,033 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:41:37,845 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 193
+INFO 2024-11-30 17:41:45,076 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-11-30 17:41:45,903 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:41:47,585 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:41:48,253 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:41:50,844 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:41:51,722 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:41:55,365 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:41:56,083 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:41:57,576 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:41:58,194 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:42:01,659 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:42:02,313 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:42:06,938 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-11-30 17:42:07,761 autoreload Watching for file changes with StatReloader
+INFO 2024-11-30 17:42:09,399 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 630
+INFO 2024-11-30 17:42:14,710 basehttp "GET //api/stocks/ HTTP/1.1" 200 456
+INFO 2024-11-30 17:42:19,104 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 630
+INFO 2024-11-30 17:42:21,141 basehttp "GET //api/stocks/ HTTP/1.1" 200 295
+INFO 2024-11-30 17:44:59,441 basehttp "PUT //api/export-invoices/35/ HTTP/1.1" 200 390
+INFO 2024-11-30 17:45:08,305 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 4741
+INFO 2024-12-01 08:34:28,075 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 4741
+WARNING 2024-12-01 08:34:29,702 log Bad Request: /api/export-invoices/
+WARNING 2024-12-01 08:34:29,703 basehttp "POST //api/export-invoices/ HTTP/1.1" 400 86
+INFO 2024-12-01 08:34:36,865 basehttp "GET //api/stocks/ HTTP/1.1" 200 295
+WARNING 2024-12-02 08:35:50,294 log Bad Request: /api/export-invoices/35/
+WARNING 2024-12-02 08:35:50,328 basehttp "PUT //api/export-invoices/35/ HTTP/1.1" 400 86
+INFO 2024-12-02 08:36:12,675 basehttp "GET //api/stocks/ HTTP/1.1" 200 127
+INFO 2024-12-02 08:41:39,734 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:41:50,901 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:42:08,278 basehttp "GET //api/import-invoices/ HTTP/1.1" 200 3204
+INFO 2024-12-02 08:42:15,896 basehttp "POST //api/import-invoices/ HTTP/1.1" 201 165
+INFO 2024-12-02 08:42:20,641 basehttp "GET //api/stocks/ HTTP/1.1" 200 127
+WARNING 2024-12-02 08:42:27,661 log Bad Request: /api/import-invoices/64/
+WARNING 2024-12-02 08:42:27,661 basehttp "PUT //api/import-invoices/64/ HTTP/1.1" 400 77
+INFO 2024-12-02 08:42:37,996 basehttp "PUT //api/import-invoices/65/ HTTP/1.1" 200 654
+INFO 2024-12-02 08:42:41,653 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:42:59,058 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 629
+INFO 2024-12-02 08:43:05,800 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:43:24,043 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:43:24,954 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:43:41,935 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:43:42,586 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:44:48,818 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:44:49,594 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:44:59,488 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:45:00,133 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:45:10,310 basehttp "PUT //api/export-invoices/35/ HTTP/1.1" 200 404
+INFO 2024-12-02 08:45:14,026 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:45:25,324 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 4975
+INFO 2024-12-02 08:45:38,504 basehttp "PUT //api/export-invoices/40/ HTTP/1.1" 200 830
+INFO 2024-12-02 08:45:42,037 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:45:43,336 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:45:44,027 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:45:44,669 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:45:45,310 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:46:06,047 basehttp "PUT //api/export-invoices/42/ HTTP/1.1" 200 830
+INFO 2024-12-02 08:46:08,945 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:46:11,959 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:46:13,318 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:46:21,958 basehttp "PUT //api/export-invoices/42/ HTTP/1.1" 200 850
+INFO 2024-12-02 08:46:24,881 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:46:29,910 basehttp "POST //api/export-invoices/ HTTP/1.1" 201 628
+INFO 2024-12-02 08:46:33,496 basehttp "GET //api/stocks/ HTTP/1.1" 200 457
+INFO 2024-12-02 08:47:05,097 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-12-02 08:47:05,727 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:48:01,068 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:48:18,608 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-02 08:48:21,677 log Internal Server Error: /api/clients/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 1156, in create
+    "cud": instance.cud,
+           ^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'cud'
+ERROR 2024-12-02 08:48:21,681 basehttp "POST //api/clients/ HTTP/1.1" 500 110587
+INFO 2024-12-02 08:49:01,576 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:49:02,232 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:49:09,893 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:49:10,518 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:49:14,108 basehttp "POST //api/clients/ HTTP/1.1" 201 126
+INFO 2024-12-02 08:49:18,104 basehttp "POST //api/clients/ HTTP/1.1" 201 126
+INFO 2024-12-02 08:49:32,453 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 5097
+INFO 2024-12-02 08:50:36,462 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-12-02 08:50:37,085 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:51:17,512 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-12-02 08:51:18,586 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:51:30,629 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-12-02 08:51:31,253 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:51:34,592 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-12-02 08:51:35,263 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:51:36,593 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-12-02 08:51:37,336 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:51:39,615 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/serializers.py changed, reloading.
+INFO 2024-12-02 08:51:40,319 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:51:43,671 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 15499
+INFO 2024-12-02 08:54:20,882 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:54:21,628 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:54:28,403 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:54:29,125 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:54:31,566 basehttp "POST //api/product-variants/ HTTP/1.1" 200 213
+INFO 2024-12-02 08:54:33,229 basehttp "POST //api/product-variants/ HTTP/1.1" 200 213
+WARNING 2024-12-02 08:54:41,314 log Bad Request: /api/product-variants/
+WARNING 2024-12-02 08:54:41,314 basehttp "POST //api/product-variants/ HTTP/1.1" 400 122
+WARNING 2024-12-02 08:54:48,046 log Bad Request: /api/products/
+WARNING 2024-12-02 08:54:48,047 basehttp "POST //api/products/ HTTP/1.1" 400 107
+WARNING 2024-12-02 08:54:54,039 log Bad Request: /api/products/
+WARNING 2024-12-02 08:54:54,040 basehttp "POST //api/products/ HTTP/1.1" 400 107
+INFO 2024-12-02 08:54:58,509 basehttp "POST //api/products/ HTTP/1.1" 201 146
+INFO 2024-12-02 08:55:02,111 basehttp "POST //api/product-variants/ HTTP/1.1" 201 185
+INFO 2024-12-02 08:55:04,446 basehttp "POST //api/product-variants/ HTTP/1.1" 200 216
+INFO 2024-12-02 08:55:20,675 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:55:21,494 autoreload Watching for file changes with StatReloader
+INFO 2024-12-02 08:55:24,950 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-02 08:55:25,673 autoreload Watching for file changes with StatReloader

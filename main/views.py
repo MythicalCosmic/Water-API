@@ -494,36 +494,72 @@ class ProductVariantListCreateView(generics.ListCreateAPIView):
     required_permissions = ['add_productvariant', 'view_productvariant']
 
     def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-    
-        if serializer.is_valid():
-            instance = serializer.save()
+        data = request.data
+        product_id = data.get('product')
+        size_id = data.get('size')
 
-            product_data = {
-                "id": instance.product.id,
-                "name": instance.product.name
-            }
-            size_data = {
-                "id": instance.size.id,
-                "name": instance.size.name
-            }
-            return Response({
-                "ok": True,
-                "message": "Product Variant created successfully",
-                "data": {
-                    "id": instance.id,
-                    "product": product_data,
-                    "size": size_data,
-                    "unique_code": instance.uniq_code,
-                }
-            }, status=status.HTTP_201_CREATED)
-    
-        else:
+        if not product_id or not size_id:
             return Response({
                 "ok": False,
-                "message": "Product Variant creation failed",
-                "data": serializer.errors
+                "message": "Both product and size fields are required."
             }, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            existing_variant = ProductVariant.objects.filter(product_id=product_id, size_id=size_id).first()
+            if existing_variant:
+                return Response({
+                    "ok": False,
+                    "message": "Product Variant with the specified product and size already exists.",
+                    "data": {
+                        "id": existing_variant.id,
+                        "product": {
+                            "id": existing_variant.product.id,
+                            "name": existing_variant.product.name
+                        },
+                        "size": {
+                            "id": existing_variant.size.id,
+                            "name": existing_variant.size.name
+                        },
+                        "unique_code": existing_variant.uniq_code
+                    }
+                }, status=status.HTTP_200_OK)
+
+            serializer = self.get_serializer(data=data)
+            if serializer.is_valid():
+                instance = serializer.save()
+
+                product_data = {
+                    "id": instance.product.id,
+                    "name": instance.product.name
+                }
+                size_data = {
+                    "id": instance.size.id,
+                    "name": instance.size.name
+                }
+                return Response({
+                    "ok": True,
+                    "message": "Product Variant created successfully.",
+                    "data": {
+                        "id": instance.id,
+                        "product": product_data,
+                        "size": size_data,
+                        "unique_code": instance.uniq_code,
+                    }
+                }, status=status.HTTP_201_CREATED)
+
+            else:
+                return Response({
+                    "ok": False,
+                    "message": "Product Variant creation failed.",
+                    "data": serializer.errors
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception as e:
+            return Response({
+                "ok": False,
+                "message": f"An error occurred: {str(e)}"
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     
 
     def list(self, request, *args, **kwargs):
@@ -741,7 +777,7 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
 
         serializer = self.get_serializer(data=data)
         if serializer.is_valid():
-            instance = serializer.save(user=request.user)  
+            instance = serializer.save(user=request.user)
             created_items = []
 
             for item in items:
@@ -757,36 +793,38 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
 
                 try:
                     variant = ProductVariant.objects.get(id=variant_id)
-                
-                    stock, created = Stock.objects.get_or_create(
-                    variant=variant, 
-                    user=user,
-                     defaults={"quantity": quantity, "price": input_price}  
-                    )
-                    if not created: 
-                        stock.quantity += int(quantity)
-                        stock.price = input_price  
-                    stock.save()
+
                     imported_item, item_created = ImportedInvoiceItem.objects.get_or_create(
-                    import_invoice=instance,
-                    variant=variant,
-                    defaults={
-                        "input_price": input_price,
-                        "quantity": quantity,
+                        import_invoice=instance,
+                        variant=variant,
+                        defaults={
+                            "input_price": input_price,
+                            "quantity": quantity,
                         }
                     )
-
-                    if not item_created: 
+                    if not item_created:
                         imported_item.quantity += quantity
-                        imported_item.input_price = input_price  
+                        imported_item.input_price = input_price
                         imported_item.save()
 
-                    StockMovement.objects.create(
-                        variant=variant,
-                        type="arrival",
-                        quantity=quantity,
-                        description=f"Stock updated from Import Invoice {instance.id}"
-                    )
+
+                    if instance.state != "new":
+                        stock, created = Stock.objects.get_or_create(
+                            variant=variant,
+                            user=user,
+                            defaults={"quantity": quantity, "price": input_price}
+                        )
+                        if not created:
+                            stock.quantity += int(quantity)
+                            stock.price = input_price
+                        stock.save()
+
+                        StockMovement.objects.create(
+                            variant=variant,
+                            type="arrival",
+                            quantity=quantity,
+                            description=f"Stock updated from Import Invoice {instance.id}"
+                        )
 
                 except ProductVariant.DoesNotExist:
                     return Response({
@@ -818,6 +856,8 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
             "message": "Import Invoice creation failed.",
             "data": serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
+
+
 
 
         
@@ -854,7 +894,7 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         })
 
     def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False)  
+        partial = kwargs.get('partial', False)
         instance = self.get_object()
 
         if instance.state in ['accepted', 'canceled']:
@@ -865,7 +905,6 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
 
         data = request.data
         items = data.pop("items", None)
-
 
         serializer = self.get_serializer(instance, data=data, partial=partial)
         if serializer.is_valid():
@@ -899,28 +938,30 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                             imported_item.input_price = input_price
                             imported_item.save()
 
-                        stock, created = Stock.objects.get_or_create(
-                            variant=variant,
-                            user=request.user,
-                            defaults={"quantity": quantity, "price": input_price}
-                        )
-                        if not created:
-                            stock.quantity += quantity
-                            stock.price = input_price
-                        stock.save()
+ 
+                        if updated_instance.state != "new":
+                            stock, created = Stock.objects.get_or_create(
+                                variant=variant,
+                                user=request.user,
+                                defaults={"quantity": quantity, "price": input_price}
+                            )
+                            if not created:
+                                stock.quantity += quantity
+                                stock.price = input_price
+                            stock.save()
 
-                        StockMovement.objects.create(
-                            variant=variant,
-                            type="update",
-                            quantity=quantity,
-                            description=f"Stock updated from Import Invoice {instance.id}"
-                        )
+                            StockMovement.objects.create(
+                                variant=variant,
+                                type="update",
+                                quantity=quantity,
+                                description=f"Stock updated from Import Invoice {instance.id}"
+                            )
 
                     except ProductVariant.DoesNotExist:
                         return Response({
                             "ok": False,
                             "message": f"Variant with ID {variant_id} does not exist."
-                        }, status=status.HTTP_400_BAD_REQUEST)
+                     }, status=status.HTTP_400_BAD_REQUEST)
 
             return Response({
                 "ok": True,
@@ -933,11 +974,6 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
             "message": "Import Invoice update failed.",
             "data": serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
-
-
-
-
-
 
 
     def destroy(self, request, *args, **kwargs):
@@ -1153,7 +1189,6 @@ class ClientListCreateView(generics.ListCreateAPIView):
                     "name": instance.name,
                     "phone": instance.phone,
                     "description": instance.description,
-                    "cud": instance.cud,
                 }
             }, status=status.HTTP_201_CREATED)
     
@@ -1217,7 +1252,6 @@ class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                     "name": instance.name,
                     "phone": instance.phone,
                     "description": instance.description,
-                    "cud": instance.cud,
                 }
             })
         else:
@@ -1311,10 +1345,10 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
         export_invoice = serializer.save(user=request.user)  
-
         total_price = Decimal(0)
         created_items = []
 
+        # Process Items
         for item in items:
             variant_id = item.get("product_variant_id")
             price = item.get("price")
@@ -1336,11 +1370,19 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
                         "message": f"Insufficient stock for variant {variant_id}. Available: {stock.quantity if stock else 0}, requested: {quantity}."
                     }, status=status.HTTP_400_BAD_REQUEST)
 
-                if stock.quantity > quantity:
-                    stock.quantity -= quantity
-                    stock.save()
-                elif stock.quantity == quantity:
-                    stock.delete()
+                if export_invoice.state != "new":
+                    if stock.quantity > quantity:
+                        stock.quantity -= quantity
+                        stock.save()
+                    elif stock.quantity == quantity:
+                        stock.delete()
+
+                    StockMovement.objects.create(
+                        variant=variant,
+                        type="departure",
+                        quantity=quantity,
+                        description=f"Stock moved for Export Invoice {export_invoice.id}"
+                    )
 
                 exported_item = ExportedInvoiceItem.objects.create(
                     export_invoice=export_invoice,
@@ -1349,14 +1391,6 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
                     quantity=quantity
                 )
                 created_items.append(exported_item)
-
-                StockMovement.objects.create(
-                    variant=variant,
-                    type="departure",
-                    quantity=quantity,
-                    description=f"Stock moved for Export Invoice {export_invoice.id}"
-                )
-
                 total_price += Decimal(price) * Decimal(quantity)
 
             except ProductVariant.DoesNotExist:
@@ -1365,12 +1399,11 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
                     "message": f"Product variant with ID {variant_id} does not exist."
                 }, status=status.HTTP_400_BAD_REQUEST)
 
-
-        client = export_invoice.client
+        # Process Payment
         try:
             if payment_type == "Debt":
-                client.balance -= total_price 
-                client.save()
+                export_invoice.client.balance -= total_price
+                export_invoice.client.save()
             else:
                 cashbox = get_object_or_404(Cashbox, id=2)
                 cashbox.deposit(
@@ -1385,12 +1418,13 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
                 "message": f"Error processing payment: {str(e)}"
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+        # Response
         export_invoice_data = {
             "id": export_invoice.id,
             "client": {
-                "id": client.id,
-                "name": client.name,
-                "balance": client.balance  
+                "id": export_invoice.client.id,
+                "name": export_invoice.client.name,
+                "balance": export_invoice.client.balance  
             },
             "user": {
                 "id": export_invoice.user.id,
@@ -1441,11 +1475,13 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
             "data": serializer.data  
         })
         
+    @transaction.atomic
     def update(self, request, *args, **kwargs):
         partial = kwargs.get('partial', False)
         instance = self.get_object()
 
-        if instance.state != 'new':
+        # Prevent updates to invoices with states other than "new"
+        if instance.state not in ["new"]:
             return Response({
                 "ok": False,
                 "message": f"Cannot edit an Export Invoice with state '{instance.state}'. Only invoices with state 'new' can be updated."
@@ -1455,7 +1491,7 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         items = data.pop("items", None)
         payment_type = data.get("payment_type", None)
 
-
+        # Validate and update the invoice
         serializer = self.get_serializer(instance, data=data, partial=partial)
         if not serializer.is_valid():
             return Response({
@@ -1467,12 +1503,14 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         export_invoice = serializer.save()
         total_price = Decimal(0)
 
+        # Process Items
         if items:
             for item in items:
                 variant_id = item.get("product_variant_id")
                 price = item.get("price")
                 quantity = item.get("quantity")
 
+                # Validate item fields
                 if not variant_id or price is None or quantity is None:
                     return Response({
                         "ok": False,
@@ -1483,19 +1521,29 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                     variant = ProductVariant.objects.get(id=variant_id)
                     stock = Stock.objects.filter(variant=variant).first()
 
-
+                    # Check stock availability
                     if not stock or stock.quantity < quantity:
                         return Response({
                             "ok": False,
                             "message": f"Insufficient stock for variant {variant_id}. Available: {stock.quantity if stock else 0}, requested: {quantity}."
                         }, status=status.HTTP_400_BAD_REQUEST)
 
-                    if stock.quantity > quantity:
-                        stock.quantity -= quantity
-                        stock.save()
-                    elif stock.quantity == quantity:
-                        stock.delete()
+                    # Update stock only if state is not "new"
+                    if instance.state != "new":
+                        if stock.quantity > quantity:
+                            stock.quantity -= quantity
+                            stock.save()
+                        elif stock.quantity == quantity:
+                            stock.delete()
 
+                        StockMovement.objects.create(
+                            variant=variant,
+                            type="departure",
+                            quantity=quantity,
+                            description=f"Stock updated for Export Invoice {export_invoice.id}"
+                        )
+
+                    # Update or create invoice items
                     exported_item, created = ExportedInvoiceItem.objects.update_or_create(
                         export_invoice=export_invoice,
                         variant=variant,
@@ -1503,13 +1551,6 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                             "price": Decimal(price),
                             "quantity": quantity
                         }
-                    )
-
-                    StockMovement.objects.create(
-                        variant=variant,
-                        type="departure",
-                        quantity=quantity,
-                        description=f"Stock updated for Export Invoice {export_invoice.id}"
                     )
 
                     total_price += Decimal(price) * Decimal(quantity)
@@ -1520,26 +1561,32 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                         "message": f"Product variant with ID {variant_id} does not exist."
                     }, status=status.HTTP_400_BAD_REQUEST)
 
-
+        # Process Payment
         try:
-            cashbox = get_object_or_404(Cashbox, id=2)
-            cashbox.deposit(
-                total_price,
-                comment=f"Payment updated for Export Invoice {export_invoice.id}",
-                payment_type=payment_type,
-                user=request.user
-            )
+            if payment_type == "Debt":
+                export_invoice.client.balance -= total_price
+                export_invoice.client.save()
+            else:
+                cashbox = get_object_or_404(Cashbox, id=2)
+                cashbox.deposit(
+                    total_price,
+                    comment=f"Payment updated for Export Invoice {export_invoice.id}",
+                    payment_type=payment_type,
+                    user=request.user
+                )
         except Exception as e:
             return Response({
                 "ok": False,
-                "message": f"Error updating Cashbox: {str(e)}"
+                "message": f"Error updating payment: {str(e)}"
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+        # Response
         export_invoice_data = {
             "id": export_invoice.id,
             "client": {
                 "id": export_invoice.client.id,
-                "name": export_invoice.client.name
+                "name": export_invoice.client.name,
+                "balance": export_invoice.client.balance
             },
             "user": {
                 "id": export_invoice.user.id,
@@ -1547,14 +1594,19 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
             },
             "state": export_invoice.state,
         }
+
         return Response({
             "ok": True,
             "message": "Export Invoice updated successfully.",
             "data": {
                 "invoice": export_invoice_data,
-                "items": ExportedInvoiceItemSerializer(ExportedInvoiceItem.objects.filter(export_invoice=export_invoice), many=True).data
+                "items": ExportedInvoiceItemSerializer(
+                    ExportedInvoiceItem.objects.filter(export_invoice=export_invoice),
+                    many=True
+                ).data
             }
         }, status=status.HTTP_200_OK)
+
 
 
 

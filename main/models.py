@@ -107,7 +107,6 @@ class Client(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
     phone = models.IntegerField()
-    cud = models.CharField(max_length=20, unique=True)
     balance = models.IntegerField(default=0)
 
 
