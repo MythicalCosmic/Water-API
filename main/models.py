@@ -117,7 +117,7 @@ class Client(models.Model):
 class ExportInvoice(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     user = models.ForeignKey(User,  null=True, blank=True, on_delete=models.CASCADE)
-    state = models.CharField(max_length=10, choices=[('new', 'New'), ('accepted', 'Accepted'), ('canceled', 'Canceled')])
+    state = models.CharField(max_length=10, choices=[('new', 'New'), ('accepted', 'Accepted'), ('canceled', 'Canceled')],default='new')
 
     def __str__(self):
         return f"Export Invoice {self.id} - {self.state}"

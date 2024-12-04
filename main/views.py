@@ -22,6 +22,7 @@ from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend # type: ignore
 from rest_framework.filters import OrderingFilter
 from rest_framework.decorators import action
+from .mixins import *
 
 
 
@@ -95,12 +96,22 @@ class SupplierListCreateView(generics.ListCreateAPIView):
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
+        page = self.paginate_queryset(queryset) 
+
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response({
+                "ok": True,
+                "message": "Suppliers retrieved successfully",
+                "data": serializer.data
+            })
         serializer = self.get_serializer(queryset, many=True)
         return Response({
             "ok": True,
             "message": "Suppliers retrieved successfully",
-            "data": serializer.data  
+            "data": serializer.data
         })
+
     
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -384,7 +395,7 @@ class SizeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
 
 # Product Views
-class ProductListCreateView(generics.ListCreateAPIView):
+class ProductListCreateView(generics.ListCreateAPIView, PaginatedMixin):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
@@ -412,13 +423,19 @@ class ProductListCreateView(generics.ListCreateAPIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
     def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Product retrieved successfully",
-            "data": serializer.data
-        })
+            queryset = self.get_queryset()
+            page = self.paginate_queryset(queryset)  
+
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+
+            serializer = self.get_serializer(queryset, many=True)
+            return Response({
+                "ok": True,
+                "message": "Product retrieved successfully",
+                "data": serializer.data
+            })
 
 
 class ProductRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
@@ -1322,6 +1339,7 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
     queryset = ExportInvoice.objects.all()
     serializer_class = ExportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
+    paginate_by = 5
     required_permissions = ['add_exportinvoice', 'view_exportinvoice']
 
     @transaction.atomic

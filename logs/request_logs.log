@@ -6523,3 +6523,481 @@ WARNING 2024-12-02 13:25:31,993 log Bad Request: /api/export-invoices/1/
 WARNING 2024-12-02 13:25:31,993 basehttp "PUT //api/export-invoices/1/ HTTP/1.1" 400 124
 INFO 2024-12-02 13:25:47,178 basehttp "PUT //api/export-invoices/2/ HTTP/1.1" 200 839
 INFO 2024-12-02 13:25:52,971 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 15751
+INFO 2024-12-02 13:37:26,462 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-02 13:37:35,343 log Not Found: /
+WARNING 2024-12-02 13:37:35,344 basehttp "GET / HTTP/1.1" 404 12972
+WARNING 2024-12-02 13:37:35,852 log Not Found: /favicon.ico
+WARNING 2024-12-02 13:37:35,856 basehttp "GET /favicon.ico HTTP/1.1" 404 13023
+INFO 2024-12-02 13:37:42,254 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2024-12-02 13:37:42,324 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-12-02 13:37:42,438 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+INFO 2024-12-02 13:37:42,554 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2024-12-02 13:37:42,567 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2024-12-02 13:37:42,568 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2024-12-02 13:37:42,585 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-12-02 13:37:42,595 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2024-12-02 13:37:42,704 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-12-02 13:37:42,706 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2024-12-02 13:37:55,368 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-12-02 13:37:55,542 basehttp "GET /admin/ HTTP/1.1" 200 16275
+INFO 2024-12-02 13:37:55,752 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2024-12-02 13:37:55,764 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-12-02 13:37:55,765 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-12-02 13:46:39,961 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/models.py changed, reloading.
+INFO 2024-12-02 13:46:43,382 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:32:28,298 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:34:08,901 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:34:11,254 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:34:17,408 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:34:18,629 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:35:00,958 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:35:02,214 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:35:57,907 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:36:20,522 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:36:21,923 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:36:25,273 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 71
+WARNING 2024-12-04 08:36:38,246 log Bad Request: /api/products/
+WARNING 2024-12-04 08:36:38,248 basehttp "POST //api/products/ HTTP/1.1" 400 114
+INFO 2024-12-04 08:36:45,145 basehttp "POST //api/categories/ HTTP/1.1" 201 105
+INFO 2024-12-04 08:36:49,507 basehttp "POST //api/products/ HTTP/1.1" 201 146
+WARNING 2024-12-04 08:36:50,712 log Bad Request: /api/products/
+WARNING 2024-12-04 08:36:50,713 basehttp "POST //api/products/ HTTP/1.1" 400 107
+WARNING 2024-12-04 08:36:51,660 log Bad Request: /api/products/
+WARNING 2024-12-04 08:36:51,661 basehttp "POST //api/products/ HTTP/1.1" 400 107
+INFO 2024-12-04 08:36:59,021 basehttp "POST //api/products/ HTTP/1.1" 201 137
+INFO 2024-12-04 08:37:02,456 basehttp "POST //api/products/ HTTP/1.1" 201 138
+INFO 2024-12-04 08:37:04,856 basehttp "POST //api/products/ HTTP/1.1" 201 139
+INFO 2024-12-04 08:37:07,208 basehttp "POST //api/products/ HTTP/1.1" 201 140
+INFO 2024-12-04 08:37:10,426 basehttp "POST //api/products/ HTTP/1.1" 201 141
+INFO 2024-12-04 08:37:13,551 basehttp "GET //api/products/ HTTP/1.1" 200 784
+INFO 2024-12-04 08:38:15,710 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:38:16,544 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:38:18,001 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:38:18,699 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:38:22,269 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:38:23,155 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:38:23,761 basehttp "GET //api/products/ HTTP/1.1" 200 784
+INFO 2024-12-04 08:38:35,277 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:38:36,096 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:38:42,886 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:38:43,615 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:38:45,255 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:38:45,932 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:39:08,522 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:39:09,301 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:39:12,740 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:39:13,467 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-04 08:39:15,965 log Forbidden: /api/products/
+WARNING 2024-12-04 08:39:15,966 basehttp "GET //api/products/ HTTP/1.1" 403 58
+INFO 2024-12-04 08:39:23,923 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+WARNING 2024-12-04 08:39:39,423 log Forbidden: /api/products/
+WARNING 2024-12-04 08:39:39,424 basehttp "GET //api/products/ HTTP/1.1" 403 58
+INFO 2024-12-04 08:39:44,783 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:39:45,482 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:39:57,329 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:39:58,197 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:40:01,787 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:40:02,415 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:40:05,986 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:40:06,762 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-04 08:40:07,743 log Forbidden: /api/products/
+WARNING 2024-12-04 08:40:07,743 basehttp "GET //api/products/ HTTP/1.1" 403 58
+WARNING 2024-12-04 08:40:08,776 log Forbidden: /api/products/
+WARNING 2024-12-04 08:40:08,776 basehttp "GET //api/products/ HTTP/1.1" 403 58
+WARNING 2024-12-04 08:40:19,010 log Forbidden: /api/products/
+WARNING 2024-12-04 08:40:19,011 basehttp "POST //api/products/ HTTP/1.1" 403 58
+INFO 2024-12-04 08:40:46,381 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:40:47,147 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:40:48,537 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:40:49,178 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:40:50,664 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:40:51,389 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-04 08:40:52,973 log Bad Request: /api/products/
+WARNING 2024-12-04 08:40:52,974 basehttp "POST //api/products/ HTTP/1.1" 400 107
+INFO 2024-12-04 08:40:55,867 basehttp "GET //api/products/ HTTP/1.1" 200 514
+INFO 2024-12-04 08:42:59,243 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:42:59,962 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:43:14,831 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:43:15,442 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:43:17,683 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:43:18,294 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:43:33,598 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:43:34,583 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:43:37,871 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:43:38,596 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:43:41,213 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:43:41,992 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-04 08:43:43,676 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 418, in list
+    page, paginator = self.paginate_queryset(queryset)
+    ^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2024-12-04 08:43:43,679 basehttp "GET //api/products/ HTTP/1.1" 500 109439
+ERROR 2024-12-04 08:43:46,502 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 418, in list
+    page, paginator = self.paginate_queryset(queryset)
+    ^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2024-12-04 08:43:46,504 basehttp "GET //api/products/ HTTP/1.1" 500 109439
+INFO 2024-12-04 08:44:58,263 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:44:58,991 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-04 08:45:02,264 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 418, in list
+    page, paginator = self.paginate_queryset(queryset)
+    ^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2024-12-04 08:45:02,267 basehttp "GET //api/products/ HTTP/1.1" 500 109439
+ERROR 2024-12-04 08:45:03,579 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 418, in list
+    page, paginator = self.paginate_queryset(queryset)
+    ^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2024-12-04 08:45:03,581 basehttp "GET //api/products/ HTTP/1.1" 500 109439
+ERROR 2024-12-04 08:45:28,086 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 418, in list
+    page, paginator = self.paginate_queryset(queryset)
+    ^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+ERROR 2024-12-04 08:45:28,087 basehttp "GET //api/products/ HTTP/1.1" 500 109439
+INFO 2024-12-04 08:45:41,719 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:45:42,598 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:45:44,954 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:45:45,635 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-04 08:45:47,593 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 422, in list
+    return self.get_paginated_response(serializer.data, paginator)
+                                                        ^^^^^^^^^
+NameError: name 'paginator' is not defined. Did you mean: 'self.paginator'?
+ERROR 2024-12-04 08:45:47,596 basehttp "GET //api/products/ HTTP/1.1" 500 110697
+ERROR 2024-12-04 08:45:48,789 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 422, in list
+    return self.get_paginated_response(serializer.data, paginator)
+                                                        ^^^^^^^^^
+NameError: name 'paginator' is not defined. Did you mean: 'self.paginator'?
+ERROR 2024-12-04 08:45:48,791 basehttp "GET //api/products/ HTTP/1.1" 500 110697
+INFO 2024-12-04 08:46:16,762 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:46:17,622 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-04 08:46:21,144 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 422, in list
+    return self.get_paginated_response(serializer.data, paginator)
+                                                        ^^^^^^^^^
+NameError: name 'paginator' is not defined. Did you mean: 'self.paginator'?
+ERROR 2024-12-04 08:46:21,147 basehttp "GET //api/products/ HTTP/1.1" 500 110697
+ERROR 2024-12-04 08:46:22,768 log Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/env/lib/python3.12/site-packages/rest_framework/generics.py", line 243, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py", line 422, in list
+    return self.get_paginated_response(serializer.data, paginator)
+                                                        ^^^^^^^^^
+NameError: name 'paginator' is not defined. Did you mean: 'self.paginator'?
+ERROR 2024-12-04 08:46:22,770 basehttp "GET //api/products/ HTTP/1.1" 500 110697
+INFO 2024-12-04 08:46:48,128 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:46:48,759 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:46:51,037 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:46:51,680 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:46:53,621 basehttp "GET //api/products/ HTTP/1.1" 200 452
+INFO 2024-12-04 08:46:54,664 basehttp "GET //api/products/ HTTP/1.1" 200 452
+INFO 2024-12-04 08:47:07,063 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:47:07,802 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:47:09,293 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:47:10,096 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:47:13,706 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:47:14,308 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:47:16,773 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:47:17,386 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:47:18,782 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:47:19,404 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:49:34,424 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 08:49:34,997 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:49:49,690 basehttp "GET //api/products/ HTTP/1.1" 200 772
+INFO 2024-12-04 08:49:51,077 basehttp "GET //api/products/ HTTP/1.1" 200 772
+INFO 2024-12-04 08:50:27,928 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:50:29,183 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:50:32,586 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:50:33,406 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:50:36,681 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:50:37,306 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:50:38,562 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:50:39,181 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:50:42,491 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:50:43,273 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:50:44,827 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:50:45,562 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:50:47,090 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:50:47,657 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:52:53,051 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:52:53,730 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:52:56,000 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:52:56,670 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:53:03,431 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:53:04,068 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:53:07,448 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:53:08,060 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:53:09,309 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:53:10,017 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:53:12,300 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:53:12,994 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:53:39,522 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:53:40,274 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:53:44,829 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:53:45,799 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:54:12,386 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:54:13,084 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:54:16,465 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:54:17,184 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:54:19,404 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:54:20,019 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:54:21,765 basehttp "GET //api/products/ HTTP/1.1" 200 784
+INFO 2024-12-04 08:54:23,405 basehttp "GET //api/products/ HTTP/1.1" 200 784
+INFO 2024-12-04 08:55:21,118 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:55:22,496 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:55:23,872 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:55:24,567 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:55:29,068 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 08:55:30,421 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:55:32,797 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/mixins.py changed, reloading.
+INFO 2024-12-04 08:55:33,625 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 08:55:35,699 basehttp "GET //api/products/ HTTP/1.1" 200 772
+INFO 2024-12-04 11:10:25,788 basehttp "GET //api/export-invoices/ HTTP/1.1" 200 71
+INFO 2024-12-04 11:11:01,959 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:11:03,373 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:11:05,698 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:11:06,825 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:11:13,681 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:11:14,499 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:11:18,043 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:11:18,660 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:18:53,106 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:19:01,459 autoreload Watching for file changes with StatReloader
