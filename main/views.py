@@ -1621,7 +1621,8 @@ class ExportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestro
 
 
 class DepositMoneyView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, GroupPermission]
+    required_permissions = ['deposit_money']
 
     def post(self, request, pk):
         cashbox = get_object_or_404(Cashbox, pk=pk)
@@ -1656,7 +1657,8 @@ class DepositMoneyView(APIView):
 
 
 class WithdrawMoneyView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, GroupPermission]
+    required_permissions = ['withdraw_money']
 
     def post(self, request, pk):
         cashbox = get_object_or_404(Cashbox, pk=pk)
@@ -1689,7 +1691,8 @@ class WithdrawMoneyView(APIView):
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
 class ResetCashboxView(APIView):
-    permission_classes = [IsAuthenticated]  
+    permission_classes = [IsAuthenticated, GroupPermission]
+    required_permissions = ['reset_cashbox'] 
 
     def post(self, request, pk):
         cashbox = get_object_or_404(Cashbox, pk=pk)
