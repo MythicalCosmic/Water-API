@@ -7001,3 +7001,109 @@ INFO 2024-12-04 11:11:18,043 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Wate
 INFO 2024-12-04 11:11:18,660 autoreload Watching for file changes with StatReloader
 INFO 2024-12-04 11:18:53,106 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
 INFO 2024-12-04 11:19:01,459 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:26:35,404 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:26:58,003 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:26:59,058 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:27:04,974 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:27:06,070 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:27:11,786 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:27:12,767 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:27:16,294 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:27:17,000 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-04 11:27:27,481 log Not Found: /
+WARNING 2024-12-04 11:27:27,482 basehttp "GET / HTTP/1.1" 404 12972
+WARNING 2024-12-04 11:27:27,797 log Not Found: /favicon.ico
+WARNING 2024-12-04 11:27:27,798 basehttp "GET /favicon.ico HTTP/1.1" 404 13023
+INFO 2024-12-04 11:27:30,550 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-12-04 11:27:30,632 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+INFO 2024-12-04 11:27:36,725 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-12-04 11:27:36,774 basehttp "GET /admin/ HTTP/1.1" 200 16275
+INFO 2024-12-04 11:27:39,700 basehttp "GET /admin/main/category/ HTTP/1.1" 200 15960
+INFO 2024-12-04 11:27:39,795 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2024-12-04 11:27:39,797 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2024-12-04 11:27:39,797 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO 2024-12-04 11:27:39,796 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-04 11:27:39,802 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2024-12-04 11:27:39,808 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2024-12-04 11:27:39,812 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-12-04 11:27:39,823 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-12-04 11:27:39,824 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2024-12-04 11:27:39,831 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-12-04 11:27:39,889 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-12-04 11:27:39,920 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-12-04 11:27:40,994 basehttp "GET /admin/main/category/add/ HTTP/1.1" 200 16095
+INFO 2024-12-04 11:27:41,046 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+INFO 2024-12-04 11:27:41,057 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-12-04 11:27:41,058 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-04 11:27:41,070 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO 2024-12-04 11:27:41,134 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-12-04 11:27:51,950 basehttp "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2024-12-04 11:27:52,016 basehttp "GET /admin/main/category/ HTTP/1.1" 200 16422
+INFO 2024-12-04 11:27:52,096 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-04 11:27:52,241 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-12-04 11:27:53,481 basehttp "GET /admin/main/category/add/ HTTP/1.1" 200 16095
+INFO 2024-12-04 11:27:53,528 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-04 11:27:59,202 basehttp "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2024-12-04 11:27:59,242 basehttp "GET /admin/main/category/ HTTP/1.1" 200 16704
+INFO 2024-12-04 11:27:59,321 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-04 11:28:18,261 basehttp "GET //api/categories/ HTTP/1.1" 200 211
+INFO 2024-12-04 11:28:32,720 basehttp "GET /admin/main/category/add/ HTTP/1.1" 200 16095
+INFO 2024-12-04 11:28:32,808 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-04 11:28:36,346 basehttp "POST /admin/main/category/add/ HTTP/1.1" 302 0
+INFO 2024-12-04 11:28:36,434 basehttp "GET /admin/main/category/ HTTP/1.1" 200 16973
+INFO 2024-12-04 11:28:36,553 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-04 11:28:39,380 basehttp "GET //api/categories/ HTTP/1.1" 200 277
+INFO 2024-12-04 11:28:44,277 basehttp "GET //api/categories/ HTTP/1.1" 200 277
+INFO 2024-12-04 11:28:56,142 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 11:29:13,194 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:29:15,689 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 11:29:16,386 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:29:17,942 basehttp "GET //api/categories/ HTTP/1.1" 200 227
+INFO 2024-12-04 11:29:32,998 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:29:33,750 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:29:36,899 basehttp "GET //api/categories/ HTTP/1.1" 200 227
+INFO 2024-12-04 11:29:38,398 basehttp "GET //api/categories/ HTTP/1.1" 200 227
+INFO 2024-12-04 11:30:51,107 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-04 11:30:51,834 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:31:32,240 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:31:32,858 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:31:34,150 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:31:34,757 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 11:31:46,685 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-04 11:31:47,292 autoreload Watching for file changes with StatReloader
+INFO 2024-12-07 15:38:32,290 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-07 15:38:38,042 log Unauthorized: /api/categories/
+WARNING 2024-12-07 15:38:38,043 basehttp "GET //api/categories/ HTTP/1.1" 401 183
+WARNING 2024-12-07 15:38:52,189 log Unauthorized: /api/categories/
+WARNING 2024-12-07 15:38:52,189 basehttp "GET //api/categories/ HTTP/1.1" 401 183
+INFO 2024-12-07 15:38:56,563 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-12-07 15:39:14,628 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-12-07 15:39:18,288 basehttp "GET //api/categories/ HTTP/1.1" 200 277
+INFO 2024-12-07 15:39:30,733 basehttp "GET //api/suppliers/ HTTP/1.1" 200 52
+INFO 2024-12-07 15:39:38,677 basehttp "GET //api/clients/ HTTP/1.1" 200 52
+INFO 2024-12-07 15:39:58,476 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-07 15:39:59,349 autoreload Watching for file changes with StatReloader
+INFO 2024-12-07 15:40:03,876 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-07 15:40:04,545 autoreload Watching for file changes with StatReloader
+INFO 2024-12-07 15:40:08,777 basehttp "GET //api/suppliers/ HTTP/1.1" 200 52
+INFO 2024-12-07 15:40:13,533 basehttp "GET //api/categories/ HTTP/1.1" 200 277
+INFO 2024-12-07 15:41:44,874 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-07 15:41:47,011 autoreload Watching for file changes with StatReloader
+INFO 2024-12-07 15:41:52,475 basehttp "GET //api/categories/ HTTP/1.1" 200 277
+INFO 2024-12-07 15:41:53,577 basehttp "GET //api/categories/ HTTP/1.1" 200 277
+INFO 2024-12-07 15:41:58,907 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/main/views.py changed, reloading.
+INFO 2024-12-07 15:41:59,615 autoreload Watching for file changes with StatReloader
+INFO 2024-12-07 15:44:15,013 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-07 15:44:15,988 autoreload Watching for file changes with StatReloader
+INFO 2024-12-07 15:44:18,276 basehttp "GET //api/categories/ HTTP/1.1" 200 194
+WARNING 2024-12-07 15:44:23,607 log Unauthorized: /api/categories/
+WARNING 2024-12-07 15:44:23,608 basehttp "GET /api/categories/?limit=2&offset=2 HTTP/1.1" 401 58
+INFO 2024-12-07 15:44:35,486 basehttp "GET //api/categories/ HTTP/1.1" 200 194
+INFO 2024-12-07 15:44:47,284 basehttp "GET /api/categories/?limit=2&offset=2 HTTP/1.1" 200 229
+INFO 2024-12-07 15:44:54,250 basehttp "GET //api/categories/ HTTP/1.1" 200 194
+INFO 2024-12-07 15:45:05,134 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-07 15:45:05,769 autoreload Watching for file changes with StatReloader
+INFO 2024-12-07 15:45:24,431 basehttp "POST //api-auth/login/ HTTP/1.1" 200 444
+INFO 2024-12-07 15:45:33,015 basehttp "GET //api/suppliers/ HTTP/1.1" 200 52
+INFO 2024-12-07 15:45:55,712 basehttp "GET //api/suppliers/ HTTP/1.1" 200 52
+INFO 2024-12-07 15:46:21,815 basehttp "GET //api/suppliers/ HTTP/1.1" 200 52

@@ -93,25 +93,6 @@ class SupplierListCreateView(generics.ListCreateAPIView):
     serializer_class = SupplierSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_supplier', 'view_supplier']
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        page = self.paginate_queryset(queryset) 
-
-        if page is not None:
-            serializer = self.get_serializer(page, many=True)
-            return self.get_paginated_response({
-                "ok": True,
-                "message": "Suppliers retrieved successfully",
-                "data": serializer.data
-            })
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Suppliers retrieved successfully",
-            "data": serializer.data
-        })
-
     
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -203,6 +184,7 @@ class CategoryListCreateView(generics.ListCreateAPIView):
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_category', 'view_category']
+    
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -224,14 +206,6 @@ class CategoryListCreateView(generics.ListCreateAPIView):
             "data": serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Categories retrieved successfully",
-            "data": serializer.data
-        })
 
 class CategoryRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
@@ -321,15 +295,6 @@ class SizeListCreateView(generics.ListCreateAPIView):
             "data": serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Size retrieved successfully",
-            "data": serializer.data
-        })
-
 
 class SizeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Size.objects.all()
@@ -395,7 +360,7 @@ class SizeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
 
 # Product Views
-class ProductListCreateView(generics.ListCreateAPIView, PaginatedMixin):
+class ProductListCreateView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
@@ -421,21 +386,6 @@ class ProductListCreateView(generics.ListCreateAPIView, PaginatedMixin):
                 "message": "Product creation failed",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
-
-    def list(self, request, *args, **kwargs):
-            queryset = self.get_queryset()
-            page = self.paginate_queryset(queryset)  
-
-            if page is not None:
-                serializer = self.get_serializer(page, many=True)
-                return self.get_paginated_response(serializer.data)
-
-            serializer = self.get_serializer(queryset, many=True)
-            return Response({
-                "ok": True,
-                "message": "Product retrieved successfully",
-                "data": serializer.data
-            })
 
 
 class ProductRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
@@ -578,15 +528,6 @@ class ProductVariantListCreateView(generics.ListCreateAPIView):
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Product Variant retrieved successfully",
-            "data": serializer.data
-        })
 
 
 class ProductVariantRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
@@ -876,19 +817,6 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
 
 
 
-
-        
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Import Invoice retrieved successfully",
-            "data": serializer.data
-        })
-
-
 class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = ImportInvoice.objects.all()
     serializer_class = ImportInvoiceSerializer
@@ -1103,19 +1031,7 @@ class StockMovementListCreateView(generics.ListCreateAPIView):
                 "message": "Stock Movement creation failed",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
-        
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Stock Movement retrieved successfully",
-            "data": serializer.data
-        })
-
-
-
+    
 
 class StockMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = StockMovement.objects.all()
@@ -1215,16 +1131,6 @@ class ClientListCreateView(generics.ListCreateAPIView):
                 "message": "Client creation failed",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
-        
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Client retrieved successfully",
-            "data": serializer.data
-        })
 
 
 class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
@@ -1339,7 +1245,6 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
     queryset = ExportInvoice.objects.all()
     serializer_class = ExportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
-    paginate_by = 5
     required_permissions = ['add_exportinvoice', 'view_exportinvoice']
 
     @transaction.atomic
@@ -1459,17 +1364,6 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
                 "items": ExportedInvoiceItemSerializer(created_items, many=True).data
             }
         }, status=status.HTTP_201_CREATED)
-
-        
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Export Invoice retrieved successfully",
-            "data": serializer.data
-        })
 
 
 class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
@@ -1652,17 +1546,6 @@ class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
     serializer_class = ExportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportedinvoiceitem', 'view_exportedinvoiceitem']
-
-
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Export Invoice Item retrieved successfully",
-            "data": serializer.data
-        })
 
 
 class ExportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
@@ -1855,16 +1738,6 @@ class CashboxListCreateView(generics.ListCreateAPIView):
             "data": serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset() 
-        serializer = self.get_serializer(queryset, many=True) 
-        return Response({
-            "ok": True,
-            "message": "Cashboxes retrieved successfully.",
-            "data": serializer.data
-        }, status=status.HTTP_200_OK)
-    
-
 class CashboxMovementListCreateView(generics.ListCreateAPIView):
     queryset = CashboxMovement.objects.all()
     serializer_class = CashboxMovementSerializer
@@ -1907,18 +1780,6 @@ class CashboxMovementListCreateView(generics.ListCreateAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
         
-        
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        
-        return Response({
-            "ok": True,
-            "message": "CashboxMovement retrieved successfully.",
-            "data": serializer.data
-        })
-
-
 class CashboxMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = CashboxMovement.objects.all()
     serializer_class = CashboxMovementSerializer
@@ -2028,15 +1889,6 @@ class UserListCreateView(generics.ListCreateAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Users retrieved successfully",
-            "data": serializer.data
-        })
-
 class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -2129,15 +1981,6 @@ class GroupListCreateView(generics.ListCreateAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def list(self, request, *args, **kwargs):   
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Groups retrieved successfully",
-            "data": serializer.data
-        })
-
 
 class GroupDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Group.objects.all()
@@ -2205,11 +2048,3 @@ class PermissionListView(generics.ListAPIView):
     serializer_class = PermissionSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_permission']
-    def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        serializer = self.get_serializer(queryset, many=True)
-        return Response({
-            "ok": True,
-            "message": "Permissions retrieved successfully",
-            "data": serializer.data
-        })
