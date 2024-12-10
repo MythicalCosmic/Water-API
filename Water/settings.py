@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^9@^jign5ll9*-mvbl_2=rl#(n&zr02(4n5h0+x$^2=%rd#omt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['water-api-fbhj.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['water-api-fbhj.onrender.com', 'localhost', '127.0.0.1', 'localhost:5173']
 
 
 # Application definition
@@ -164,10 +164,10 @@ REST_FRAMEWORK = {
 }
 
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://localhost:5174',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:5173',
+#     'http://localhost:5174',
+# ]
 CSRF_TRUSTED_ORIGINS = ['https://water-api-fbhj.onrender.com']
 
 
@@ -213,3 +213,5 @@ LOGGING = {
         },
     },
 }
+
+CORS_ALLOW_ALL_ORIGINS = True
