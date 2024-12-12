@@ -12,7 +12,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 from datetime import datetime
 from rest_framework.generics import get_object_or_404
 from rest_framework.decorators import action
-
+from .mixins import *
 
 
 class LogoutView(APIView):
@@ -77,304 +77,63 @@ class LoginView(TokenObtainPairView):
 
 
 
-class SupplierListCreateView(generics.ListCreateAPIView):
+class SupplierListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Supplier.objects.order_by('id')
     serializer_class = SupplierSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_supplier', 'view_supplier']
-    
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            instance = serializer.save()  
-            return Response({
-                "ok": True,
-                "message": "Supplier created successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                    "contact": instance.phone_number
-                }
-            }, status=status.HTTP_201_CREATED)
-        
-        return Response({
-            "ok": False,
-            "message": "Supplier creation failed",
-            "data": serializer.errors
-        }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class SupplierRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class SupplierRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = Supplier.objects.order_by('id')
     serializer_class = SupplierSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_supplier', 'view_supplier']
 
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Supplier with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Supplier retrieved successfully",
-            "data": serializer.data  
-        })
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            
-            return Response({
-                "ok": True,
-                "message": "Supplier updated successfully",
-                "data": {
-                    "id": updated_instance.id,
-                    "name": updated_instance.name,
-                    "contact": updated_instance.phone_number
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Supplier update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-
-
-# Category Views
-class CategoryListCreateView(generics.ListCreateAPIView):
+class CategoryListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Category.objects.order_by('id')
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_category', 'view_category']
-    
-
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            instance = serializer.save()  
-            return Response({
-                "ok": True,
-                "message": "Category created successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                    "contact": instance.description
-                }
-            }, status=status.HTTP_201_CREATED)
-        
-        return Response({
-            "ok": False,
-            "message": "Cateogry creation failed",
-            "data": serializer.errors
-        }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class CategoryRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class CategoryRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.order_by('id')
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_category', 'view_category']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Category with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Category retrieved successfully",
-            "data": serializer.data  
-        })
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            
-            return Response({
-                "ok": True,
-                "message": "Category updated successfully",
-                "data": {
-                    "id": updated_instance.id,
-                    "name": updated_instance.name,
-                    "description": updated_instance.description
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Category update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class SizeListCreateView(generics.ListCreateAPIView):
+class SizeListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Size.objects.order_by('id')
     serializer_class = SizeSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_size', 'view_size']
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            instance = serializer.save()  
-            return Response({
-                "ok": True,
-                "message": "Size created successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                }
-            }, status=status.HTTP_201_CREATED)   
-        
-        return Response({
-            "ok": False,
-            "message": "Size creation failed",
-            "data": serializer.errors
-        }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class SizeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class SizeRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = Size.objects.order_by('id')
     serializer_class = SizeSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_size', 'view_size']
 
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Size with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Size retrieved successfully",
-            "data": serializer.data  
-        })
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            
-            return Response({
-                "ok": True,
-                "message": "Size updated successfully",
-                "data": {
-                    "id": updated_instance.id,
-                    "name": updated_instance.name,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Size update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-
-class ProductListCreateView(generics.ListCreateAPIView):
+class ProductListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Product.objects.order_by('id')
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_product', 'view_product']
 
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            instance = serializer.save()  
-            return Response({
-                "ok": True,
-                "message": "Product created successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                    "description": instance.description,
-                    "category": instance.category.name,
-                }
-            }, status=status.HTTP_201_CREATED)   
-        else:
-            return Response({
-                "ok": False,
-                "message": "Product creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
-
-class ProductRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class ProductRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.order_by('id')
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_product', 'view_product']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Product with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Product retrieved successfully",
-            "data": serializer.data  
-        })
-        
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            
-            return Response({
-                "ok": True,
-                "message": "Product updated successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                    "description": instance.description,
-                    "category": instance.category.name,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Product update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ProductVariantListCreateView(generics.ListCreateAPIView):
+class ProductVariantListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = ProductVariant.objects.order_by('id')
     serializer_class = ProductVariantSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
@@ -450,163 +209,56 @@ class ProductVariantListCreateView(generics.ListCreateAPIView):
     
 
 
-class ProductVariantRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class ProductVariantRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = ProductVariant.objects.order_by('id')
     serializer_class = ProductVariantSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_productvariant', 'view_productvariant']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Product Variant with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Product Variant retrieved successfully",
-            "data": serializer.data  
-        })
-        
 
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            product_data = {
-                "id": instance.product.id,
-                "name": instance.product.name
-            }
-            size_data = {
-                "id": instance.size.id,
-                "name": instance.size.name
-            }
-            
-            return Response({
-                "ok": True,
-                "message": "Product Variant updated successfully",
-                 "data": {
-                    "id": instance.id,
-                    "product": product_data,
-                    "size": size_data,
-                    "unique_code": instance.uniq_code,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Product Variant update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-class StockListCreateView(generics.ListCreateAPIView):
+class StockListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Stock.objects.order_by('id')
     serializer_class = StockSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_stock', 'view_stock']
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            self.perform_create(serializer)  
-            instance = serializer.instance
-            variant_data = {
-                "id": instance.variant.id,
-            }
-            return Response({
-                "ok": True,
-                "message": "Stock created successfully",
-                "data": {
-                    "id": instance.id,
-                    "variant": variant_data,
-                    "quantity": instance.quantity,
-                    "price": instance.price,
-                    "user": {
-                        "id": instance.user.id,
-                        "username": instance.user.username
-                    }
-                }
-            }, status=status.HTTP_201_CREATED)
-        else:
-            return Response({
-                "ok": False,
-                "message": "Stock creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-
     def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
-        total_money = sum(stock.quantity * stock.price for stock in queryset)
-        total_quantity = sum(stock.quantity for stock in queryset)
-        total_items = queryset.count() 
+        queryset = self.filter_queryset(self.get_queryset())
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            paginated_response = self.get_paginated_response(serializer.data)
+
+            paginated_response.data.update({
+                "summary": self.get_summary_data(queryset)
+            })
+
+            return paginated_response
+
         serializer = self.get_serializer(queryset, many=True)
         return Response({
             "ok": True,
-            "message": "Stock retrieved successfully",
-            "summary": {
-                "total_money": str(total_money),  
-                "total_quantity": total_quantity,
-                "total_items": total_items  
-            },
+            "message": "Data retrieved successfully",
+            "summary": self.get_summary_data(queryset),
             "data": serializer.data
         })
 
+    def get_summary_data(self, queryset):
+        total_quantity = sum(item.quantity for item in queryset)
+        total_money = sum(float(item.price) for item in queryset)
+        return {
+            "total_money": f"{total_money:.2f}",
+            "total_quantity": total_quantity,
+            "total_items": len(queryset)
+        }
 
 
-
-class StockRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class StockRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = Stock.objects.order_by('id')
     serializer_class = StockSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_stock', 'view_stock']
 
-    def retrieve(self, request, *args, **kwargs):
-        instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Stock retrieved successfully",
-            "data": serializer.data  
-        })
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False)
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        if serializer.is_valid():
-            updated_instance = serializer.save(user=request.user)  
-            variant_data = {
-                "id": updated_instance.variant.id,
-            }
-            return Response({
-                "ok": True,
-                "message": "Stock updated successfully",
-                "data": {
-                    "id": updated_instance.id,
-                    "variant": variant_data,
-                    "quantity": updated_instance.quantity,
-                    "price": updated_instance.price,
-                    "user": {
-                        "id": updated_instance.user.id,
-                        "username": updated_instance.user.username
-                    }
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Stock update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 class ImportInvoiceListCreateView(generics.ListCreateAPIView):
     queryset = ImportInvoice.objects.order_by('id')
@@ -714,21 +366,6 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
     serializer_class = ImportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_importinvoice', 'view_importinvoice']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Import Invoice with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Import Invoice retrieved successfully",
-            "data": serializer.data  
-        })
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.get('partial', False)
@@ -813,7 +450,7 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ImportedInvoiceItemListCreateView(generics.ListCreateAPIView):
+class ImportedInvoiceItemListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = ImportedInvoiceItem.objects.order_by('id')
     serializer_class = ImportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
@@ -822,221 +459,46 @@ class ImportedInvoiceItemListCreateView(generics.ListCreateAPIView):
 
 
 
-class ImportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class ImportedInvoiceItemRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = ImportedInvoiceItem.objects.order_by('id')
     serializer_class = ImportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_importedinvoiceitem', 'view_importedinvoiceitem']
 
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Imported Invoice Item with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Imported Invoice Item retrieved successfully",
-            "data": serializer.data  
-        })
-
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Imported Invoice Item with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-
-        import_invoice = instance.import_invoice
-        if import_invoice.state not in ['new']:
-            return Response({
-                "ok": False,
-                "message": f"Cannot delete Imported Invoice Item. The associated Import Invoice is in '{import_invoice.state}' state.",
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Imported Invoice Item deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
-class StockMovementListCreateView(generics.ListCreateAPIView):
+class StockMovementListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = StockMovement.objects.order_by('id')
     serializer_class = StockMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_stockmovement', 'view_stockmovement']
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-    
-        if serializer.is_valid():
-            instance = serializer.save()
-
-            variant_data = {
-                "id": instance.variant.id,
-            }
-            return Response({
-                "ok": True,
-                "message": "Stock Movement created successfully",
-                "data": {
-                    "id": instance.id,
-                    "variant": variant_data,
-                    "type": instance.type,
-                    "description": instance.description,
-                    "quantity": instance.quantity,
-                }
-            }, status=status.HTTP_201_CREATED)
-    
-        else:
-            return Response({
-                "ok": False,
-                "message": "Stock Movement creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
     
 
-class StockMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class StockMovementRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = StockMovement.objects.order_by('id')
     serializer_class = StockMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_stockmovement', 'view_stockmovement']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Stock Movement with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Stock Movement retrieved successfully",
-            "data": serializer.data  
-        })
-        
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            variant_data = {
-                "id": instance.variant.id,
-            }
-            
-            return Response({
-                "ok": True,
-                "message": "Stock Movement updated successfully",
-                  "data": {
-                    "id": instance.id,
-                    "type": instance.type,
-                    "variant": variant_data,
-                    "description": instance.description,
-                    "quantity": instance.quantity,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Stock Movement update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ClientListCreateView(generics.ListCreateAPIView):
+class ClientListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Client.objects.order_by('id')
     serializer_class = ClientSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_client', 'view_client']
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-    
-        if serializer.is_valid():
-            instance = serializer.save()
-
-            return Response({
-                "ok": True,
-                "message": "Client created successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                    "phone": instance.phone,
-                    "description": instance.description,
-                }
-            }, status=status.HTTP_201_CREATED)
-    
-        else:
-            return Response({
-                "ok": False,
-                "message": "Client creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class ClientRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = Client.objects.order_by('id')
     serializer_class = ClientSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_client', 'view_client']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Client with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Client retrieved successfully",
-            "data": serializer.data  
-        })
         
     def post(self, request, *args, **kwargs):
         if self.request.path.endswith('adjust-balance/'):
             return self.adjust_balance(request, *args, **kwargs)
         
         return super().post(request, *args, **kwargs)
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            return Response({
-                "ok": True,
-                "message": "Client updated successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                    "phone": instance.phone,
-                    "description": instance.description,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Client update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-        
-
+    
     @action(detail=True, methods=['post'], url_path='adjust-balance')
     def adjust_balance(self, request, *args, **kwargs):
         client = self.get_object() 
@@ -1107,7 +569,6 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
         total_price = Decimal(0)
         created_items = []
 
-        # Process Items
         for item in items:
             variant_id = item.get("product_variant_id")
             price = item.get("price")
@@ -1158,7 +619,6 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
                     "message": f"Product variant with ID {variant_id} does not exist."
                 }, status=status.HTTP_400_BAD_REQUEST)
 
-        # Process Payment
         try:
             if payment_type == "Debt":
                 export_invoice.client.balance -= total_price
@@ -1177,7 +637,6 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
                 "message": f"Error processing payment: {str(e)}"
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # Response
         export_invoice_data = {
             "id": export_invoice.id,
             "client": {
@@ -1207,28 +666,12 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
     serializer_class = ExportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_exportinvoice', 'view_exportinvoice']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Export Invoice with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Export Invoice retrieved successfully",
-            "data": serializer.data  
-        })
-        
     @transaction.atomic
     def update(self, request, *args, **kwargs):
         partial = kwargs.get('partial', False)
         instance = self.get_object()
 
-        # Prevent updates to invoices with states other than "new"
+
         if instance.state not in ["new"]:
             return Response({
                 "ok": False,
@@ -1239,7 +682,6 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         items = data.pop("items", None)
         payment_type = data.get("payment_type", None)
 
-        # Validate and update the invoice
         serializer = self.get_serializer(instance, data=data, partial=partial)
         if not serializer.is_valid():
             return Response({
@@ -1251,14 +693,12 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         export_invoice = serializer.save()
         total_price = Decimal(0)
 
-        # Process Items
         if items:
             for item in items:
                 variant_id = item.get("product_variant_id")
                 price = item.get("price")
                 quantity = item.get("quantity")
 
-                # Validate item fields
                 if not variant_id or price is None or quantity is None:
                     return Response({
                         "ok": False,
@@ -1269,14 +709,13 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                     variant = ProductVariant.objects.get(id=variant_id)
                     stock = Stock.objects.filter(variant=variant).first()
 
-                    # Check stock availability
+    
                     if not stock or stock.quantity < quantity:
                         return Response({
                             "ok": False,
                             "message": f"Insufficient stock for variant {variant_id}. Available: {stock.quantity if stock else 0}, requested: {quantity}."
                         }, status=status.HTTP_400_BAD_REQUEST)
 
-                    # Update stock only if state is not "new"
                     if instance.state != "new":
                         if stock.quantity > quantity:
                             stock.quantity -= quantity
@@ -1291,7 +730,6 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                             description=f"Stock updated for Export Invoice {export_invoice.id}"
                         )
 
-                    # Update or create invoice items
                     exported_item, created = ExportedInvoiceItem.objects.update_or_create(
                         export_invoice=export_invoice,
                         variant=variant,
@@ -1309,7 +747,6 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                         "message": f"Product variant with ID {variant_id} does not exist."
                     }, status=status.HTTP_400_BAD_REQUEST)
 
-        # Process Payment
         try:
             if payment_type == "Debt":
                 export_invoice.client.balance -= total_price
@@ -1328,7 +765,6 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                 "message": f"Error updating payment: {str(e)}"
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # Response
         export_invoice_data = {
             "id": export_invoice.id,
             "client": {
@@ -1356,68 +792,20 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         }, status=status.HTTP_200_OK)
 
 
-class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
+class ExportedInvoiceItemListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = ExportedInvoiceItem.objects.order_by('id')
     serializer_class = ExportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportedinvoiceitem', 'view_exportedinvoiceitem']
 
 
-class ExportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class ExportedInvoiceItemRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = ExportedInvoiceItem.objects.order_by('id')
     serializer_class = ExportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_exportedinvoiceitem', 'view_exportedinvoiceitem']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Exported Invoice Item with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Exported Invoice Items retrieved successfully",
-            "data": serializer.data  
-        })
         
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save() 
-            export_invoice_data = {
-                "id": instance.export_invoice.id,
-                "name": instance.client.name
-            }
-            variant_data = {
-                "id": instance.variant.id,
-                "name": instance.variant.name
-            }   
-            return Response({
-                "ok": True,
-                "message": "Export Invoice Item updated successfully",
-                "data": {
-                    "id": instance.id,
-                    "export_invoice": export_invoice_data,
-                    "variant": variant_data,
-                    "state": instance.state,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Export Invoice Item update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-        
-
 class DepositMoneyView(APIView):
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['deposit_money']
@@ -1513,288 +901,57 @@ class ResetCashboxView(APIView):
 
 
 
-class CashboxListCreateView(generics.ListCreateAPIView):
+class CashboxListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Cashbox.objects.order_by('id')
     serializer_class = CashboxSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashbox', 'view_cashbox']
 
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
 
-        if serializer.is_valid():
-            instance = serializer.save() 
-            return Response({
-                "ok": True,
-                "message": "Cashbox created successfully.",
-                "data": {
-                    "id": instance.id,
-                    "remains": str(instance.remains), 
-                }
-            }, status=status.HTTP_201_CREATED)
-
-        return Response({
-            "ok": False,
-            "message": "Cashbox creation failed.",
-            "data": serializer.errors
-        }, status=status.HTTP_400_BAD_REQUEST)
-
-class CashboxMovementListCreateView(generics.ListCreateAPIView):
+class CashboxMovementListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = CashboxMovement.objects.order_by('id')
     serializer_class = CashboxMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashboxmovement', 'view_cashboxmovement']
 
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-
-        if serializer.is_valid():
-            instance = serializer.save()
-            if instance.user:
-                user_data = {
-                    "id": instance.user.id,
-                    "username": instance.user.username,
-                }
-            else:
-                user_data = None 
-
-            return Response({
-                "ok": True,
-                "message": "CashboxMovement Item created successfully",
-                "data": {
-                    "id": instance.id,
-                    "type": instance.type,
-                    "sum": instance.sum,
-                    "remains": instance.remains,
-                    "comment": instance.comment,
-                    "payment_type": instance.payment_type,
-                    "user": user_data,
-                    "created_at": instance.created_at,
-                    "updated_at": instance.updated_at,
-                    "deleted_at": instance.deleted_at,
-                }
-            }, status=status.HTTP_201_CREATED)
-        else:
-            return Response({
-                "ok": False,
-                "message": "CashboxMovement creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
         
-class CashboxMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class CashboxMovementRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = CashboxMovement.objects.order_by('id')
     serializer_class = CashboxMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_cashboxmovement', 'view_cashboxmovement']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "CashboxMovement with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "CashboxMovement retrieved successfully",
-            "data": serializer.data  
-        })
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False) 
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        
-        if serializer.is_valid():
-            updated_instance = serializer.save()  
-            user_data = {
-                "id": instance.user.id,
-                "username": instance.user.username,
-            }
-            return Response({
-                "ok": True,
-                "message": "CashboxMovement updated successfully",
-                "data": {
-                    "id": instance.id,
-                    "type": instance.type,
-                    "sum": instance.sum,
-                    "remains": instance.remains,
-                    "comment": instance.comment,
-                    "payment_type": instance.payment_type,
-                    "user": user_data,
-                    "created_at": instance.created_at,
-                    "updated_at": instance.updated_at,
-                    "deleted_at": instance.deleted_at,
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "CashboxMovement update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserListCreateView(generics.ListCreateAPIView):
+
+class UserListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = User.objects.order_by('id')
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_user', 'auth.add_user']
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-    
-        if serializer.is_valid():
-            instance = serializer.save()
-            instance.set_password(request.data['password'])
-            instance.save()
-        
-            user_data = {
-                "id": instance.id,
-                "username": instance.username,
-                "email": instance.email,
-                "is_active": instance.is_active,
-                "is_staff": instance.is_staff,
-                "is_superuser": instance.is_superuser,
-                "groups": [group.id for group in instance.groups.all()],
-                "user_permissions": [permission.id for permission in instance.user_permissions.all()]
-            }
-        
-            return Response({
-                "ok": True,
-                "message": "User created successfully",
-                "data": user_data
-            }, status=status.HTTP_201_CREATED)
-    
-        else:
-            return Response({
-                "ok": False,
-                "message": "User creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
-class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
+
+class UserDetailView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.order_by('id')
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_user', 'auth.change_user', 'auth.delete_user']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(User, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "User with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "User retrieved successfully",
-            "data": serializer.data
-        })
-
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False)
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-    
-        if serializer.is_valid():
-            updated_instance = serializer.save()
-            return Response({
-                "ok": True,
-                "message": "User updated successfully",
-                "data": {
-                    "id": updated_instance.id,
-                    "username": updated_instance.username,
-                    "is_active": updated_instance.is_active,
-                    "is_staff": updated_instance.is_staff,
-                    "is_superuser": updated_instance.is_superuser,
-                    "groups": [group.id for group in updated_instance.groups.all()],
-                    "user_permissions": [permission.id for permission in updated_instance.user_permissions.all()]
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "User update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class GroupListCreateView(generics.ListCreateAPIView):
+class GroupListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     queryset = Group.objects.order_by('id')
     serializer_class = GroupSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_group', 'auth.add_group']
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-    
-        if serializer.is_valid():
-            instance = serializer.save()
-            return Response({
-                "ok": True,
-                "message": "Group created successfully",
-                "data": {
-                    "id": instance.id,
-                    "name": instance.name,
-                    "permissions": [permission.id for permission in instance.permissions.all()]
-                }
-            }, status=status.HTTP_201_CREATED)
-        else:
-            return Response({
-                "ok": False,
-                "message": "Group creation failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
 
 
-class GroupDetailView(generics.RetrieveUpdateDestroyAPIView):
+class GroupDetailView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
     queryset = Group.objects.order_by('id')
     serializer_class = GroupSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_group', 'auth.change_group', 'auth.delete_group']
-    def retrieve(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(Group, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Group with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = self.get_serializer(instance)
-        return Response({
-            "ok": True,
-            "message": "Group retrieved successfully",
-            "data": serializer.data
-        })
 
-    def update(self, request, *args, **kwargs):
-        partial = kwargs.get('partial', False)
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-    
-        if serializer.is_valid():
-            updated_instance = serializer.save()
-            return Response({
-                "ok": True,
-                "message": "Group updated successfully",
-                "data": {
-                    "id": updated_instance.id,
-                    "name": updated_instance.name,
-                    "permissions": [permission.id for permission in updated_instance.permissions.all()]
-                }
-            })
-        else:
-            return Response({
-                "ok": False,
-                "message": "Group update failed",
-                "data": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-
-class PermissionListView(generics.ListAPIView):
+class PermissionListView(CustomResponseMixin, generics.ListAPIView):
     queryset = Permission.objects.order_by('id')
     serializer_class = PermissionSerializer
     permission_classes = [IsAuthenticated, GroupPermission]

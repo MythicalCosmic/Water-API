@@ -154,6 +154,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'EXCEPTION_HANDLER': 'main.exception_handler.custom_exception_handler',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',  
     ],
@@ -216,7 +217,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-USE_X_FORWARDED_HOST = True
-SECURE_SSL_REDIRECT = True 
+# USE_X_FORWARDED_HOST = True
+# SECURE_SSL_REDIRECT = True 
