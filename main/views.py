@@ -2,7 +2,6 @@ from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import *
 from .serializers import *  
@@ -10,19 +9,9 @@ from .decorators import *
 import jwt
 from datetime import datetime
 from rest_framework_simplejwt.tokens import AccessToken
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework_simplejwt.exceptions import InvalidToken
 from datetime import datetime
-import pytz
-from rest_framework.exceptions import NotFound
 from rest_framework.generics import get_object_or_404
-from rest_framework.generics import ListAPIView
-from rest_framework.permissions import IsAuthenticated
-from django_filters.rest_framework import DjangoFilterBackend # type: ignore
-from rest_framework.filters import OrderingFilter
 from rest_framework.decorators import action
-from .mixins import *
 
 
 
@@ -89,7 +78,7 @@ class LoginView(TokenObtainPairView):
 
 
 class SupplierListCreateView(generics.ListCreateAPIView):
-    queryset = Supplier.objects.all()
+    queryset = Supplier.objects.order_by('id')
     serializer_class = SupplierSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_supplier', 'view_supplier']
@@ -116,7 +105,7 @@ class SupplierListCreateView(generics.ListCreateAPIView):
 
 
 class SupplierRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Supplier.objects.all()
+    queryset = Supplier.objects.order_by('id')
     serializer_class = SupplierSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_supplier', 'view_supplier']
@@ -161,26 +150,11 @@ class SupplierRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Supplier with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Supplier deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
-    
+
 
 # Category Views
 class CategoryListCreateView(generics.ListCreateAPIView):
-    queryset = Category.objects.all()
+    queryset = Category.objects.order_by('id')
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_category', 'view_category']
@@ -208,7 +182,7 @@ class CategoryListCreateView(generics.ListCreateAPIView):
 
 
 class CategoryRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Category.objects.all()
+    queryset = Category.objects.order_by('id')
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_category', 'view_category']
@@ -252,27 +226,9 @@ class CategoryRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Category with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Category deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
 
-
-
-# Size Views
 class SizeListCreateView(generics.ListCreateAPIView):
-    queryset = Size.objects.all()
+    queryset = Size.objects.order_by('id')
     serializer_class = SizeSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_size', 'view_size']
@@ -297,7 +253,7 @@ class SizeListCreateView(generics.ListCreateAPIView):
 
 
 class SizeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Size.objects.all()
+    queryset = Size.objects.order_by('id')
     serializer_class = SizeSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_size', 'view_size']
@@ -341,27 +297,9 @@ class SizeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Size with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Size deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
 
-
-
-# Product Views
 class ProductListCreateView(generics.ListCreateAPIView):
-    queryset = Product.objects.all()
+    queryset = Product.objects.order_by('id')
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_product', 'view_product']
@@ -389,7 +327,7 @@ class ProductListCreateView(generics.ListCreateAPIView):
 
 
 class ProductRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Product.objects.all()
+    queryset = Product.objects.order_by('id')
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_product', 'view_product']
@@ -435,27 +373,9 @@ class ProductRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Product with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Product deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
 
-
-
-# Product Variant Views
 class ProductVariantListCreateView(generics.ListCreateAPIView):
-    queryset = ProductVariant.objects.all()
+    queryset = ProductVariant.objects.order_by('id')
     serializer_class = ProductVariantSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_productvariant', 'view_productvariant']
@@ -531,7 +451,7 @@ class ProductVariantListCreateView(generics.ListCreateAPIView):
 
 
 class ProductVariantRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = ProductVariant.objects.all()
+    queryset = ProductVariant.objects.order_by('id')
     serializer_class = ProductVariantSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_productvariant', 'view_productvariant']
@@ -585,26 +505,8 @@ class ProductVariantRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIV
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Product Variant with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Product Variant deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
-# Stock Views
 class StockListCreateView(generics.ListCreateAPIView):
-    queryset = Stock.objects.all()
+    queryset = Stock.objects.order_by('id')
     serializer_class = StockSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_stock', 'view_stock']
@@ -662,7 +564,7 @@ class StockListCreateView(generics.ListCreateAPIView):
 
 
 class StockRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Stock.objects.all()
+    queryset = Stock.objects.order_by('id')
     serializer_class = StockSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_stock', 'view_stock']
@@ -706,18 +608,8 @@ class StockRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Stock deleted successfully",
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
-# Import Invoice Views
 class ImportInvoiceListCreateView(generics.ListCreateAPIView):
-    queryset = ImportInvoice.objects.all()
+    queryset = ImportInvoice.objects.order_by('id')
     serializer_class = ImportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_importinvoice', 'view_importinvoice']
@@ -818,7 +710,7 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
 
 
 class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = ImportInvoice.objects.all()
+    queryset = ImportInvoice.objects.order_by('id')
     serializer_class = ImportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_importinvoice', 'view_importinvoice']
@@ -921,26 +813,8 @@ class ImportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         }, status=status.HTTP_400_BAD_REQUEST)
 
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Import Invoice with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Import Invoice deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
-
 class ImportedInvoiceItemListCreateView(generics.ListCreateAPIView):
-    queryset = ImportedInvoiceItem.objects.all()
+    queryset = ImportedInvoiceItem.objects.order_by('id')
     serializer_class = ImportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_importedinvoiceitem', 'view_importedinvoiceitem']
@@ -949,7 +823,7 @@ class ImportedInvoiceItemListCreateView(generics.ListCreateAPIView):
 
 
 class ImportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = ImportedInvoiceItem.objects.all()
+    queryset = ImportedInvoiceItem.objects.order_by('id')
     serializer_class = ImportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_importedinvoiceitem', 'view_importedinvoiceitem']
@@ -995,12 +869,8 @@ class ImportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestro
         }, status=status.HTTP_204_NO_CONTENT)
 
 
-
-
-
-# Stock Movement Views
 class StockMovementListCreateView(generics.ListCreateAPIView):
-    queryset = StockMovement.objects.all()
+    queryset = StockMovement.objects.order_by('id')
     serializer_class = StockMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_stockmovement', 'view_stockmovement']
@@ -1034,7 +904,7 @@ class StockMovementListCreateView(generics.ListCreateAPIView):
     
 
 class StockMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = StockMovement.objects.all()
+    queryset = StockMovement.objects.order_by('id')
     serializer_class = StockMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_stockmovement', 'view_stockmovement']
@@ -1084,27 +954,9 @@ class StockMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Stock Movement  with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Stock Movement deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
 
-
-
-# Client Views
 class ClientListCreateView(generics.ListCreateAPIView):
-    queryset = Client.objects.all()
+    queryset = Client.objects.order_by('id')
     serializer_class = ClientSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_client', 'view_client']
@@ -1134,7 +986,7 @@ class ClientListCreateView(generics.ListCreateAPIView):
 
 
 class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Client.objects.all()
+    queryset = Client.objects.order_by('id')
     serializer_class = ClientSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_client', 'view_client']
@@ -1183,22 +1035,8 @@ class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
                 "message": "Client update failed",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
+        
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Client with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Client deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
     @action(detail=True, methods=['post'], url_path='adjust-balance')
     def adjust_balance(self, request, *args, **kwargs):
         client = self.get_object() 
@@ -1239,10 +1077,8 @@ class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
 
-
-# Export Invoice Views
 class ExportInvoiceListCreateView(generics.ListCreateAPIView):
-    queryset = ExportInvoice.objects.all()
+    queryset = ExportInvoice.objects.order_by('id')
     serializer_class = ExportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportinvoice', 'view_exportinvoice']
@@ -1367,7 +1203,7 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
 
 
 class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = ExportInvoice.objects.all()
+    queryset = ExportInvoice.objects.order_by('id')
     serializer_class = ExportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_exportinvoice', 'view_exportinvoice']
@@ -1520,36 +1356,15 @@ class ExportInvoiceRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIVi
         }, status=status.HTTP_200_OK)
 
 
-
-
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Export Invoice with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Export Invoice deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
-
-# Exported Invoice Item Views
 class ExportedInvoiceItemListCreateView(generics.ListCreateAPIView):
-    queryset = ExportedInvoiceItem.objects.all()
+    queryset = ExportedInvoiceItem.objects.order_by('id')
     serializer_class = ExportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportedinvoiceitem', 'view_exportedinvoiceitem']
 
 
 class ExportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = ExportedInvoiceItem.objects.all()
+    queryset = ExportedInvoiceItem.objects.order_by('id')
     serializer_class = ExportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_exportedinvoiceitem', 'view_exportedinvoiceitem']
@@ -1601,24 +1416,7 @@ class ExportedInvoiceItemRetrieveUpdateDestroyView(generics.RetrieveUpdateDestro
                 "message": "Export Invoice Item update failed",
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
-
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Export Invoice Item with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Export Invoice Item deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
+        
 
 class DepositMoneyView(APIView):
     permission_classes = [IsAuthenticated, GroupPermission]
@@ -1716,7 +1514,7 @@ class ResetCashboxView(APIView):
 
 
 class CashboxListCreateView(generics.ListCreateAPIView):
-    queryset = Cashbox.objects.all()
+    queryset = Cashbox.objects.order_by('id')
     serializer_class = CashboxSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashbox', 'view_cashbox']
@@ -1742,7 +1540,7 @@ class CashboxListCreateView(generics.ListCreateAPIView):
         }, status=status.HTTP_400_BAD_REQUEST)
 
 class CashboxMovementListCreateView(generics.ListCreateAPIView):
-    queryset = CashboxMovement.objects.all()
+    queryset = CashboxMovement.objects.order_by('id')
     serializer_class = CashboxMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashboxmovement', 'view_cashboxmovement']
@@ -1784,7 +1582,7 @@ class CashboxMovementListCreateView(generics.ListCreateAPIView):
             }, status=status.HTTP_400_BAD_REQUEST)
         
 class CashboxMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = CashboxMovement.objects.all()
+    queryset = CashboxMovement.objects.order_by('id')
     serializer_class = CashboxMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['change_cashboxmovement', 'view_cashboxmovement']
@@ -1838,25 +1636,9 @@ class CashboxMovementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPI
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(self.queryset, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "CashboxMovement with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "CashboxMovement deleted successfully",
-            "data": {} 
-        }, status=status.HTTP_204_NO_CONTENT)
-
 
 class UserListCreateView(generics.ListCreateAPIView):
-    queryset = User.objects.all()
+    queryset = User.objects.order_by('id')
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_user', 'auth.add_user']
@@ -1893,7 +1675,7 @@ class UserListCreateView(generics.ListCreateAPIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
 class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = User.objects.all()
+    queryset = User.objects.order_by('id')
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_user', 'auth.change_user', 'auth.delete_user']
@@ -1926,7 +1708,6 @@ class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
                 "data": {
                     "id": updated_instance.id,
                     "username": updated_instance.username,
-                    "email": updated_instance.email,
                     "is_active": updated_instance.is_active,
                     "is_staff": updated_instance.is_staff,
                     "is_superuser": updated_instance.is_superuser,
@@ -1941,25 +1722,9 @@ class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(User, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "User with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "User deleted successfully",
-            "data": {}
-        }, status=status.HTTP_204_NO_CONTENT)
-
 
 class GroupListCreateView(generics.ListCreateAPIView):
-    queryset = Group.objects.all()
+    queryset = Group.objects.order_by('id')
     serializer_class = GroupSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_group', 'auth.add_group']
@@ -1986,7 +1751,7 @@ class GroupListCreateView(generics.ListCreateAPIView):
 
 
 class GroupDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Group.objects.all()
+    queryset = Group.objects.order_by('id')
     serializer_class = GroupSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_group', 'auth.change_group', 'auth.delete_group']
@@ -2029,25 +1794,8 @@ class GroupDetailView(generics.RetrieveUpdateDestroyAPIView):
                 "data": serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, *args, **kwargs):
-        try:
-            instance = get_object_or_404(Group, pk=kwargs['pk'])
-        except:
-            return Response({
-                "ok": False,
-                "message": "Group with the specified ID does not exist",
-            }, status=status.HTTP_404_NOT_FOUND)
-    
-        instance.delete()
-        return Response({
-            "ok": True,
-            "message": "Group deleted successfully",
-            "data": {}
-        }, status=status.HTTP_204_NO_CONTENT)
-
-
 class PermissionListView(generics.ListAPIView):
-    queryset = Permission.objects.all()
+    queryset = Permission.objects.order_by('id')
     serializer_class = PermissionSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_permission']
