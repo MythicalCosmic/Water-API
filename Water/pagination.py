@@ -18,6 +18,7 @@ class CustomPagination(PageNumberPagination):
         return Response({
             'meta': {
                 'total': total_items,
+                'total_pages': total_pages,
                 'per_page': page_size,
                 'current_page': current_page,
                 'last_page': total_pages,
