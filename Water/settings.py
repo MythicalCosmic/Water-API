@@ -213,3 +213,10 @@ CSRF_TRUSTED_ORIGINS = ['https://water-api-fbhj.onrender.com']
 # }
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+USE_X_FORWARDED_HOST = True
+SECURE_SSL_REDIRECT = True 
