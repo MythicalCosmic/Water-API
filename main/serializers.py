@@ -2,10 +2,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from .models import *
 from django.contrib.auth.models import User, Group, Permission
-from rest_framework import status
-from rest_framework.response import Response
 from rest_framework.exceptions import AuthenticationFailed
-from decimal import Decimal
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
@@ -27,39 +24,35 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 class SupplierSerializer(serializers.ModelSerializer):
     class Meta:
         model = Supplier
-        fields = ['id', 'name', 'phone_number']
-
-        
+        fields = ['id', 'name', 'phone_number', 'created_at', 'updated_at', 'deleted']
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = '__all__'
+        fields = ['id', 'name', 'description', 'created_at', 'updated_at', 'deleted']
 
 
 class SizeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Size
-        fields = '__all__'
+        fields = ['id', 'name', 'created_at', 'updated_at', 'deleted']
 
 
 class ProductSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(source='category.name', read_only=True)
+
     class Meta:
         model = Product
-        fields = ['id', 'name', 'description', 'category', 'category_name']
-        
+        fields = ['id', 'name', 'description', 'category', 'category_name', 'created_at', 'updated_at', 'deleted']
+
     def to_representation(self, instance):
         data = super().to_representation(instance)
         data['category_data'] = {
             'category_id': data.pop('category', None),
-            'category_name': data.pop('category_name', None) 
+            'category_name': data.pop('category_name', None)
         }
-
-
         return data
-
 
 
 class ProductVariantSerializer(serializers.ModelSerializer):
@@ -68,12 +61,13 @@ class ProductVariantSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ProductVariant
-        fields = ['id', 'product', 'product_name', 'size', 'size_name', 'uniq_code']
+        fields = ['id', 'product', 'product_name', 'size', 'size_name', 'uniq_code', 'created_at', 'updated_at', 'deleted']
+
     def to_representation(self, instance):
         data = super().to_representation(instance)
         data['product_data'] = {
             'product_id': data.pop('product', None),
-            'product_name': data.pop('product_name', None) 
+            'product_name': data.pop('product_name', None)
         }
         data['size_data'] = {
             'size_id': data.pop('size', None),
@@ -88,20 +82,20 @@ class StockSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Stock
-        fields = ['id', 'variant', 'variant_data', 'quantity', 'price', 'user', 'user_username'] 
+        fields = ['id', 'variant', 'variant_data', 'quantity', 'price', 'user', 'user_username', 'created_at', 'updated_at', 'deleted']
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
-        
         data['variant_data'] = {
-            'variant_id': data.pop('variant', None), 
-            'variant_info': data.pop('variant_data', None),  
+            'variant_id': data.pop('variant', None),
+            'variant_info': data.pop('variant_data', None),
         }
         data['user_data'] = {
-            'user_id': data.pop('user', None),  
-            'username': data.pop('user_username', None),  
+            'user_id': data.pop('user', None),
+            'username': data.pop('user_username', None),
         }
         return data
+
 
 class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
     import_invoice_info = serializers.CharField(source='import_invoice.__str__', read_only=True)
@@ -109,7 +103,7 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ImportedInvoiceItem
-        fields = ['id', 'import_invoice', 'import_invoice_info', 'variant', 'variant_info', 'input_price', 'quantity']
+        fields = ['id', 'import_invoice', 'import_invoice_info', 'variant', 'variant_info', 'input_price', 'quantity', 'created_at', 'updated_at', 'deleted']
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
@@ -124,17 +118,14 @@ class ImportedInvoiceItemSerializer(serializers.ModelSerializer):
         return data
 
 
-
-
-
 class ImportInvoiceSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
     supplier_name = serializers.CharField(source='supplier.name', read_only=True)
-    imported_items = ImportedInvoiceItemSerializer(many=True, read_only=True)  
+    imported_items = ImportedInvoiceItemSerializer(many=True, read_only=True)
 
     class Meta:
         model = ImportInvoice
-        fields = ['id', 'supplier', 'supplier_name', 'state', 'user', 'username', 'imported_items']
+        fields = ['id', 'supplier', 'supplier_name', 'state', 'user', 'username', 'imported_items', 'created_at', 'updated_at', 'deleted']
 
     def create(self, validated_data):
         imported_items_data = validated_data.pop('imported_items', [])
@@ -147,7 +138,6 @@ class ImportInvoiceSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
-
         data['user_data'] = {
             'user_id': instance.user.id if instance.user else None,
             'username': instance.user.username if instance.user else None
@@ -157,13 +147,7 @@ class ImportInvoiceSerializer(serializers.ModelSerializer):
             'supplier_name': instance.supplier.name
         }
 
-        data.pop('user', None)
-        data.pop('username', None)
-        data.pop('supplier', None)
-        data.pop('supplier_name', None)
-
-
-        imported_items = instance.importedinvoiceitem_set.all() 
+        imported_items = instance.importedinvoiceitem_set.all()
 
         if imported_items.exists():
             data['imported_items'] = ImportedInvoiceItemSerializer(imported_items, many=True).data
@@ -173,39 +157,32 @@ class ImportInvoiceSerializer(serializers.ModelSerializer):
         return data
 
 
-
-
-
-
 class StockMovementSerializer(serializers.ModelSerializer):
     variant_info = serializers.CharField(source='variant.__str__', read_only=True)
 
     class Meta:
         model = StockMovement
-        fields = ['id', 'variant', 'variant_info', 'type', 'quantity', 'description']
+        fields = ['id', 'variant', 'variant_info', 'type', 'quantity', 'description', 'created_at', 'updated_at', 'deleted']
+
     def to_representation(self, instance):
         data = super().to_representation(instance)
         data['variant_data'] = {
             'variant_id': data.pop('variant', None),
             'variant_info': data.pop('variant_info', None),
         }
-        data.pop('user', None)
-        data.pop('supplier', None)
-
-
         return data
 
 
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
-        fields = '__all__'
+        fields = ['id', 'name', 'description', 'created_at', 'updated_at', 'deleted']
 
 
 class CashboxSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cashbox
-        fields = ['id', 'remains']
+        fields = ['id', 'remains', 'created_at', 'updated_at', 'deleted']
 
 
 class ExportedInvoiceItemSerializer(serializers.ModelSerializer):
@@ -214,21 +191,18 @@ class ExportedInvoiceItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ExportedInvoiceItem
-        fields = ['id', 'export_invoice', 'export_invoice_info', 'variant', 'variant_info', 'price', 'quantity']
+        fields = ['id', 'export_invoice', 'export_invoice_info', 'variant', 'variant_info', 'price', 'quantity', 'created_at', 'updated_at', 'deleted']
+
     def to_representation(self, instance):
         data = super().to_representation(instance)
         data['export_invoice_data'] = {
             'export_invoice_id': data.pop('export_invoice', None),
-            'export_invoice_info': data.pop('export_invoice_info', None) 
+            'export_invoice_info': data.pop('export_invoice_info', None)
         }
         data['variant_data'] = {
             'variant_id': data.pop('variant', None),
             'variant_info': data.pop('variant_info', None),
         }
-        data.pop('user', None)
-        data.pop('supplier', None)
-
-
         return data
 
 
@@ -239,7 +213,7 @@ class ExportInvoiceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ExportInvoice
-        fields = ['id', 'client', 'client_name', 'user', 'user_username', 'state', 'exported_items']
+        fields = ['id', 'client', 'client_name', 'user', 'user_username', 'state', 'exported_items', 'created_at', 'updated_at', 'deleted']
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
@@ -251,26 +225,7 @@ class ExportInvoiceSerializer(serializers.ModelSerializer):
             'client_id': data.pop('client', None),
             'client_name': data.pop('client_name', None),
         }
-        data.pop('user', None)
-        data.pop('supplier', None)
-
         return data
-
-    def create(self, validated_data):
-        user = self.context['request'].user
-        validated_data['user'] = user
-        return super().create(validated_data)
-
-
-    
-    def create(self, validated_data):
-        user = self.context['request'].user  
-        validated_data['user'] = user
-        return super().create(validated_data)
-
-
-
-
 
 
 class CashboxMovementSerializer(serializers.ModelSerializer):
@@ -278,7 +233,7 @@ class CashboxMovementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CashboxMovement
-        fields = ['id', 'type', 'sum', 'remains', 'comment', 'payment_type', 'user', 'created_at', 'updated_at', 'deleted_at']
+        fields = ['id', 'type', 'sum', 'remains', 'comment', 'payment_type', 'user', 'created_at', 'updated_at', 'deleted']
     
     def get_user(self, obj):
         if obj.user:
@@ -289,11 +244,10 @@ class CashboxMovementSerializer(serializers.ModelSerializer):
         return None
 
 
-
 class PermissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Permission
-        fields = ['id', 'name', 'codename']
+        fields = ['id', 'name', 'codename', 'created_at', 'updated_at', 'deleted']
 
 
 class GroupSerializer(serializers.ModelSerializer):
@@ -301,7 +255,7 @@ class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = ['id', 'name', 'permissions']
+        fields = ['id', 'name', 'permissions', 'created_at', 'updated_at', 'deleted']
 
     def create(self, validated_data):
         permissions = self.initial_data.get('permissions', [])
@@ -324,7 +278,8 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'password', 'is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions']
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'date_joined', 'last_login', 'groups', 'user_permissions', 'created_at', 'updated_at', 'deleted']
+
         extra_kwargs = {
             'password': {'write_only': True}  
         }

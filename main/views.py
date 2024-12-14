@@ -1,4 +1,4 @@
-from rest_framework import generics, status
+from rest_framework import generics, status, filters
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
@@ -82,6 +82,8 @@ class SupplierListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = SupplierSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_supplier', 'view_supplier']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'phone_number']
 
 
 class SupplierRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -96,6 +98,8 @@ class CategoryListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_category', 'view_category']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'description']
 
 
 class CategoryRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -110,6 +114,8 @@ class SizeListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = SizeSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_size', 'view_size']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
 
 
 class SizeRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -124,6 +130,8 @@ class ProductListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_product', 'view_product']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'description']
 
 
 class ProductRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -138,6 +146,8 @@ class ProductVariantListCreateView(CustomResponseMixin, generics.ListCreateAPIVi
     serializer_class = ProductVariantSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_productvariant', 'view_productvariant']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['uniq_code']
 
     def create(self, request, *args, **kwargs):
         data = request.data
@@ -221,6 +231,9 @@ class StockListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = StockSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_stock', 'view_stock']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['variant', 'price']
+
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
 
@@ -265,6 +278,8 @@ class ImportInvoiceListCreateView(generics.ListCreateAPIView):
     serializer_class = ImportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_importinvoice', 'view_importinvoice']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['supplier', 'state']
 
     def create(self, request, *args, **kwargs):
         data = request.data
@@ -455,8 +470,8 @@ class ImportedInvoiceItemListCreateView(CustomResponseMixin, generics.ListCreate
     serializer_class = ImportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_importedinvoiceitem', 'view_importedinvoiceitem']
-
-
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['quantity', 'variant']
 
 
 class ImportedInvoiceItemRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -471,6 +486,8 @@ class StockMovementListCreateView(CustomResponseMixin, generics.ListCreateAPIVie
     serializer_class = StockMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_stockmovement', 'view_stockmovement']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['type', 'variant']
     
 
 class StockMovementRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -485,6 +502,8 @@ class ClientListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = ClientSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_client', 'view_client']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'phone']
 
 
 class ClientRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -544,6 +563,8 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
     serializer_class = ExportInvoiceSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportinvoice', 'view_exportinvoice']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['client', 'state']
 
     @transaction.atomic
     def create(self, request, *args, **kwargs):
@@ -797,6 +818,8 @@ class ExportedInvoiceItemListCreateView(CustomResponseMixin, generics.ListCreate
     serializer_class = ExportedInvoiceItemSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_exportedinvoiceitem', 'view_exportedinvoiceitem']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['export_invoice', 'quantity']
 
 
 class ExportedInvoiceItemRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -906,6 +929,9 @@ class CashboxListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = CashboxSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashbox', 'view_cashbox']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['remains']
+
 
 
 class CashboxMovementListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
@@ -913,6 +939,8 @@ class CashboxMovementListCreateView(CustomResponseMixin, generics.ListCreateAPIV
     serializer_class = CashboxMovementSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['add_cashboxmovement', 'view_cashboxmovement']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['type', 'user']
 
         
 class CashboxMovementRetrieveUpdateDestroyView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -928,6 +956,8 @@ class UserListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_user', 'auth.add_user']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['username', 'first_name', 'last_name']
 
 
 class UserDetailView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
@@ -942,6 +972,8 @@ class GroupListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
     serializer_class = GroupSerializer
     permission_classes = [IsAuthenticated, GroupPermission]
     required_permissions = ['auth.view_group', 'auth.add_group']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
 
 
 class GroupDetailView(CustomResponseMixin, generics.RetrieveUpdateDestroyAPIView):
