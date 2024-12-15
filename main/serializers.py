@@ -247,7 +247,7 @@ class CashboxMovementSerializer(serializers.ModelSerializer):
 class PermissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Permission
-        fields = ['id', 'name', 'codename', 'created_at', 'updated_at', 'deleted']
+        fields = ['id', 'name', 'codename']
 
 
 class GroupSerializer(serializers.ModelSerializer):
@@ -255,7 +255,7 @@ class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = ['id', 'name', 'permissions', 'created_at', 'updated_at', 'deleted']
+        fields = ['id', 'name', 'permissions']
 
     def create(self, validated_data):
         permissions = self.initial_data.get('permissions', [])
@@ -278,7 +278,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'date_joined', 'last_login', 'groups', 'user_permissions', 'created_at', 'updated_at', 'deleted']
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'date_joined', 'last_login', 'groups', 'user_permissions']
 
         extra_kwargs = {
             'password': {'write_only': True}  
