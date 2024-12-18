@@ -176,7 +176,7 @@ class StockMovementSerializer(serializers.ModelSerializer):
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
-        fields = ['id', 'name', 'description', 'created_at', 'updated_at', 'deleted']
+        fields = ['id', 'name', 'description', 'phone', 'created_at', 'updated_at', 'deleted']
 
 
 class CashboxSerializer(serializers.ModelSerializer):
