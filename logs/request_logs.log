@@ -633,3 +633,14 @@ INFO 2024-12-23 11:27:13,882 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Wate
 INFO 2024-12-23 11:27:14,485 autoreload Watching for file changes with StatReloader
 INFO 2024-12-23 11:34:07,564 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
 INFO 2024-12-23 11:34:08,722 autoreload Watching for file changes with StatReloader
+INFO 2024-12-23 11:54:02,207 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-23 11:54:03,103 autoreload Watching for file changes with StatReloader
+INFO 2024-12-23 12:59:12,569 basehttp "POST //api/categories/ HTTP/1.1" 301 0
+INFO 2024-12-23 12:59:12,586 basehttp code 400, message Bad request version ('À\x13À')
+ERROR 2024-12-23 12:59:12,587 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-12-23 12:59:20,541 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-23 12:59:21,492 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-23 12:59:23,182 log Bad Request: /api/categories/
+WARNING 2024-12-23 12:59:23,182 basehttp "POST //api/categories/ HTTP/1.1" 400 109
+INFO 2024-12-23 12:59:29,143 basehttp "POST //api/categories/ HTTP/1.1" 201 211
+INFO 2024-12-23 13:01:24,914 basehttp "POST //api/categories/ HTTP/1.1" 201 212
