@@ -644,3 +644,7 @@ WARNING 2024-12-23 12:59:23,182 log Bad Request: /api/categories/
 WARNING 2024-12-23 12:59:23,182 basehttp "POST //api/categories/ HTTP/1.1" 400 109
 INFO 2024-12-23 12:59:29,143 basehttp "POST //api/categories/ HTTP/1.1" 201 211
 INFO 2024-12-23 13:01:24,914 basehttp "POST //api/categories/ HTTP/1.1" 201 212
+WARNING 2024-12-23 13:09:42,769 log Bad Request: /api/categories/
+WARNING 2024-12-23 13:09:42,770 basehttp "POST //api/categories/ HTTP/1.1" 400 109
+INFO 2024-12-23 13:14:40,164 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
+INFO 2024-12-23 13:14:40,952 autoreload Watching for file changes with StatReloader
