@@ -15,6 +15,7 @@ from rest_framework.decorators import action
 from .mixins import *
 
 
+
 class LogoutView(APIView):
     def post(self, request, *args, **kwargs):
         access_token = request.data.get("access_token")
@@ -258,9 +259,9 @@ class StockListCreateView(CustomResponseMixin, generics.ListCreateAPIView):
 
     def get_summary_data(self, queryset):
         total_quantity = sum(item.quantity for item in queryset)
-        total_money = sum(float(item.price) for item in queryset)
+        total_money = Stock.objects.values_list('price', flat=True)
         return {
-            "total_money": f"{total_money:.2f}",
+            "total_money": sum(total_money),
             "total_quantity": total_quantity,
             "total_items": len(queryset)
         }
@@ -570,8 +571,9 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
     def create(self, request, *args, **kwargs):
         data = request.data
         items = data.pop("items", None)  
-        payment_type = data.pop("payment_type", None)  
-
+        payment_type = data.pop("payment_type", None) 
+        amout_of_money = data.pop("amount", None) 
+        print(amout_of_money)
         if not items:
             return Response({
                 "ok": False,
@@ -642,8 +644,12 @@ class ExportInvoiceListCreateView(generics.ListCreateAPIView):
 
         try:
             if payment_type == "Debt":
-                export_invoice.client.balance -= total_price
-                export_invoice.client.save()
+                if amout_of_money:
+                    export_invoice.client.balance -= amout_of_money
+                    export_invoice.client.save()
+                else: 
+                    export_invoice.client.balance -= total_price
+                    export_invoice.client.save()
             else:
                 cashbox = get_object_or_404(Cashbox, id=2)
                 cashbox.deposit(
