@@ -24,7 +24,7 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 class SupplierSerializer(serializers.ModelSerializer):
     class Meta:
         model = Supplier
-        fields = ['id', 'name', 'phone_number', 'created_at', 'updated_at', 'deleted']
+        fields = ['id', 'name', 'phone_number', 'address', 'balance', 'created_at', 'updated_at', 'deleted']
 
 
 class CategorySerializer(serializers.ModelSerializer):
