@@ -10,6 +10,8 @@ class Supplier(SafeDeleteModel):
     _safedelete_policy = SOFT_DELETE
     name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15)
+    address = models.CharField(default='Andijon Uzbekistan', max_length=150)
+    balance = models.CharField(default=0, max_length=10000000)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

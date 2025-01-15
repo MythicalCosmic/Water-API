@@ -648,3 +648,228 @@ WARNING 2024-12-23 13:09:42,769 log Bad Request: /api/categories/
 WARNING 2024-12-23 13:09:42,770 basehttp "POST //api/categories/ HTTP/1.1" 400 109
 INFO 2024-12-23 13:14:40,164 autoreload /home/dev/Desktop/CodeStorm/WaterV2/Water/Water/settings.py changed, reloading.
 INFO 2024-12-23 13:14:40,952 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 15:58:44,260 autoreload Watching for file changes with StatReloader
+INFO 2024-12-31 03:10:34,524 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-31 03:36:43,906 exception Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+WARNING 2024-12-31 03:36:44,033 log Bad Request: /
+ERROR 2024-12-31 03:39:07,167 exception Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+WARNING 2024-12-31 03:39:07,298 log Bad Request: /
+ERROR 2024-12-31 03:41:58,865 exception Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+WARNING 2024-12-31 03:41:59,082 log Bad Request: /
+ERROR 2024-12-31 03:42:45,138 exception Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+WARNING 2024-12-31 03:42:45,179 log Bad Request: /
+ERROR 2024-12-31 03:43:34,382 exception Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+WARNING 2024-12-31 03:43:34,566 log Bad Request: /
+ERROR 2024-12-31 03:44:40,124 exception Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+WARNING 2024-12-31 03:44:40,155 log Bad Request: /
+ERROR 2024-12-31 03:47:25,049 exception Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com'. You may need to add 'api.water.com' to ALLOWED_HOSTS.
+WARNING 2024-12-31 03:47:25,096 log Bad Request: /
+ERROR 2024-12-31 03:49:53,616 exception Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+WARNING 2024-12-31 03:49:53,731 log Bad Request: /
+INFO 2024-12-31 03:51:21,826 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-31 03:51:57,338 exception Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+WARNING 2024-12-31 03:51:57,372 log Bad Request: /
+ERROR 2024-12-31 03:52:12,921 exception Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+curl -I http://api.water.com/ -H "Host: api.water.com"
+ERROR 2024-12-31 03:52:45,461 exception Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+WARNING 2024-12-31 03:52:45,488 log Bad Request: /
+ERROR 2024-12-31 03:53:16,525 exception Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+WARNING 2024-12-31 03:53:16,558 log Bad Request: /
+ERROR 2024-12-31 03:54:09,616 exception Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/var/www/Water-API/env/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.water.com,api.water.com'. The domain name provided is not valid according to RFC 1034/1035.
+WARNING 2024-12-31 03:54:09,750 log Bad Request: /
+INFO 2024-12-31 05:05:28,533 autoreload /var/www/Water-API/Water/settings.py changed, reloading.
+INFO 2024-12-31 05:05:29,339 autoreload Watching for file changes with StatReloader
+INFO 2024-12-31 05:24:03,246 autoreload /var/www/Water-API/Water/settings.py changed, reloading.
+INFO 2024-12-31 05:24:06,740 autoreload Watching for file changes with StatReloader
+INFO 2024-12-31 13:03:39,699 autoreload Watching for file changes with StatReloader
+WARNING 2024-12-31 13:03:47,275 log Not Found: /
+WARNING 2024-12-31 13:03:47,279 basehttp "GET / HTTP/1.1" 404 12972
+WARNING 2024-12-31 13:03:47,509 log Not Found: /favicon.ico
+WARNING 2024-12-31 13:03:47,512 basehttp "GET /favicon.ico HTTP/1.1" 404 13023
+INFO 2025-01-03 12:42:09,856 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-03 12:42:13,074 log Not Found: /
+WARNING 2025-01-03 12:42:13,087 basehttp "GET / HTTP/1.1" 404 12972
+WARNING 2025-01-03 12:42:13,539 log Not Found: /favicon.ico
+WARNING 2025-01-03 12:42:13,540 basehttp "GET /favicon.ico HTTP/1.1" 404 13023
+INFO 2025-01-03 12:42:17,727 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2025-01-03 12:42:17,793 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-01-03 12:42:17,832 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+INFO 2025-01-03 12:42:17,931 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2025-01-03 12:42:17,936 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2025-01-03 12:42:17,938 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-01-03 12:42:17,940 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-01-03 12:42:17,941 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-01-03 12:42:17,943 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2025-01-03 12:42:17,956 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-01-03 12:42:17,957 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-01-03 12:42:18,003 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-01-03 12:42:24,709 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-01-03 12:42:24,752 basehttp "GET /admin/ HTTP/1.1" 200 16275
+INFO 2025-01-03 12:42:24,833 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-01-03 12:42:24,911 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-01-03 12:42:24,918 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-01-03 12:56:12,254 autoreload Watching for file changes with StatReloader

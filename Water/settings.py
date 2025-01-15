@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-^9@^jign5ll9*-mvbl_2=rl#(n&zr02(4n5h0+x$^2=%rd#omt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['water-api-fbhj.onrender.com', 'localhost', '127.0.0.1', 'localhost:5173']
+ALLOWED_HOSTS = ['water-api-fbhj.onrender.com', 'localhost', '127.0.0.1', 'localhost:5173', 'api.water.com', 'www.api.water.com']
+
 
 
 # Application definition
@@ -154,7 +155,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'EXCEPTION_HANDLER': 'main.exception_handler.custom_exception_handler',
+    # 'EXCEPTION_HANDLER': 'main.exception_handler.custom_exception_handler',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',  
     ],
